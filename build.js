@@ -402,6 +402,11 @@ ${nav("../")}
       .join("")}</div>
   </header>
 
+  <figure class="shot hero-shot">
+    <div class="shot-ph" data-key="${esc(p.id[0])}"><span>Add cover image — <code>${p.slug}-cover.jpg</code></span></div>
+    <figcaption>Cover / hero shot</figcaption>
+  </figure>
+
   <section class="case-block">
     <h2>What I designed</h2>
     <p>${esc(p.designed)}</p>
@@ -421,6 +426,14 @@ ${nav("../")}
     <h2>My role &amp; contribution</h2>
     <p class="role-lead">${esc(p.roleLead)}</p>
     <ul class="ticks">${p.role.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
+  </section>
+
+  <section class="case-block">
+    <figure class="shot grid-shots">
+      <div class="shot-ph" data-key="${esc(p.id[0])}"><span>Screen 1 — <code>${p.slug}-1.jpg</code></span></div>
+      <div class="shot-ph" data-key="${esc(p.id[0])}"><span>Screen 2 — <code>${p.slug}-2.jpg</code></span></div>
+      <figcaption>Selected screens &amp; flows</figcaption>
+    </figure>
   </section>
 
   <section class="case-block">
