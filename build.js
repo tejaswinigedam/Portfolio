@@ -397,6 +397,8 @@ const head = (title, rel = "") => `<!doctype html>
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(site.name)} — ${esc(site.role)}. ${esc(site.tagline)}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:opsz,wght@9..40,400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${rel}styles.css">
 </head>`;
 
@@ -528,6 +530,7 @@ ${nav("../")}
     <figcaption>Cover / hero shot</figcaption>
   </figure>
 
+  <div class="sheet">
   <section class="case-block scene">
     <p class="beat">One moment</p>
     <p class="scene-text">${esc(s.scene)}</p>
@@ -579,6 +582,7 @@ ${nav("../")}
     <div class="score-card">${scoreRows}</div>
     <p class="fine">Measurable impact is intentionally left open — to be updated with real metrics as they become available.</p>
   </section>
+  </div>
 
   <nav class="case-nav">
     <a href="${prev.slug}.html">← ${esc(prev.title)}</a>
