@@ -173,7 +173,47 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 @media (max-width: 560px) { .grid-shots { grid-template-columns: 1fr; } }
 
 .case-block { max-width: 760px; margin: 0 auto 44px; }
-.case-block h2 { font-size: 22px; margin: 0 0 14px; }
+.case-block h2 { font-size: 24px; margin: 0 0 14px; }
+
+/* Story beats */
+.beat {
+  text-transform: uppercase; letter-spacing: .16em; font-size: 12px; font-weight: 700;
+  color: var(--accent); margin: 0 0 8px;
+}
+.scene { max-width: 820px; }
+.scene-text {
+  font-size: 21px; line-height: 1.5; letter-spacing: -.01em;
+  color: var(--ink); margin: 0 0 28px; font-weight: 500;
+}
+.hfb { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 640px) { .hfb { grid-template-columns: 1fr; } }
+.hfb-item {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 14px; padding: 18px; border-top: 3px solid var(--line);
+}
+.hfb-item span {
+  display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .1em;
+  font-weight: 700; margin-bottom: 8px; color: var(--ink-soft);
+}
+.hfb-item p { margin: 0; font-size: 15px; color: var(--ink); }
+.hfb-item.hope { border-top-color: var(--accent-2); }
+.hfb-item.fear { border-top-color: var(--accent); }
+.hfb-item.but { border-top-color: color-mix(in srgb, var(--accent) 60%, var(--accent-2)); }
+.hfb-item.but span { color: var(--accent); }
+
+.context-note { color: var(--ink-soft); font-size: 15.5px; border-left: 3px solid var(--line); padding-left: 16px; margin-top: 20px; }
+.context-note strong { color: var(--ink); }
+
+.role-full { margin-top: 24px; border-top: 1px solid var(--line); padding-top: 16px; }
+.role-full summary { cursor: pointer; color: var(--accent); font-weight: 600; font-size: 14.5px; list-style: none; }
+.role-full summary::-webkit-details-marker { display: none; }
+.role-full summary::before { content: "▸ "; }
+.role-full[open] summary::before { content: "▾ "; }
+.role-full .ticks { margin-top: 16px; }
+
+.takeaway { font-size: 19px; line-height: 1.55; font-weight: 500; color: var(--ink); margin: 0 0 18px; }
+.unsolved { color: var(--ink-soft); font-size: 15.5px; background: var(--surface); border: 1px dashed var(--line); border-radius: 12px; padding: 14px 16px; margin: 0; }
+.unsolved strong { color: var(--accent); }
 .case-block p { font-size: 17px; color: var(--ink); margin: 0 0 14px; }
 .case-block .role-lead { color: var(--ink-soft); }
 .ticks { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 10px; }

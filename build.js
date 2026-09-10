@@ -48,6 +48,26 @@ const site = {
       ],
       timeline: "7 months",
       permission: "",
+      story: {
+        scene:
+          "It's the morning a tender closes. A bid manager has three other tenders open in different tabs, a folder of PDFs still to read, and stakeholders who each own one section of the response. Somewhere in a hundred pages is a mandatory requirement that, if missed, disqualifies the whole bid — and the clock is the only thing moving quickly.",
+        hope: "Submit a complete, compliant bid on time — and win the work.",
+        fear: "Miss one buried requirement or one deadline, and months of effort are disqualified in a second.",
+        but: "The information all exists — but it's scattered across documents, people, and deadlines that no one can see in one place.",
+        whyTitle: "Winning should hinge on your proposal, not your paperwork",
+        why:
+          "Winning a bid should come down to the quality of your proposal — not your ability to manually wrangle documents, requirements, and dates. I wanted to move teams from a fragile manual process to one where nothing important could quietly slip.",
+        how: [
+          "Started by learning the real workflow — user, market, and competitor research — before designing a single screen, so the product followed how bids actually get made.",
+          "Turned research into a clear map of the end-to-end process, then designed around three questions a team asks all day: what's done, what's pending, and what needs attention now.",
+          "Placed AI where it removes repetitive reading and data-gathering — surfacing requirements and organizing information — while keeping people in charge of the judgment calls a bid depends on.",
+          "As Founding Designer, owned the 0→1 arc end to end, pressure-testing every flow with the PM and developers so what shipped stayed true to the intent.",
+        ],
+        takeaway:
+          "Structure the workflow around the deadline and the decision, and AI stops being a gimmick — it becomes the thing that catches what a tired human, at 4pm on submission day, would miss.",
+        unsolved:
+          "The real proof — win-rate lift, hours saved per bid, errors avoided — is still to be validated with live usage data.",
+      },
       scores: {
         "Interesting problem": 5,
         "Good UX thinking": 5,
@@ -87,6 +107,26 @@ const site = {
       ],
       timeline: "",
       permission: "",
+      story: {
+        scene:
+          "It's the end of term, and an instructor is facing a stack of submissions and a weekend. By the fortieth paper the same feedback is being retyped, attention is fraying, and the grading is quietly drifting — the last student and the first are no longer being judged by quite the same standard.",
+        hope: "Grade fairly and quickly — and get the weekend back.",
+        fear: "That AI grades on their behalf and quietly takes over a judgment they're the ones accountable for.",
+        but: "AI can draft an assessment in seconds — but a grade a teacher can't see inside of is a grade they can't stand behind.",
+        whyTitle: "Give teachers their time back, not their judgment",
+        why:
+          "AI should give educators their time back without taking away the judgment that makes them the teacher. The goal was assistance, not autopilot.",
+        how: [
+          "Anchored the design in real grading workflows and educator needs, discovered through research rather than assumed.",
+          "Designed the whole experience around a review → understand → modify → validate loop, so the instructor is always the one who decides.",
+          "Made AI-generated assessments legible and actionable — you can see why a suggestion was made, and change it — instead of a score handed down as a black box.",
+          "Kept the interface clean and consistently patterned so instructors can move through a large volume of work without losing the thread.",
+        ],
+        takeaway:
+          "The win wasn't automating the grade — it was designing the handoff between AI and educator so the teacher stays in charge and still gets through the pile faster.",
+        unsolved:
+          "Real numbers — time saved per task, gains in grading consistency, instructor adoption — are still to be added from actual use.",
+      },
       scores: {
         "Interesting problem": 5,
         "Good UX thinking": 5,
@@ -127,6 +167,26 @@ const site = {
       ],
       timeline: "",
       permission: "",
+      story: {
+        scene:
+          "A patient is mid-sentence. The doctor is listening, thinking back to the last visit, and trying to remember where — across years of notes — an earlier lab result lived. Every minute spent typing is a minute not spent with the person in the chair, and the record only gets deeper from here.",
+        hope: "Be fully present with the patient and still walk away with a clean, complete record.",
+        fear: "Miss something buried in the history — or lose the evening catching up on documentation.",
+        but: "The record already holds everything — but everything is not the same as findable.",
+        whyTitle: "A record that behaves like a good colleague",
+        why:
+          "A medical record should behave like a good colleague: it remembers, it surfaces what matters right now, and it stays quiet about the rest. I wanted to pull fragmented clinical information into one calm, intelligent place.",
+        how: [
+          "Sat close to the real consultation and patient-management workflow, and how doctors actually record, access, and review information.",
+          "Structured complex patient information into an architecture built for findability — designed around the doctor's moment, not around database sections.",
+          "Used AI to carry the documentation load: recording the consultation, preparing notes, and surfacing the insights that need attention.",
+          "Treated the core tension — information density vs. findability — as the central design problem, deciding what to show, when, and how to rank it.",
+        ],
+        takeaway:
+          "Designing an EMR turned out to be less about storing more, and more about deciding what to show, when — so the doctor can find what matters without wading through everything else.",
+        unsolved:
+          "Impact on documentation time, note-creation speed, and information findability is still to be measured in practice.",
+      },
       scores: {
         "Interesting problem": 5,
         "Good UX thinking": 5,
@@ -165,6 +225,26 @@ const site = {
       ],
       timeline: "",
       permission: "",
+      story: {
+        scene:
+          "A staffing coordinator is trying to cover tomorrow's night shift. Three nurses are qualified, one just called out, and the schedule lives half in a spreadsheet and half in people's heads. The gap is real; the picture of how to close it is not.",
+        hope: "Every shift covered, no gaps, no last-minute scramble.",
+        fear: "A hole discovered too late — or the same nurse accidentally booked twice.",
+        but: "The constraints are knowable — but they shift hour to hour and live in too many places to hold at once.",
+        whyTitle: "Coverage should be a decision, not a daily emergency",
+        why:
+          "Covering a shift should be a clear decision, not a daily emergency. I wanted staffing teams to see the state of their workforce at a glance and act on it with confidence.",
+        how: [
+          "Mapped the existing shift-management workflow and the points where it actually breaks down.",
+          "Designed shift creation and management around clear status and visibility, so availability and gaps are obvious.",
+          "Explored the messy real scenarios — changing needs, availability constraints, multiple stakeholders — rather than the happy path.",
+          "Worked with developers to keep the design feasible, and iterated as requirements evolved.",
+        ],
+        takeaway:
+          "When what's covered, open, and at risk is visible in one place, shift management stops being firefighting and becomes a decision.",
+        unsolved:
+          "Self-evaluation scores and outcome metrics are still to be added for this project.",
+      },
       scores: {
         "Interesting problem": null,
         "Good UX thinking": null,
@@ -203,6 +283,26 @@ const site = {
       ],
       timeline: "",
       permission: "",
+      story: {
+        scene:
+          "A nurse scrolls listings that never quite say whether she qualifies. Across the same marketplace, a hospital posts a shift and waits, unsure who will actually show up. Two people looking for each other — and missing, because each is judging the match by information the other can't see.",
+        hope: "The nurse finds the right opportunity; the hospital finds a qualified, reliable nurse.",
+        fear: "The nurse wastes time on roles she can't take; the hospital gets no-shows or unqualified applicants.",
+        but: "Both sides want the very same match — but they judge it by completely different information.",
+        whyTitle: "The match has to be trustworthy at a glance — for both sides",
+        why:
+          "A two-sided staffing marketplace only works when each side can trust the match at a glance. I wanted the seam between nurse and hospital to feel effortless, not like two disconnected apps.",
+        how: [
+          "Understood the needs and pain points of both sides before designing either.",
+          "Mapped both journeys — nurses finding and managing opportunities, hospitals managing requirements and candidates — and where they must connect.",
+          "Structured information and interactions around each group's distinct goals while keeping one coherent ecosystem.",
+          "Designed the connecting workflows so one side's clarity becomes the other side's trust.",
+        ],
+        takeaway:
+          "The real design job wasn't either screen — it was the seam: making the information one side provides land as confidence for the other.",
+        unsolved:
+          "Self-evaluation scores and match/fulfilment outcomes are still to be added.",
+      },
       scores: {
         "Interesting problem": null,
         "Good UX thinking": null,
@@ -242,6 +342,26 @@ const site = {
       ],
       timeline: "",
       permission: "",
+      story: {
+        scene:
+          "A nurse is one document away from being cleared to work a shift — but doesn't know which document, or whether the one she uploaded last week was ever accepted. On the other side, a compliance reviewer stares at forty files with no clear queue and no easy way to say who's ready.",
+        hope: "Get cleared to work quickly; keep the organization compliant.",
+        fear: "A shift lost to a missing certificate — or an expired credential slipping quietly through.",
+        but: "The requirements are fixed and knowable — but their status is invisible to the very people who need to act on it.",
+        whyTitle: "A checklist you can finish, not a black box you wait on",
+        why:
+          "Compliance should feel like a checklist you can finish, not a black box you wait on. I wanted both nurses and reviewers to always know exactly where things stand.",
+        how: [
+          "Mapped the credentialing journey and its verification stages end to end.",
+          "Designed submission workflows that make required, completed, pending, and missing unmistakable at a glance.",
+          "Built the reviewer side to manage and verify documents without hunting through a pile.",
+          "Structured document-heavy information into a clear, scannable flow, iterating with PMs and developers.",
+        ],
+        takeaway:
+          "Making status visible on both sides turned a source of anxiety and waiting into a task people could simply complete.",
+        unsolved:
+          "Self-evaluation scores and verification-time metrics are still to be added.",
+      },
       scores: {
         "Interesting problem": null,
         "Good UX thinking": null,
@@ -388,6 +508,7 @@ site.projects.forEach((p, idx) => {
     p.permission ? ["Public display", p.permission] : null,
   ].filter(Boolean);
 
+  const s = p.story;
   const page = `${head(`${p.title} — ${site.name}`, "../")}
 <body>
 ${nav("../")}
@@ -407,41 +528,50 @@ ${nav("../")}
     <figcaption>Cover / hero shot</figcaption>
   </figure>
 
+  <section class="case-block scene">
+    <p class="beat">One moment</p>
+    <p class="scene-text">${esc(s.scene)}</p>
+    <div class="hfb">
+      <div class="hfb-item hope"><span>The hope</span><p>${esc(s.hope)}</p></div>
+      <div class="hfb-item fear"><span>The fear</span><p>${esc(s.fear)}</p></div>
+      <div class="hfb-item but"><span>But…</span><p>${esc(s.but)}</p></div>
+    </div>
+  </section>
+
   <section class="case-block">
+    <p class="beat">Why — the belief</p>
+    <h2>${esc(s.whyTitle)}</h2>
+    <p>${esc(s.why)}</p>
+    <p class="context-note"><strong>Who it was for.</strong> ${esc(p.who)}</p>
+  </section>
+
+  <section class="case-block">
+    <p class="beat">How — the approach</p>
+    <h2>The choices I made</h2>
+    <p class="role-lead">${esc(p.roleLead)}</p>
+    <ul class="ticks">${s.how.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
+  </section>
+
+  <section class="case-block">
+    <p class="beat">What — the thing you can see</p>
     <h2>What I designed</h2>
     <p>${esc(p.designed)}</p>
-  </section>
-
-  <section class="case-block">
-    <h2>Who it was for</h2>
-    <p>${esc(p.who)}</p>
-  </section>
-
-  <section class="case-block">
-    <h2>The problem</h2>
-    ${p.problem.map((x) => `<p>${esc(x)}</p>`).join("")}
-  </section>
-
-  <section class="case-block">
-    <h2>My role &amp; contribution</h2>
-    <p class="role-lead">${esc(p.roleLead)}</p>
-    <ul class="ticks">${p.role.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
-  </section>
-
-  <section class="case-block">
     <figure class="shot grid-shots">
       <div class="shot-ph" data-key="${esc(p.id[0])}"><span>Screen 1 — <code>${p.slug}-1.jpg</code></span></div>
       <div class="shot-ph" data-key="${esc(p.id[0])}"><span>Screen 2 — <code>${p.slug}-2.jpg</code></span></div>
       <figcaption>Selected screens &amp; flows</figcaption>
     </figure>
+    <details class="role-full">
+      <summary>The full scope of what I did</summary>
+      <ul class="ticks">${p.role.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
+    </details>
   </section>
 
   <section class="case-block">
-    <h2>Reflection</h2>
-    <ul class="reflect">${p.notes.map((x) => {
-      const [h, ...rest] = x.split(" — ");
-      return `<li><strong>${esc(h)}</strong>${rest.length ? " — " + esc(rest.join(" — ")) : ""}</li>`;
-    }).join("")}</ul>
+    <p class="beat">Where it landed</p>
+    <h2>The takeaway</h2>
+    <p class="takeaway">${esc(s.takeaway)}</p>
+    <p class="unsolved"><strong>Still unsolved.</strong> ${esc(s.unsolved)}</p>
   </section>
 
   <section class="case-block scores">
