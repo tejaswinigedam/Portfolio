@@ -23,8 +23,16 @@ const site = {
   ],
   projects: [
     {
-      id: "Vbidd",
-      title: "Vbidd — AI Bid Management System",
+      id: "Tendrix",
+      title: "Tendrix — AI Bid Management System",
+      images: {
+        cover: "img/tendrix-dashboard.jpg",
+        coverCaption: "The Opportunities dashboard — pipeline, deadline countdown, and the stage tracker that shows what's done, pending, and needs attention. (Client details anonymized.)",
+        a: "img/tendrix-register.jpg",
+        aCaption: "Registering a tender: a guided 7-step flow with “Register with AI” to read the bid document and pre-fill the details.",
+        b: "img/tendrix-checklist.jpg",
+        bCaption: "The checklist turns a tender into categorized, assignable tasks — each with an owner, due date, status, and linked file.",
+      },
       short: "A 0→1, AI-powered tender & bid management platform. Founding Designer.",
       designed:
         "An AI-powered tender management system that helps companies move from a manual bid process to a smarter, more timely, automated, and accurate workflow. It helps teams manage tenders efficiently, reduce repetitive manual work, organize critical information, and ensure bids are completed accurately and on time.",
@@ -526,8 +534,10 @@ ${nav("../")}
   </header>
 
   <figure class="shot hero-shot">
-    <div class="shot-ph" data-key="${esc(p.id[0])}"><span>Add cover image — <code>${p.slug}-cover.jpg</code></span></div>
-    <figcaption>Cover / hero shot</figcaption>
+    ${p.images && p.images.cover
+      ? `<img src="${p.images.cover}" alt="${esc(p.title)} — product screenshot" loading="lazy">`
+      : `<div class="shot-ph" data-key="${esc(p.id[0])}"><span>Add cover image — <code>${p.slug}-cover.jpg</code></span></div>`}
+    <figcaption>${p.images && p.images.coverCaption ? esc(p.images.coverCaption) : "Cover / hero shot"}</figcaption>
   </figure>
 
   <div class="sheet">
@@ -560,9 +570,15 @@ ${nav("../")}
     <h2>What I designed</h2>
     <p>${esc(p.designed)}</p>
     <figure class="shot grid-shots">
-      <div class="shot-ph" data-key="${esc(p.id[0])}"><span>Screen 1 — <code>${p.slug}-1.jpg</code></span></div>
-      <div class="shot-ph" data-key="${esc(p.id[0])}"><span>Screen 2 — <code>${p.slug}-2.jpg</code></span></div>
-      <figcaption>Selected screens &amp; flows</figcaption>
+      ${p.images && p.images.a
+        ? `<img src="${p.images.a}" alt="${esc(p.title)} — ${esc(p.images.aCaption || "screen")}" loading="lazy">`
+        : `<div class="shot-ph" data-key="${esc(p.id[0])}"><span>Screen 1 — <code>${p.slug}-1.jpg</code></span></div>`}
+      ${p.images && p.images.b
+        ? `<img src="${p.images.b}" alt="${esc(p.title)} — ${esc(p.images.bCaption || "screen")}" loading="lazy">`
+        : `<div class="shot-ph" data-key="${esc(p.id[0])}"><span>Screen 2 — <code>${p.slug}-2.jpg</code></span></div>`}
+      <figcaption>${p.images && (p.images.aCaption || p.images.bCaption)
+        ? esc([p.images.aCaption, p.images.bCaption].filter(Boolean).join("  ·  "))
+        : "Selected screens &amp; flows"}</figcaption>
     </figure>
     <details class="role-full">
       <summary>The full scope of what I did</summary>

@@ -252,6 +252,8 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 .sheet .shot-ph { border-color: var(--line); color: var(--ink-soft); background: repeating-linear-gradient(45deg, #efe9dc, #efe9dc 12px, #eae3d3 12px, #eae3d3 24px); }
 .sheet .shot figcaption { color: var(--ink-soft); }
 .grid-shots { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0 8px; }
+.grid-shots img { aspect-ratio: 4 / 3; object-fit: cover; object-position: top; border: 1px solid var(--line); }
+.hero-shot img { border: 1px solid var(--line-page); }
 .grid-shots figcaption { grid-column: 1 / -1; }
 @media (max-width: 560px) { .grid-shots { grid-template-columns: 1fr; } }
 
