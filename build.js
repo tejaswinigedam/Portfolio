@@ -56,6 +56,47 @@ const site = {
       ],
       timeline: "7 months",
       permission: "",
+      explainer: {
+        hookTitle: "The Hours Behind Every Tender Submission",
+        hookSub:
+          "How I explored a manual tender-preparation workflow and turned scattered steps into a more structured process.",
+        snapshot: [
+          { label: "Problem", cls: "problem", text: "Tender teams spend hours reading requirements, checking eligibility and preparing the work needed for submission." },
+          { label: "Focus", cls: "focus", text: "Understand where the manual effort comes from and explore ways to connect requirements, company documents and actions." },
+          { label: "Outcome", cls: "outcome", text: "A structured workflow designed to reduce repetitive work and make the process easier to execute." },
+        ],
+        world: {
+          beat: "Context",
+          heading: "First, what is a tender?",
+          steps: ["Government / enterprise needs something", "Publishes a tender", "Companies compete to win the contract"],
+          closing:
+            "The company I worked with helps businesses discover these opportunities and manage the work required to bid for them.",
+        },
+        journey: {
+          beat: "The team",
+          heading: "So what does a tender team actually do?",
+          steps: ["Find an opportunity", "Understand requirements", "Check eligibility", "Prepare the bid", "Submit"],
+          closing:
+            "The interesting part starts after a tender is found: the team has to turn a long document into a clear set of requirements, checks, documents and actions.",
+        },
+        zoom: {
+          beat: "The friction",
+          heading: "This is where the manual work begins",
+          steps: [
+            { text: "Tender document" },
+            { text: "Read requirements" },
+            { text: "Identify dates & eligibility" },
+            { text: "Cross-check company documents", friction: true },
+            { text: "Prepare / edit documents", friction: true },
+            { text: "Create tasks & checklist", friction: true },
+          ],
+          annotations: [
+            { label: "Cross-check", text: "Requirements from the tender had to be manually compared with the company's existing documents and credentials." },
+            { label: "Prepare", text: "Once eligible, the team had to figure out which documents needed editing or creation." },
+            { label: "Tasks", text: "The work then had to be manually translated into a task list." },
+          ],
+        },
+      },
       story: {
         scene:
           "It's the morning a tender closes. A bid manager has three other tenders open in different tabs, a folder of PDFs still to read, and stakeholders who each own one section of the response. Somewhere in a hundred pages is a mandatory requirement that, if missed, disqualifies the whole bid — and the clock is the only thing moving quickly.",
@@ -397,6 +438,50 @@ const stars = (n) =>
     ? '<span class="score tbd">To be added</span>'
     : `<span class="score" aria-label="${n} out of 5">${"●".repeat(n)}${"○".repeat(5 - n)} <em>${n}/5</em></span>`;
 
+const explainer = (e) => `
+  <section class="case-block hook">
+    <p class="beat">The story</p>
+    <h2 class="hook-title">${esc(e.hookTitle)}</h2>
+    <p class="hook-sub">${esc(e.hookSub)}</p>
+    <div class="snapshot">${e.snapshot
+      .map((x) => `<div class="snapshot-item ${esc(x.cls)}"><span>${esc(x.label)}</span><p>${esc(x.text)}</p></div>`)
+      .join("")}</div>
+  </section>
+
+  <section class="case-block world">
+    <p class="beat">${esc(e.world.beat)}</p>
+    <h2>${esc(e.world.heading)}</h2>
+    <div class="flow flow-vertical">${e.world.steps
+      .map((s, i) => (i === 0 ? "" : `<div class="flow-arrow">↓</div>`) + `<div class="flow-step">${esc(s)}</div>`)
+      .join("")}</div>
+    <p>${esc(e.world.closing)}</p>
+  </section>
+
+  <section class="case-block journey">
+    <p class="beat">${esc(e.journey.beat)}</p>
+    <h2>${esc(e.journey.heading)}</h2>
+    <div class="flow">${e.journey.steps
+      .map((s, i) => (i === 0 ? "" : `<div class="flow-arrow">→</div>`) + `<div class="flow-step">${esc(s)}</div>`)
+      .join("")}</div>
+    <p>${esc(e.journey.closing)}</p>
+  </section>
+
+  <section class="case-block zoom">
+    <p class="beat">${esc(e.zoom.beat)}</p>
+    <h2>${esc(e.zoom.heading)}</h2>
+    <div class="flow">${e.zoom.steps
+      .map(
+        (s, i) =>
+          (i === 0 ? "" : `<div class="flow-arrow">→</div>`) +
+          `<div class="flow-step${s.friction ? " flow-friction" : ""}">${esc(s.text)}</div>`
+      )
+      .join("")}</div>
+    <div class="annotations">${e.zoom.annotations
+      .map((a) => `<div class="annotation"><span>${esc(a.label)}</span><p>${esc(a.text)}</p></div>`)
+      .join("")}</div>
+  </section>
+`;
+
 const head = (title, rel = "") => `<!doctype html>
 <html lang="en">
 <head>
@@ -404,6 +489,8 @@ const head = (title, rel = "") => `<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(site.name)} — ${esc(site.role)}. ${esc(site.tagline)}">
+<link rel="preload" as="font" type="font/woff2" href="${rel}fonts/instrument-serif-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="${rel}fonts/space-mono-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="${rel}fonts/bricolage-grotesque-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="${rel}fonts/dm-sans-latin.woff2" crossorigin>
 <link rel="stylesheet" href="${rel}fonts/fonts.css">
@@ -434,13 +521,13 @@ const footer = (rel = "") => `
 const cards = site.projects
   .map(
     (p, i) => `
-    <a class="card" href="work/${p.slug}.html" style="--i:${i}">
-      <div class="card-media" data-key="${esc(p.id[0])}"><span>${esc(p.id.split(" ")[0])}</span></div>
+    <a class="card" href="work/${p.slug}.html">
+      <div class="card-media">0${i + 1}</div>
       <div class="card-body">
         <h3>${esc(p.title)}</h3>
         <p>${esc(p.short)}</p>
-        <span class="card-cta">View case study →</span>
       </div>
+      <span class="card-cta">View case study →</span>
     </a>`
   )
   .join("");
@@ -457,7 +544,7 @@ ${nav()}
 <main>
   <section class="hero">
     <p class="eyebrow">${esc(site.role)}</p>
-    <h1>${esc(site.tagline)}</h1>
+    <h1>${esc(site.tagline).replace("human-centered", "<em>human-centered</em>")}</h1>
     <div class="hero-actions">
       <a class="btn" href="#work">See my work</a>
       <a class="btn ghost" href="mailto:${site.email}">Get in touch</a>
@@ -533,14 +620,16 @@ ${nav("../")}
       .join("")}</div>
   </header>
 
-  <figure class="shot hero-shot">
+  ${p.explainer ? "" : `<figure class="shot hero-shot">
     ${p.images && p.images.cover
       ? `<img src="${p.images.cover}" alt="${esc(p.title)} — product screenshot" loading="lazy">`
       : `<div class="shot-ph" data-key="${esc(p.id[0])}"><span>Add cover image — <code>${p.slug}-cover.jpg</code></span></div>`}
     <figcaption>${p.images && p.images.coverCaption ? esc(p.images.coverCaption) : "Cover / hero shot"}</figcaption>
-  </figure>
+  </figure>`}
 
-  <div class="sheet">
+  <div class="sheet">${p.explainer
+    ? explainer(p.explainer)
+    : `
   <section class="case-block scene">
     <p class="beat">One moment</p>
     <p class="scene-text">${esc(s.scene)}</p>
@@ -597,7 +686,7 @@ ${nav("../")}
     <h2>Self-evaluation</h2>
     <div class="score-card">${scoreRows}</div>
     <p class="fine">Measurable impact is intentionally left open — to be updated with real metrics as they become available.</p>
-  </section>
+  </section>`}
   </div>
 
   <nav class="case-nav">
