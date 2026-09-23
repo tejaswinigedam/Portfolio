@@ -8,19 +8,19 @@
    small scattered dot accents).
    ============================================================ */
 :root {
-  --page: #f7f4ec;        /* off-white page */
+  --page: #ffffff;        /* white page */
   --paper: #ffffff;       /* card / sheet surface */
   --paper-2: #ffffff;
-  --ink: #14130f;
-  --ink-soft: #64604f;
-  --line: #e4ddc9;
+  --ink: #131313;
+  --ink-soft: #5a5a57;
+  --line: #e1e0da;
 
-  --accent: #d7f24d;      /* highlighter green — hero word, marks, hovers */
-  --accent-ink: #1c2205;  /* text color when sitting on --accent */
+  --accent: #c6f24c;      /* highlighter lime — hero word, marks, hovers */
+  --accent-ink: #182106;  /* text color when sitting on --accent */
   --blue: #3b4ce0;        /* small utility accent (links, dots) */
   --sky: #3fb1d1;
   --sky-deep: #1f8fbe;
-  --coral: #ff5c72;
+  --violet: #8b5cf6;
   --yellow: #ffc63f;
 
   --r-lg: 14px;
@@ -174,6 +174,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 /* the reading sheet */
 .sheet {
   background: var(--paper); color: var(--ink);
+  padding: clamp(40px, 7vw, 72px) 0 clamp(24px, 5vw, 48px);
 }
 
 .case-block { max-width: 720px; margin: 0 auto 46px; }
@@ -183,7 +184,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 .case-block .role-lead { color: var(--ink-soft); }
 
 /* story beats */
-.beat { font-family: var(--mono); text-transform: uppercase; letter-spacing: .1em; font-size: 12px; font-weight: 700; color: var(--coral); margin: 0 0 10px; }
+.beat { font-family: var(--mono); text-transform: uppercase; letter-spacing: .1em; font-size: 12px; font-weight: 700; color: var(--violet); margin: 0 0 10px; }
 .scene { max-width: 800px; }
 .scene-text { font-family: var(--serif); font-style: italic; font-size: clamp(22px, 3.4vw, 30px); line-height: 1.35; letter-spacing: 0; color: var(--ink); margin: 0 0 30px; font-weight: 400; }
 .hfb { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -192,9 +193,9 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 .hfb-item span { display: block; font-family: var(--mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; margin-bottom: 8px; color: var(--ink-soft); }
 .hfb-item p { margin: 0; font-size: 15px; color: var(--ink); }
 .hfb-item.hope { border-top-color: var(--sky); }
-.hfb-item.fear { border-top-color: var(--coral); }
+.hfb-item.fear { border-top-color: var(--violet); }
 .hfb-item.but { border-top-color: var(--yellow); }
-.hfb-item.but span { color: var(--coral); }
+.hfb-item.but span { color: var(--violet); }
 
 /* case explainer: hook + snapshot, world/journey/zoom flows */
 .hook { max-width: 800px; }
@@ -205,21 +206,22 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 .snapshot-item { background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-sm); padding: 20px; border-top: 3px solid var(--line); }
 .snapshot-item span { display: block; font-family: var(--mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; margin-bottom: 8px; color: var(--ink-soft); }
 .snapshot-item p { margin: 0; font-size: 15px; color: var(--ink); }
-.snapshot-item.problem { border-top-color: var(--coral); }
+.snapshot-item.problem { border-top-color: var(--violet); }
 .snapshot-item.focus { border-top-color: var(--sky); }
 .snapshot-item.outcome { border-top-color: var(--yellow); }
 
-.flow { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 22px 0; }
+.world, .journey, .zoom { max-width: 980px; }
+.flow { display: flex; flex-wrap: nowrap; align-items: center; gap: 8px; margin: 22px 0; }
 .flow-vertical { flex-direction: column; align-items: stretch; }
 .flow-step {
-  flex: 1 1 150px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-sm);
-  padding: 14px 18px; font-size: 14px; font-weight: 700; font-family: var(--mono); color: var(--ink); text-align: center;
+  flex: 1 1 0; min-width: 0; background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-sm);
+  padding: 12px 10px; font-size: 12.5px; font-weight: 700; font-family: var(--mono); color: var(--ink); text-align: center;
 }
 .flow-vertical .flow-step { flex: none; }
-.flow-arrow { flex: 0 0 auto; color: var(--ink-soft); font-size: 20px; line-height: 1; }
+.flow-arrow { flex: 0 0 auto; color: var(--ink-soft); font-size: 18px; line-height: 1; }
 .flow-vertical .flow-arrow { text-align: center; }
-.flow-step.flow-friction { border-color: var(--coral); background: rgba(255,92,114,.08); }
-@media (max-width: 640px) {
+.flow-step.flow-friction { border-color: var(--violet); background: rgba(139,92,246,.08); }
+@media (max-width: 720px) {
   .flow:not(.flow-vertical) { flex-direction: column; align-items: stretch; }
   .flow:not(.flow-vertical) .flow-step { flex: none; }
   .flow:not(.flow-vertical) .flow-arrow { text-align: center; transform: rotate(90deg); }
@@ -227,8 +229,8 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 
 .annotations { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 18px; }
 @media (max-width: 640px) { .annotations { grid-template-columns: 1fr; } }
-.annotation { border-top: 3px solid var(--coral); padding: 16px 2px 0; }
-.annotation span { display: block; font-family: var(--mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; margin-bottom: 6px; color: var(--coral); }
+.annotation { border-top: 3px solid var(--violet); padding: 16px 2px 0; }
+.annotation span { display: block; font-family: var(--mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; margin-bottom: 6px; color: var(--violet); }
 .annotation p { margin: 0; font-size: 14.5px; color: var(--ink-soft); }
 
 .context-note { color: var(--ink-soft); font-size: 15.5px; border-left: 3px solid var(--blue); padding-left: 16px; margin-top: 20px; }
@@ -247,7 +249,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 
 .takeaway { font-family: var(--serif); font-style: italic; font-size: clamp(21px, 2.8vw, 26px); line-height: 1.35; font-weight: 400; color: var(--ink); margin: 0 0 18px; }
 .unsolved { color: var(--ink-soft); font-size: 15.5px; background: var(--paper); border: 1px dashed var(--line); border-radius: var(--r-sm); padding: 16px 18px; margin: 0; }
-.unsolved strong { color: var(--coral); }
+.unsolved strong { color: var(--violet); }
 
 /* image slots */
 .shot { margin: 0 auto 8px; max-width: 720px; }
