@@ -398,6 +398,35 @@ const site = {
           ],
           closing:
             "None of these choices were about picking the fanciest option — they were about deciding, case by case, how much judgment stays with Arjun and how much moves to the system. The common thread across all three: AI does the reading; Arjun keeps the decision.",
+          fallback: {
+            intro: "AI reads a tender wrong sometimes — an unusual PDF layout, a scanned document, a clause phrased in a way the model misses. Every AI step in this flow was designed with a manual way out, so a bad read slows Arjun down instead of quietly breaking his bid.",
+            cases: [
+              {
+                scenario: "AI misses or misreads a requirement while extracting the document",
+                fix: "Every extracted criterion is editable — Arjun can add a missed requirement, correct a wrong one, or re-upload a cleaner copy of the document to re-run extraction.",
+              },
+              {
+                scenario: "AI can't confidently match a requirement to a company document",
+                fix: "Unmatched items are flagged as \"needs review\" rather than silently marked missing — Arjun manually searches or uploads the right document himself.",
+              },
+              {
+                scenario: "AI generates a checklist that doesn't fit how this tender actually works",
+                fix: "The checklist is a starting draft, not a locked list — tasks can be added, deleted, reassigned, or reordered freely after generation.",
+              },
+              {
+                scenario: "AI is unavailable, or the document fails to parse at all",
+                fix: "Every screen still works as a manual tool with AI switched off — register, checklist, and requirements can all be built by hand from a blank state.",
+              },
+            ],
+          },
+          outcome: {
+            metrics: [
+              { label: "Time to read & extract a 140-page tender document", before: "~3–4 hrs of manual reading & note-taking", after: "~30–40 min reviewing AI-extracted criteria & dates" },
+              { label: "Requirements missed or caught only at final review", before: "Buried clauses found late, close to deadline", after: "Flagged and confirmed early, against the full extracted list" },
+              { label: "Time to build a tender's task checklist", before: "~1–2 hrs typing tasks from scratch", after: "~10–15 min reviewing an auto-generated checklist" },
+              { label: "Late-stage scrambles before submission", before: "Common — driven by requirements found too late", after: "Rare — dates and gaps are visible from day one" },
+            ],
+          },
         },
       },
       story: {
@@ -825,6 +854,35 @@ const persona = (pe) => `
       )
       .join("")}
     <p class="context-note">${esc(pe.closing)}</p>
+  </section>
+
+  <section class="case-block" style="max-width:980px">
+    <p class="beat">Designing for fallback</p>
+    <h2>What happens when AI doesn't get it right</h2>
+    <p>${esc(pe.fallback.intro)}</p>
+    <div class="rgrid-2">${pe.fallback.cases
+      .map(
+        (c) => `<div class="rcard c-blue"><p class="rk">If this happens</p><h4>${esc(c.scenario)}</h4><p>${esc(c.fix)}</p></div>`
+      )
+      .join("")}</div>
+  </section>
+
+  <section class="case-block" style="max-width:980px">
+    <p class="beat">Outcome</p>
+    <h2>What these choices are meant to change</h2>
+    <div class="metric-grid">${pe.outcome.metrics
+      .map(
+        (m) => `
+      <div class="metric-card">
+        <p class="rk">${esc(m.label)}</p>
+        <div class="metric-row">
+          <div class="metric-col"><span class="metric-tag before">Before</span><p>${esc(m.before)}</p></div>
+          <div class="metric-arrow">→</div>
+          <div class="metric-col"><span class="metric-tag after">After</span><p>${esc(m.after)}</p></div>
+        </div>
+      </div>`
+      )
+      .join("")}</div>
   </section>
 `;
 
