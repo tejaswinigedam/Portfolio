@@ -793,6 +793,7 @@ const research = (r, p) => `
     <p class="beat">Where it landed</p>
     <h2>The takeaway</h2>
     <p class="takeaway">${esc(r.takeaway)}</p>
+    <p class="context-note"><strong>What's next.</strong> Part two of this project picks up where the research stops — turning these findings into actual design fixes, coming soon.</p>
     <details class="role-full">
       <summary>The full scope of what I did</summary>
       <ul class="ticks">${p.role.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
