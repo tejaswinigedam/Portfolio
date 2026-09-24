@@ -62,6 +62,105 @@
     <div class="annotations"><div class="annotation"><span>Cross-check</span><p>Requirements from the tender had to be manually compared with the company's existing documents and credentials.</p></div><div class="annotation"><span>Prepare</span><p>Once eligible, the team had to figure out which documents needed editing or creation.</p></div><div class="annotation"><span>Tasks</span><p>The work then had to be manually translated into a task list.</p></div></div>
   </section>
 
+  <section class="case-block" style="max-width:980px">
+    <p class="beat">A day in the life</p>
+    <div class="persona-head">
+      <div class="avatar">AV</div>
+      <h2 style="margin:0">Meet Arjun Verma, Tender Manager</h2>
+    </div>
+    <p>Arjun manages twelve live tenders across three states for a mid-sized infrastructure firm. On any given day, he's the last line of defense between a hundred-page tender document and a bid his company can actually stand behind.</p>
+    <div class="mtimeline"><div class="mt-row"><span class="mt-day">9:00 AM</span><span class="mt-text">Opens his inbox to three new tender notifications and two stakeholders asking "are we bidding on this one?"</span></div><div class="mt-row"><span class="mt-day">11:30 AM</span><span class="mt-text">Starts reading a 140-page tender document, manually noting eligibility criteria and deadlines on a separate sheet.</span></div><div class="mt-row"><span class="mt-day">1:15 PM</span><span class="mt-text">Cross-checks the tender's document requirements against the company's compliance folder — some certificates turn out to be outdated.</span></div><div class="mt-row"><span class="mt-day">3:00 PM</span><span class="mt-text">Assigns sections of the bid response to five teammates over email, with no single place to see who owns what.</span></div><div class="mt-row"><span class="mt-day">5:30 PM</span><span class="mt-text">Finds a sub-clause buried on page 87 that needs a document format he doesn't have ready — two days before submission.</span></div><div class="mt-row"><span class="mt-day">7:00 PM</span><span class="mt-text">Still checking whether every requirement has been addressed before he lets himself stop for the day.</span></div></div>
+  </section>
+
+  <section class="case-block" style="max-width:980px">
+    <p class="beat">Ideation</p>
+    <h2>From problem to solution — the roads not taken</h2>
+    <p>Three connected problems repeat across Arjun's week, no matter which tender he's working on — read the document, check what's missing, then turn the gaps into work. For each step, I explored a few different directions before deciding what to build.</p>
+    
+    <div class="solution-set">
+      <h4>1. How do you make sense of a 140-page tender document — its requirements, eligibility, and dates?</h4>
+      
+      <div class="variant-grid">
+        <div class="variant-card">
+          
+          <h5>Manual read-through with margin notes</h5>
+          <p class="vdesc">Arjun reads the full PDF top to bottom, highlighting clauses and eligibility criteria by hand and jotting deadlines onto a separate sheet.</p>
+          <ul class="pc pros"><li>Nothing gets summarized wrong — every word passes under his eyes.</li></ul>
+          <ul class="pc cons"><li>Takes hours per document, and the notes live separately from the source — easy to lose track of.</li></ul>
+        </div>
+        <div class="variant-card">
+          
+          <h5>AI-generated summary only</h5>
+          <p class="vdesc">AI reads the document and returns a short paragraph summarizing what the tender is about and its key requirements.</p>
+          <ul class="pc pros"><li>Fast — gives Arjun the gist in seconds.</li></ul>
+          <ul class="pc cons"><li>A summary can't be checked against the source — if AI misses a clause, there's no way to know without rereading the whole document anyway.</li></ul>
+        </div>
+        <div class="variant-card selected">
+          <span class="variant-badge">Selected</span>
+          <h5>Side-by-side AI extraction — document, structured criteria, and dates</h5>
+          <p class="vdesc">The original document sits on the left with key clauses auto-highlighted; on the right, AI pulls every requirement and eligibility criterion into a clean, structured list linked back to its source clause — no comparison yet, just what the tender actually asks for. Every date mentioned in the document is pulled out separately into both a timeline and a calendar view.</p>
+          <ul class="pc pros"><li>Keeps the source document as the reference, so nothing is taken on faith</li><li>Turns scattered dates buried in prose into something Arjun can actually plan around</li></ul>
+          <ul class="pc cons"><li>Depends on accurate document parsing — an unusually formatted or poorly scanned tender can throw off highlights and dates, which Arjun still has to catch.</li></ul>
+        </div></div>
+      <div class="proto-ph"><span>Prototype placeholder — the final interaction for this flow goes here</span></div>
+    </div>
+    <div class="solution-set">
+      <h4>2. Which requirements has the company already met, and which are missing?</h4>
+      
+      <div class="variant-grid">
+        <div class="variant-card">
+          
+          <h5>Manual side-by-side checklist</h5>
+          <p class="vdesc">A split view where Arjun reads the tender text on one side and manually ticks off matching company documents on the other.</p>
+          <ul class="pc pros"><li>Full transparency — nothing hidden from Arjun's own judgment.</li></ul>
+          <ul class="pc cons"><li>Still requires reading the entire document — doesn't reduce the core time cost.</li></ul>
+        </div>
+        <div class="variant-card">
+          
+          <h5>Fully automated AI matcher</h5>
+          <p class="vdesc">AI reads the tender and automatically marks each requirement met or unmet against the company's document library — no review step.</p>
+          <ul class="pc pros"><li>Fastest possible option — zero manual reading.</li></ul>
+          <ul class="pc cons"><li>A wrong match on a mandatory clause could disqualify the bid with no human checkpoint.</li></ul>
+        </div>
+        <div class="variant-card selected">
+          <span class="variant-badge">Selected</span>
+          <h5>AI-suggested matches, manually confirmed</h5>
+          <p class="vdesc">AI pre-matches each requirement to a company document and flags gaps, but every match needs a one-tap confirm or reject from Arjun before it counts.</p>
+          <ul class="pc pros"><li>Cuts reading time dramatically</li><li>Keeps Arjun as the final judgment call on anything that matters</li></ul>
+          <ul class="pc cons"><li>Still needs Arjun's attention on every item — faster attention, not zero attention.</li></ul>
+        </div></div>
+      <div class="proto-ph"><span>Prototype placeholder — the final interaction for this flow goes here</span></div>
+    </div>
+    <div class="solution-set">
+      <h4>3. How do the extracted requirements and gaps turn into a set of trackable tasks?</h4>
+      
+      <div class="variant-grid">
+        <div class="variant-card">
+          
+          <h5>Build the checklist from scratch</h5>
+          <p class="vdesc">Arjun ignores the extracted criteria and gap list, and manually types every task, owner, and due date into a spreadsheet for each new tender.</p>
+          <ul class="pc pros"><li>Nothing about the tender surprises him — he wrote every line himself.</li></ul>
+          <ul class="pc cons"><li>Repetitive and error-prone, and throws away the extraction and gap-check work already done in steps 1 and 2.</li></ul>
+        </div>
+        <div class="variant-card">
+          
+          <h5>Fixed category templates</h5>
+          <p class="vdesc">Pick a tender category (e.g. "railways") and get a pre-built generic checklist, unrelated to what was actually extracted or flagged as missing.</p>
+          <ul class="pc pros"><li>Faster than starting from scratch.</li></ul>
+          <ul class="pc cons"><li>Generic templates miss clauses unique to this tender — Arjun still edits it by hand, and it ignores the gaps already found.</li></ul>
+        </div>
+        <div class="variant-card selected">
+          <span class="variant-badge">Selected</span>
+          <h5>Auto-generate tasks from the extracted checklist and gaps</h5>
+          <p class="vdesc">Every requirement pulled out in step 1 and every gap flagged in step 2 becomes a task automatically — owner, due date, and linked document slot pre-filled — which Arjun can then edit, reassign, and reorder.</p>
+          <ul class="pc pros"><li>Builds directly on work already done — nothing gets re-read or re-typed</li><li>Tasks map one-to-one to the tender's actual requirements, not a generic template</li></ul>
+          <ul class="pc cons"><li>Needs a post-generation review from Arjun to feel confident the task breakdown makes sense.</li></ul>
+        </div></div>
+      <div class="proto-ph"><span>Prototype placeholder — the final interaction for this flow goes here</span></div>
+    </div>
+    <p class="context-note">None of these choices were about picking the fanciest option — they were about deciding, case by case, how much judgment stays with Arjun and how much moves to the system. The common thread across all three: AI does the reading; Arjun keeps the decision.</p>
+  </section>
+
   </div>
 
   <nav class="case-nav">

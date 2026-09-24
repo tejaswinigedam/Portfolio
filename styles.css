@@ -279,6 +279,42 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 .score.tbd { color: var(--ink-soft); letter-spacing: 0; font-style: italic; font-family: var(--serif); }
 .fine { color: var(--ink-soft); font-size: 13.5px; font-family: var(--mono); }
 
+/* ---------- Persona / ideation (Tendrix) ---------- */
+.persona-head { display: flex; align-items: center; gap: 18px; margin-bottom: 18px; }
+.avatar {
+  flex: none; width: 60px; height: 60px; border-radius: 50%;
+  background: var(--accent); color: var(--accent-ink);
+  display: grid; place-items: center;
+  font-family: var(--display); font-weight: 700; font-size: 20px;
+}
+.solution-set { margin: 30px 0; }
+.solution-set h4 { font-family: var(--display); font-size: 17px; margin: 0 0 14px; }
+.variant-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+@media (max-width: 900px) { .variant-grid { grid-template-columns: 1fr; } }
+.variant-card { position: relative; background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-sm); padding: 18px; }
+.variant-card.selected { border: 2px solid var(--accent); }
+.variant-badge {
+  position: absolute; top: -11px; right: 14px;
+  background: var(--accent); color: var(--accent-ink);
+  font-family: var(--mono); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+  padding: 4px 10px; border-radius: 500px;
+}
+.variant-card h5 { margin: 0 0 8px; font-family: var(--display); font-size: 14.5px; }
+.variant-card .vdesc { margin: 0 0 12px; font-size: 13.5px; color: var(--ink-soft); }
+.pc { list-style: none; margin: 0 0 10px; padding: 0; font-size: 13px; }
+.pc:last-child { margin-bottom: 0; }
+.pc li { position: relative; padding-left: 18px; margin-bottom: 5px; color: var(--ink-soft); }
+.pc li:last-child { margin-bottom: 0; }
+.pc.pros li::before { content: "+"; position: absolute; left: 0; color: #1f8f5a; font-weight: 700; font-family: var(--mono); }
+.pc.cons li::before { content: "–"; position: absolute; left: 0; color: #b3261e; font-weight: 700; font-family: var(--mono); }
+
+.proto-ph {
+  margin-top: 18px; padding: 30px; text-align: center;
+  border: 1px dashed var(--line); border-radius: var(--r-md);
+  color: var(--ink-soft); font-family: var(--mono); font-size: 12.5px; text-transform: uppercase; letter-spacing: .04em;
+  background: repeating-linear-gradient(45deg, #efe9dc, #efe9dc 12px, #eae3d3 12px, #eae3d3 24px);
+}
+
 /* ---------- Research case study primitives ---------- */
 .rgrid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 8px; }
 .rgrid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 8px; }
@@ -292,8 +328,8 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 .rcard.c-blue { border-top-color: var(--blue); }
 
 .mtimeline { display: grid; gap: 2px; margin-top: 8px; }
-.mtimeline .mt-row { display: grid; grid-template-columns: 24px 1fr; gap: 12px; padding: 8px 0; }
-.mtimeline .mt-day { font-family: var(--mono); font-size: 13px; color: var(--blue); font-weight: 700; }
+.mtimeline .mt-row { display: grid; grid-template-columns: 68px 1fr; gap: 12px; padding: 8px 0; }
+.mtimeline .mt-day { font-family: var(--mono); font-size: 12.5px; color: var(--blue); font-weight: 700; white-space: nowrap; }
 .mtimeline .mt-text { font-size: 14.5px; color: var(--ink-soft); }
 
 .table-wrap { overflow-x: auto; margin-top: 10px; }

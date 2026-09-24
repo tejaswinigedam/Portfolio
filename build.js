@@ -302,6 +302,103 @@ const site = {
             { label: "Tasks", text: "The work then had to be manually translated into a task list." },
           ],
         },
+        persona: {
+          initials: "AV",
+          name: "Meet Arjun Verma, Tender Manager",
+          intro:
+            "Arjun manages twelve live tenders across three states for a mid-sized infrastructure firm. On any given day, he's the last line of defense between a hundred-page tender document and a bid his company can actually stand behind.",
+          day: [
+            { time: "9:00 AM", text: "Opens his inbox to three new tender notifications and two stakeholders asking \"are we bidding on this one?\"" },
+            { time: "11:30 AM", text: "Starts reading a 140-page tender document, manually noting eligibility criteria and deadlines on a separate sheet." },
+            { time: "1:15 PM", text: "Cross-checks the tender's document requirements against the company's compliance folder — some certificates turn out to be outdated." },
+            { time: "3:00 PM", text: "Assigns sections of the bid response to five teammates over email, with no single place to see who owns what." },
+            { time: "5:30 PM", text: "Finds a sub-clause buried on page 87 that needs a document format he doesn't have ready — two days before submission." },
+            { time: "7:00 PM", text: "Still checking whether every requirement has been addressed before he lets himself stop for the day." },
+          ],
+          problemsIntro: "Three connected problems repeat across Arjun's week, no matter which tender he's working on — read the document, check what's missing, then turn the gaps into work. For each step, I explored a few different directions before deciding what to build.",
+          sets: [
+            {
+              problem: "How do you make sense of a 140-page tender document — its requirements, eligibility, and dates?",
+              variations: [
+                {
+                  name: "Manual read-through with margin notes",
+                  desc: "Arjun reads the full PDF top to bottom, highlighting clauses and eligibility criteria by hand and jotting deadlines onto a separate sheet.",
+                  pros: ["Nothing gets summarized wrong — every word passes under his eyes."],
+                  cons: ["Takes hours per document, and the notes live separately from the source — easy to lose track of."],
+                  selected: false,
+                },
+                {
+                  name: "AI-generated summary only",
+                  desc: "AI reads the document and returns a short paragraph summarizing what the tender is about and its key requirements.",
+                  pros: ["Fast — gives Arjun the gist in seconds."],
+                  cons: ["A summary can't be checked against the source — if AI misses a clause, there's no way to know without rereading the whole document anyway."],
+                  selected: false,
+                },
+                {
+                  name: "Side-by-side AI extraction — document, structured criteria, and dates",
+                  desc: "The original document sits on the left with key clauses auto-highlighted; on the right, AI pulls every requirement and eligibility criterion into a clean, structured list linked back to its source clause — no comparison yet, just what the tender actually asks for. Every date mentioned in the document is pulled out separately into both a timeline and a calendar view.",
+                  pros: ["Keeps the source document as the reference, so nothing is taken on faith", "Turns scattered dates buried in prose into something Arjun can actually plan around"],
+                  cons: ["Depends on accurate document parsing — an unusually formatted or poorly scanned tender can throw off highlights and dates, which Arjun still has to catch."],
+                  selected: true,
+                },
+              ],
+            },
+            {
+              problem: "Which requirements has the company already met, and which are missing?",
+              variations: [
+                {
+                  name: "Manual side-by-side checklist",
+                  desc: "A split view where Arjun reads the tender text on one side and manually ticks off matching company documents on the other.",
+                  pros: ["Full transparency — nothing hidden from Arjun's own judgment."],
+                  cons: ["Still requires reading the entire document — doesn't reduce the core time cost."],
+                  selected: false,
+                },
+                {
+                  name: "Fully automated AI matcher",
+                  desc: "AI reads the tender and automatically marks each requirement met or unmet against the company's document library — no review step.",
+                  pros: ["Fastest possible option — zero manual reading."],
+                  cons: ["A wrong match on a mandatory clause could disqualify the bid with no human checkpoint."],
+                  selected: false,
+                },
+                {
+                  name: "AI-suggested matches, manually confirmed",
+                  desc: "AI pre-matches each requirement to a company document and flags gaps, but every match needs a one-tap confirm or reject from Arjun before it counts.",
+                  pros: ["Cuts reading time dramatically", "Keeps Arjun as the final judgment call on anything that matters"],
+                  cons: ["Still needs Arjun's attention on every item — faster attention, not zero attention."],
+                  selected: true,
+                },
+              ],
+            },
+            {
+              problem: "How do the extracted requirements and gaps turn into a set of trackable tasks?",
+              variations: [
+                {
+                  name: "Build the checklist from scratch",
+                  desc: "Arjun ignores the extracted criteria and gap list, and manually types every task, owner, and due date into a spreadsheet for each new tender.",
+                  pros: ["Nothing about the tender surprises him — he wrote every line himself."],
+                  cons: ["Repetitive and error-prone, and throws away the extraction and gap-check work already done in steps 1 and 2."],
+                  selected: false,
+                },
+                {
+                  name: "Fixed category templates",
+                  desc: "Pick a tender category (e.g. \"railways\") and get a pre-built generic checklist, unrelated to what was actually extracted or flagged as missing.",
+                  pros: ["Faster than starting from scratch."],
+                  cons: ["Generic templates miss clauses unique to this tender — Arjun still edits it by hand, and it ignores the gaps already found."],
+                  selected: false,
+                },
+                {
+                  name: "Auto-generate tasks from the extracted checklist and gaps",
+                  desc: "Every requirement pulled out in step 1 and every gap flagged in step 2 becomes a task automatically — owner, due date, and linked document slot pre-filled — which Arjun can then edit, reassign, and reorder.",
+                  pros: ["Builds directly on work already done — nothing gets re-read or re-typed", "Tasks map one-to-one to the tender's actual requirements, not a generic template"],
+                  cons: ["Needs a post-generation review from Arjun to feel confident the task breakdown makes sense."],
+                  selected: true,
+                },
+              ],
+            },
+          ],
+          closing:
+            "None of these choices were about picking the fanciest option — they were about deciding, case by case, how much judgment stays with Arjun and how much moves to the system. The common thread across all three: AI does the reading; Arjun keeps the decision.",
+        },
       },
       story: {
         scene:
@@ -685,6 +782,49 @@ const explainer = (e) => `
     <div class="annotations">${e.zoom.annotations
       .map((a) => `<div class="annotation"><span>${esc(a.label)}</span><p>${esc(a.text)}</p></div>`)
       .join("")}</div>
+  </section>
+${e.persona ? persona(e.persona) : ""}`;
+
+const persona = (pe) => `
+  <section class="case-block" style="max-width:980px">
+    <p class="beat">A day in the life</p>
+    <div class="persona-head">
+      <div class="avatar">${esc(pe.initials)}</div>
+      <h2 style="margin:0">${esc(pe.name)}</h2>
+    </div>
+    <p>${esc(pe.intro)}</p>
+    <div class="mtimeline">${pe.day
+      .map((d) => `<div class="mt-row"><span class="mt-day">${esc(d.time)}</span><span class="mt-text">${esc(d.text)}</span></div>`)
+      .join("")}</div>
+  </section>
+
+  <section class="case-block" style="max-width:980px">
+    <p class="beat">Ideation</p>
+    <h2>From problem to solution — the roads not taken</h2>
+    <p>${esc(pe.problemsIntro)}</p>
+    ${pe.sets
+      .map(
+        (s, i) => `
+    <div class="solution-set">
+      <h4>${i + 1}. ${esc(s.problem)}</h4>
+      ${s.illo ? `<div class="issue-illo">${s.illo}</div>` : ""}
+      <div class="variant-grid">${s.variations
+        .map(
+          (v) => `
+        <div class="variant-card${v.selected ? " selected" : ""}">
+          ${v.selected ? `<span class="variant-badge">Selected</span>` : ""}
+          <h5>${esc(v.name)}</h5>
+          <p class="vdesc">${esc(v.desc)}</p>
+          <ul class="pc pros">${v.pros.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
+          <ul class="pc cons">${v.cons.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
+        </div>`
+        )
+        .join("")}</div>
+      <div class="proto-ph"><span>Prototype placeholder — the final interaction for this flow goes here</span></div>
+    </div>`
+      )
+      .join("")}
+    <p class="context-note">${esc(pe.closing)}</p>
   </section>
 `;
 
