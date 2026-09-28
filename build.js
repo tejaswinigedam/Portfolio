@@ -229,14 +229,14 @@ const site = {
       ],
     },
     {
-      id: "Tendrix",
-      title: "Tendrix — AI Bid Management System",
+      id: "BidFlow",
+      title: "BidFlow — AI Bid Management System",
       images: {
-        cover: "img/tendrix-dashboard.jpg",
+        cover: "img/bidflow-dashboard.jpg",
         coverCaption: "The Opportunities dashboard — pipeline, deadline countdown, and the stage tracker that shows what's done, pending, and needs attention. (Client details anonymized.)",
-        a: "img/tendrix-register.jpg",
+        a: "img/bidflow-register.jpg",
         aCaption: "Registering a tender: a guided 7-step flow with “Register with AI” to read the bid document and pre-fill the details.",
-        b: "img/tendrix-checklist.jpg",
+        b: "img/bidflow-checklist.jpg",
         bCaption: "The checklist turns a tender into categorized, assignable tasks — each with an owner, due date, status, and linked file.",
       },
       short: "A 0→1, AI-powered tender & bid management platform. Founding Designer.",
@@ -465,6 +465,7 @@ const site = {
     },
     {
       id: "Educator AI Platform",
+      comingSoon: true,
       title: "Educator AI Platform",
       short: "An AI-assisted grading platform that keeps instructors in control.",
       designed:
@@ -524,6 +525,7 @@ const site = {
     },
     {
       id: "Wellytics",
+      comingSoon: true,
       title: "Wellytics — AI-Powered EMR Platform",
       short: "An intelligent EMR that supports doctors across the whole patient-care journey.",
       designed:
@@ -584,6 +586,7 @@ const site = {
     },
     {
       id: "Shift Management Platform",
+      comingSoon: true,
       title: "Shift Management Platform",
       short: "A healthcare workforce platform for managing nurse shifts and staffing.",
       designed:
@@ -642,6 +645,7 @@ const site = {
     },
     {
       id: "Nurse & Hospital Platform",
+      comingSoon: true,
       title: "Nurse & Hospital Platform",
       short: "A two-sided marketplace connecting nurses with hospitals.",
       designed:
@@ -700,6 +704,7 @@ const site = {
     },
     {
       id: "Nurse Compliance & Verification Platform",
+      comingSoon: true,
       title: "Nurse Compliance & Verification Platform",
       short: "A transparent workflow for collecting and verifying nurse credentials.",
       designed:
@@ -1036,8 +1041,18 @@ const footer = (rel = "") => `
 
 // ---------- index.html ----------
 const cards = site.projects
-  .map(
-    (p, i) => `
+  .map((p, i) =>
+    p.comingSoon
+      ? `
+    <div class="card card-soon">
+      <div class="card-media">0${i + 1}</div>
+      <div class="card-body">
+        <h3>${esc(p.title)}</h3>
+        <p>${esc(p.short)}</p>
+      </div>
+      <span class="card-cta">Case study coming soon</span>
+    </div>`
+      : `
     <a class="card" href="work/${p.slug}.html">
       <div class="card-media">0${i + 1}</div>
       <div class="card-body">
@@ -1108,9 +1123,11 @@ fs.writeFileSync(path.join(OUT, "index.html"), index);
 const workDir = path.join(OUT, "work");
 fs.mkdirSync(workDir, { recursive: true });
 
-site.projects.forEach((p, idx) => {
-  const prev = site.projects[(idx - 1 + site.projects.length) % site.projects.length];
-  const next = site.projects[(idx + 1) % site.projects.length];
+const linkedProjects = site.projects.filter((p) => !p.comingSoon);
+
+linkedProjects.forEach((p, idx) => {
+  const prev = linkedProjects[(idx - 1 + linkedProjects.length) % linkedProjects.length];
+  const next = linkedProjects[(idx + 1) % linkedProjects.length];
 
   const scoreRows = Object.entries(p.scores)
     .map(([k, v]) => `<div class="score-row"><span>${esc(k)}</span>${stars(v)}</div>`)
@@ -1219,4 +1236,4 @@ ${footer("../")}
   fs.writeFileSync(path.join(workDir, `${p.slug}.html`), page);
 });
 
-console.log("Generated index.html and", site.projects.length, "case studies.");
+console.log("Generated index.html and", linkedProjects.length, "case studies.");
