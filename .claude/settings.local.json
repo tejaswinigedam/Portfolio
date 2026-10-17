@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"try{require.resolve\\('pdf-parse'\\);console.log\\('pdf-parse ok'\\)}catch\\(e\\){console.log\\('no pdf-parse'\\)}\")",
+      "WebFetch(domain:screeching-volleyball-c97.notion.site)"
+    ]
+  }
+}

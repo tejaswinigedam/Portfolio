@@ -230,7 +230,20 @@ const site = {
     },
     {
       id: "BidFlow",
-      title: "BidFlow — AI Bid Management System",
+      title: "Designing the workflow behind AI-powered tender management",
+      product: "BidFlow",
+      scrollFx: true,
+      productDesc: "AI-powered tender analysis and bid-management software",
+      scope: "Product thinking, workflow design, information architecture, interaction design and UI",
+      tags: [
+        "0→1 Product Design",
+        "Founding Designer",
+        "AI-Native Design",
+        "Designing for AI Limitations",
+        "Human + AI Collaboration",
+        "Enterprise UX",
+        "Designing for Trust & Verification",
+      ],
       images: {
         cover: "img/bidflow-dashboard.jpg",
         coverCaption: "The Opportunities dashboard — pipeline, deadline countdown, and the stage tracker that shows what's done, pending, and needs attention. (Client details anonymized.)",
@@ -239,7 +252,7 @@ const site = {
         b: "img/bidflow-checklist.jpg",
         bCaption: "The checklist turns a tender into categorized, assignable tasks — each with an owner, due date, status, and linked file.",
       },
-      short: "A 0→1, AI-powered tender & bid management platform. Founding Designer.",
+      short: "Designing BidFlow from 0→1 to help tender teams understand requirements, verify eligibility, and turn them into actionable work.",
       designed:
         "An AI-powered tender management system that helps companies move from a manual bid process to a smarter, more timely, automated, and accurate workflow. It helps teams manage tenders efficiently, reduce repetitive manual work, organize critical information, and ensure bids are completed accurately and on time.",
       who: "Companies and teams involved in tender and bid management — particularly those handling multiple tenders, documents, deadlines, and approval processes.",
@@ -263,170 +276,151 @@ const site = {
       timeline: "7 months",
       permission: "",
       explainer: {
-        hookTitle: "The Hours Behind Every Tender Submission",
-        hookSub:
-          "How I explored a manual tender-preparation workflow and turned scattered steps into a more structured process.",
         snapshot: [
-          { label: "Problem", cls: "problem", text: "Tender teams spend hours reading requirements, checking eligibility and preparing the work needed for submission." },
-          { label: "Focus", cls: "focus", text: "Understand where the manual effort comes from and explore ways to connect requirements, company documents and actions." },
-          { label: "Outcome", cls: "outcome", text: "A structured workflow designed to reduce repetitive work and make the process easier to execute." },
+          { label: "Problem", cls: "problem", text: "Tender teams spent hours reading lengthy tender documents, cross-checking eligibility, gathering documents, and manually turning requirements into bid tasks. The process was fragmented, making it easy to miss requirements and slowing down decisions." },
+          { label: "Solution", cls: "focus", text: "A unified bid workflow that uses AI to extract and organize tender requirements, surface eligibility gaps, and turn requirements into actionable tasks and document checklists, while keeping users in control of verification and decisions." },
+          { label: "Impact", cls: "outcome", text: "The product moved from zero to its first customers, and the team observed a substantial reduction in the time from receiving a tender to preparing a proposal. A repeatable workflow now connects tender analysis to bid preparation." },
         ],
-        world: {
-          beat: "Context",
-          heading: "First, what is a tender?",
-          steps: ["Government / enterprise needs something", "Publishes a tender", "Companies compete to win the contract"],
-          closing:
-            "The company I worked with helps businesses discover these opportunities and manage the work required to bid for them.",
+        scene: {
+          context: {
+            beat: "Context",
+            heading: "First, what is a tender?",
+            notes: [
+              "Government / enterprise needs something",
+              "Publishes a tender",
+              "Companies compete to win the contract",
+            ],
+            closing:
+              "The company I worked with helps businesses discover these opportunities and manage the work required to bid for them.",
+          },
+          team: {
+            beat: "The team",
+            heading: "So what does a tender team actually do?",
+            steps: [
+              { title: "Find an opportunity", text: "One tender document arrives on an otherwise empty desk." },
+              { title: "Understand requirements", text: "Pages turn. Clauses get highlighted. Tabs mark the sections that matter." },
+              { title: "Check eligibility", text: "A checklist appears beside the document, with conditions to verify." },
+              { title: "Prepare the bid", text: "Requirements peel away from the document and become tasks: find the certificate, confirm the owner, get the signature." },
+              { title: "Submit", text: "The team assembles the final documents, but the desk is still full of all the work it took to get there." },
+            ],
+            final:
+              "The interesting part starts after a tender is found: the team has to turn a long document into a clear set of requirements, checks, documents and actions.",
+          },
         },
-        journey: {
-          beat: "The team",
-          heading: "So what does a tender team actually do?",
-          steps: ["Find an opportunity", "Understand requirements", "Check eligibility", "Prepare the bid", "Submit"],
+        challenge: {
+          beat: "The challenge",
+          heading: "Turning a tender into an actionable plan",
+          paragraphs: [
+            "Preparing a tender response involved much more than reading a document and writing a proposal.",
+            "Bid managers had to review lengthy tender documents, identify eligibility criteria, evaluate compliance against their company's capabilities, track deadlines, and identify every document required for submission.",
+            "For each required document, they also needed to determine whether it already existed, where to source it, which team or person owned it, and whether it needed to be newly prepared, reviewed, signed or stamped. Much of this work involved manually reading, copying, organising and cross-checking information across documents and teams.",
+          ],
+          opportunityHeading: "The design opportunity",
+          opportunityIntro:
+            "The engineering team was building an AI agent to analyse tender documents. My challenge was to translate that analysis into an experience that helped bid managers make decisions and move work forward. Two questions guided the design:",
+          questions: [
+            "How might we make AI-extracted tender information understandable, verifiable and actionable?",
+            "How might we help bid managers coordinate the work required to prepare a complete tender response?",
+          ],
           closing:
-            "The interesting part starts after a tender is found: the team has to turn a long document into a clear set of requirements, checks, documents and actions.",
+            "The opportunity was not simply to automate document reading. It was to connect tender analysis to the entire preparation workflow.",
         },
-        zoom: {
-          beat: "The friction",
-          heading: "This is where the manual work begins",
+        manual: {
+          beat: "The manual workflow",
+          heading: "The work hidden behind every tender",
           steps: [
-            { text: "Tender document" },
-            { text: "Read requirements" },
-            { text: "Identify dates & eligibility" },
-            { text: "Cross-check company documents", friction: true },
-            { text: "Prepare / edit documents", friction: true },
-            { text: "Create tasks & checklist", friction: true },
-          ],
-          annotations: [
-            { label: "Cross-check", text: "Requirements from the tender had to be manually compared with the company's existing documents and credentials." },
-            { label: "Prepare", text: "Once eligible, the team had to figure out which documents needed editing or creation." },
-            { label: "Tasks", text: "The work then had to be manually translated into a task list." },
-          ],
-        },
-        persona: {
-          initials: "AV",
-          name: "Meet Arjun Verma, Tender Manager",
-          intro:
-            "Arjun manages twelve live tenders across three states for a mid-sized infrastructure firm. On any given day, he's the last line of defense between a hundred-page tender document and a bid his company can actually stand behind.",
-          day: [
-            { time: "9:00 AM", text: "Opens his inbox to three new tender notifications and two stakeholders asking \"are we bidding on this one?\"" },
-            { time: "11:30 AM", text: "Starts reading a 140-page tender document, manually noting eligibility criteria and deadlines on a separate sheet." },
-            { time: "1:15 PM", text: "Cross-checks the tender's document requirements against the company's compliance folder — some certificates turn out to be outdated." },
-            { time: "3:00 PM", text: "Assigns sections of the bid response to five teammates over email, with no single place to see who owns what." },
-            { time: "5:30 PM", text: "Finds a sub-clause buried on page 87 that needs a document format he doesn't have ready — two days before submission." },
-            { time: "7:00 PM", text: "Still checking whether every requirement has been addressed before he lets himself stop for the day." },
-          ],
-          problemsIntro: "Three connected problems repeat across Arjun's week, no matter which tender he's working on — read the document, check what's missing, then turn the gaps into work. For each step, I explored a few different directions before deciding what to build.",
-          sets: [
-            {
-              problem: "How do you make sense of a 140-page tender document — its requirements, eligibility, and dates?",
-              variations: [
-                {
-                  name: "Manual read-through with margin notes",
-                  desc: "Arjun reads the full PDF top to bottom, highlighting clauses and eligibility criteria by hand and jotting deadlines onto a separate sheet.",
-                  pros: ["Nothing gets summarized wrong — every word passes under his eyes."],
-                  cons: ["Takes hours per document, and the notes live separately from the source — easy to lose track of."],
-                  selected: false,
-                },
-                {
-                  name: "AI-generated summary only",
-                  desc: "AI reads the document and returns a short paragraph summarizing what the tender is about and its key requirements.",
-                  pros: ["Fast — gives Arjun the gist in seconds."],
-                  cons: ["A summary can't be checked against the source — if AI misses a clause, there's no way to know without rereading the whole document anyway."],
-                  selected: false,
-                },
-                {
-                  name: "Side-by-side AI extraction — document, structured criteria, and dates",
-                  desc: "The original document sits on the left with key clauses auto-highlighted; on the right, AI pulls every requirement and eligibility criterion into a clean, structured list linked back to its source clause — no comparison yet, just what the tender actually asks for. Every date mentioned in the document is pulled out separately into both a timeline and a calendar view.",
-                  pros: ["Keeps the source document as the reference, so nothing is taken on faith", "Turns scattered dates buried in prose into something Arjun can actually plan around"],
-                  cons: ["Depends on accurate document parsing — an unusually formatted or poorly scanned tender can throw off highlights and dates, which Arjun still has to catch."],
-                  selected: true,
-                },
-              ],
-            },
-            {
-              problem: "Which requirements has the company already met, and which are missing?",
-              variations: [
-                {
-                  name: "Manual side-by-side checklist",
-                  desc: "A split view where Arjun reads the tender text on one side and manually ticks off matching company documents on the other.",
-                  pros: ["Full transparency — nothing hidden from Arjun's own judgment."],
-                  cons: ["Still requires reading the entire document — doesn't reduce the core time cost."],
-                  selected: false,
-                },
-                {
-                  name: "Fully automated AI matcher",
-                  desc: "AI reads the tender and automatically marks each requirement met or unmet against the company's document library — no review step.",
-                  pros: ["Fastest possible option — zero manual reading."],
-                  cons: ["A wrong match on a mandatory clause could disqualify the bid with no human checkpoint."],
-                  selected: false,
-                },
-                {
-                  name: "AI-suggested matches, manually confirmed",
-                  desc: "AI pre-matches each requirement to a company document and flags gaps, but every match needs a one-tap confirm or reject from Arjun before it counts.",
-                  pros: ["Cuts reading time dramatically", "Keeps Arjun as the final judgment call on anything that matters"],
-                  cons: ["Still needs Arjun's attention on every item — faster attention, not zero attention."],
-                  selected: true,
-                },
-              ],
-            },
-            {
-              problem: "How do the extracted requirements and gaps turn into a set of trackable tasks?",
-              variations: [
-                {
-                  name: "Build the checklist from scratch",
-                  desc: "Arjun ignores the extracted criteria and gap list, and manually types every task, owner, and due date into a spreadsheet for each new tender.",
-                  pros: ["Nothing about the tender surprises him — he wrote every line himself."],
-                  cons: ["Repetitive and error-prone, and throws away the extraction and gap-check work already done in steps 1 and 2."],
-                  selected: false,
-                },
-                {
-                  name: "Fixed category templates",
-                  desc: "Pick a tender category (e.g. \"railways\") and get a pre-built generic checklist, unrelated to what was actually extracted or flagged as missing.",
-                  pros: ["Faster than starting from scratch."],
-                  cons: ["Generic templates miss clauses unique to this tender — Arjun still edits it by hand, and it ignores the gaps already found."],
-                  selected: false,
-                },
-                {
-                  name: "Auto-generate tasks from the extracted checklist and gaps",
-                  desc: "Every requirement pulled out in step 1 and every gap flagged in step 2 becomes a task automatically — owner, due date, and linked document slot pre-filled — which Arjun can then edit, reassign, and reorder.",
-                  pros: ["Builds directly on work already done — nothing gets re-read or re-typed", "Tasks map one-to-one to the tender's actual requirements, not a generic template"],
-                  cons: ["Needs a post-generation review from Arjun to feel confident the task breakdown makes sense."],
-                  selected: true,
-                },
-              ],
-            },
+            { label: "Read & interpret", text: "Review tender documents and locate relevant requirements, eligibility criteria and legal or compliance conditions." },
+            { label: "Check eligibility", text: "Compare the tender's conditions with the company's qualifications, capabilities and available information." },
+            { label: "Identify documents", text: "Create a list of supporting documents and determine which are already available and which need to be prepared." },
+            { label: "Coordinate teams", text: "Source documents from the appropriate people, then track any required review, signatures, stamps or other actions." },
+            { label: "Manage deadlines", text: "Keep track of timelines, outstanding work and the final proposal documentation." },
           ],
           closing:
-            "None of these choices were about picking the fanciest option — they were about deciding, case by case, how much judgment stays with Arjun and how much moves to the system. The common thread across all three: AI does the reading; Arjun keeps the decision.",
-          fallback: {
-            intro: "AI reads a tender wrong sometimes — an unusual PDF layout, a scanned document, a clause phrased in a way the model misses. Every AI step in this flow was designed with a manual way out, so a bad read slows Arjun down instead of quietly breaking his bid.",
-            cases: [
-              {
-                scenario: "AI misses or misreads a requirement while extracting the document",
-                fix: "Every extracted criterion is editable — Arjun can add a missed requirement, correct a wrong one, or re-upload a cleaner copy of the document to re-run extraction.",
-              },
-              {
-                scenario: "AI can't confidently match a requirement to a company document",
-                fix: "Unmatched items are flagged as \"needs review\" rather than silently marked missing — Arjun manually searches or uploads the right document himself.",
-              },
-              {
-                scenario: "AI generates a checklist that doesn't fit how this tender actually works",
-                fix: "The checklist is a starting draft, not a locked list — tasks can be added, deleted, reassigned, or reordered freely after generation.",
-              },
-              {
-                scenario: "AI is unavailable, or the document fails to parse at all",
-                fix: "Every screen still works as a manual tool with AI switched off — register, checklist, and requirements can all be built by hand from a blank state.",
-              },
-            ],
-          },
-          outcome: {
-            metrics: [
-              { label: "Time to read & extract a 140-page tender document", before: "~3–4 hrs of manual reading & note-taking", after: "~30–40 min reviewing AI-extracted criteria & dates" },
-              { label: "Requirements missed or caught only at final review", before: "Buried clauses found late, close to deadline", after: "Flagged and confirmed early, against the full extracted list" },
-              { label: "Time to build a tender's task checklist", before: "~1–2 hrs typing tasks from scratch", after: "~10–15 min reviewing an auto-generated checklist" },
-              { label: "Late-stage scrambles before submission", before: "Common — driven by requirements found too late", after: "Rare — dates and gaps are visible from day one" },
-            ],
-          },
+            "Extracting text from the tender solved only the first of these steps. The rest of the work happened around the document, which is why analysis alone was not enough.",
+        },
+        discovery: {
+          beat: "Discovery",
+          heading: "Understanding the bid manager's workflow",
+          paragraphs: [
+            "I examined tender documents and the activities involved in preparing a response to understand how information moved from the original tender into the team's day-to-day work.",
+            "This helped frame the problem beyond document analysis. Extracted information needed to support several interconnected activities: eligibility assessment, compliance checks, document collection, task coordination and deadline management.",
+          ],
+          questionsHeading: "Key areas of investigation",
+          questions: [
+            "How could requirements be extracted and organised into a useful summary?",
+            "How could bid managers verify extracted information against the original tender?",
+            "How could the product distinguish between documents already available and those requiring further action?",
+            "How could the analysis translate into a coordinated plan for completing the bid?",
+          ],
+          evidence: "Add tender excerpts, workflow notes or diagrams from discovery",
+        },
+        ideation: {
+          beat: "Ideation",
+          heading: "Four directions for connecting analysis to action",
+          intro:
+            "There was more than one way to turn tender analysis into something useful. These are the directions I weighed, each answering a different part of the bid manager's workload.",
+          directions: [
+            { key: "Direction A", name: "Automated tender summary", desc: "Extract key requirements, eligibility conditions, dates and submission criteria into a prioritised summary.", value: "Reduce the effort required to locate important information." },
+            { key: "Direction B", name: "Eligibility and gap analysis", desc: "Compare tender requirements with company information to surface potential eligibility issues, compliance gaps and missing information.", value: "Help bid managers identify what needs attention before proceeding." },
+            { key: "Direction C", name: "Automated checklist and document tracking", desc: "Generate a list of required documents and tasks, with follow-up actions based on document availability and preparation needs.", value: "Connect tender analysis with execution." },
+            { key: "Direction D", name: "Timeline and bid coordination", desc: "Organise activities around deadlines, task ownership, reminders and submission milestones.", value: "Help teams coordinate the full preparation process." },
+          ],
+          evidence: "Add sketches, wireframes or alternatives explored",
+        },
+        decisions: {
+          beat: "Design decisions",
+          heading: "Three decisions that shaped the product",
+          intro:
+            "Three design challenges shaped how tender analysis became something a bid manager could trust and act on.",
+          items: [
+            {
+              num: "Decision 01",
+              title: "Making AI uncertainty visible",
+              problem: "Tender documents didn't follow a single consistent template. Variations in structure and formatting meant the AI could miss information or extract it incorrectly.",
+              response: "I introduced AI confidence scores to communicate the system's confidence in its extracted information.",
+              tradeoff: "Confidence indicators could help users identify information that deserved closer attention, but they could not guarantee that an extraction was correct. The interface still needed to support verification.",
+              shots: [{ ph: "Add the AI analysis screen showing confidence scores" }],
+              caption: "AI analysis with confidence scores.",
+            },
+            {
+              num: "Decision 02",
+              title: "Keeping the original tender within reach",
+              problem: "Even when the AI produced a useful analysis, bid managers still needed to check whether the information matched the original document.",
+              response: "I designed a quick-access panel to make the analysis accessible alongside the source document, supporting a verification workflow without requiring users to rely solely on the AI's interpretation.",
+              tradeoff: "Presenting the analysis more conveniently could reduce the effort of switching between views, but it did not remove the need for users to review the source.",
+              shots: [
+                { ph: "Add the quick-access panel screen" },
+                { src: "img/bidflow-register.jpg", alt: "BidFlow Register opportunity screen with Open bid document and Register with AI actions" },
+              ],
+              caption: "The quick-access panel (to be added), and where analysis starts: “Register with AI” sits beside “Open bid document”.",
+            },
+            {
+              num: "Decision 03",
+              title: "Extending analysis into bid execution",
+              problem: "Understanding a tender was only the beginning. Bid managers still had to identify missing documents, source existing ones, assign work and prepare new materials before the deadline.",
+              response: "The product extended into document requirements, checklists, task management and timeline-related workflows, so the analysis led directly into the work of preparing the bid.",
+              tradeoff: "A richer workflow could support more of the bid-preparation process, but it also introduced more information and coordination to manage. The design needed to make the next actions clear without overwhelming the user.",
+              shots: [
+                { src: "img/bidflow-dashboard.jpg", alt: "BidFlow Opportunities dashboard with stage tracker and deadline countdown" },
+                { src: "img/bidflow-checklist.jpg", alt: "BidFlow checklist creator with categorized tasks, assignees, due dates and linked files" },
+              ],
+              caption: "The Opportunities dashboard tracks each bid's stage and deadline; the checklist creator turns requirements into categorized, assignable tasks with a due date and linked file. (Client details anonymized.)",
+            },
+          ],
+        },
+        outcome: {
+          beat: "Outcomes",
+          heading: "From document analysis to a broader bid-management workflow",
+          paragraphs: [
+            "The product was designed to bring together tender analysis and the activities required to prepare a response, rather than leaving bid managers to coordinate every step manually.",
+            "During my time on BidFlow, the product progressed from zero customers to its first customers as early sales began, and the team observed a substantial reduction in the time required to move from receiving a tender to preparing a proposal.",
+          ],
+          cards: [
+            { label: "Customers", text: "From zero customers to its first customers as early sales began.", value: "To be added" },
+            { label: "Tender-to-proposal turnaround", text: "A substantial reduction in the time from receiving a tender to preparing a proposal, observed by the team.", value: "To be added" },
+          ],
+          note:
+            "These are early product outcomes, not a controlled measurement of design impact. I would not attribute the turnaround improvement to any single feature.",
         },
       },
       story: {
@@ -775,119 +769,218 @@ const stars = (n) =>
     ? '<span class="score tbd">To be added</span>'
     : `<span class="score" aria-label="${n} out of 5">${"●".repeat(n)}${"○".repeat(5 - n)} <em>${n}/5</em></span>`;
 
+const shotFigure = (shots, caption) => {
+  const parts = shots.map((s) =>
+    s.src
+      ? `<img src="${s.src}" alt="${esc(s.alt)}" loading="lazy">`
+      : `<div class="shot-ph"><span>${esc(s.ph)}</span></div>`
+  );
+  return `<figure class="shot${shots.length > 1 ? " grid-shots" : ""}">
+      ${parts.join("")}
+      <figcaption>${esc(caption)}</figcaption>
+    </figure>`;
+};
+
+const sheetShape = `<path class="fg-paper" d="M0 0H34L44 10V58H0Z"/><path class="fg-line" d="M34 0V10H44"/><rect x="6" y="8" width="20" height="3" class="fg-v"/><path class="fg-soft2" d="M6 15H16 M6 21H38 M6 27H36 M6 33H40 M6 39H32 M6 45H38 M6 51H24"/>`;
+
+const sceneOrigin = (notes) => `
+    <div class="fig-a">
+      <svg class="fig" viewBox="0 0 960 340" role="img" aria-label="An illustrated scene. A buyer's building publishes a tender document, which travels across to a business's desk.">
+        <defs><pattern id="gridA" width="24" height="24" patternUnits="userSpaceOnUse"><path class="fg-grid" d="M24 0H0V24"/></pattern></defs>
+        <rect width="960" height="340" fill="url(#gridA)"/>
+        <line class="fg-soft" x1="30" y1="290" x2="930" y2="290"/>
+        <path class="fg-soft" d="${Array.from({ length: 16 }, (_, i) => `M${30 + i * 60} 290v5`).join("")}"/>
+
+        <path class="fg-paper" d="M90 170H210V290H90Z"/>
+        <path class="fg-paper" d="M80 170L150 128L220 170Z"/>
+        <path class="fg-line" d="M108 178V290M132 178V240M168 178V240M192 178V290"/>
+        <path class="fg-paper" d="M136 290V240H164V290"/>
+        <path class="fg-line" d="M82 290H218M86 284H214"/>
+        <circle class="fg-line" cx="150" cy="152" r="6"/><circle class="fg-v" cx="150" cy="152" r="2"/>
+        <path class="fg-soft" d="M90 304H210M90 301V307M210 301V307"/>
+        <text class="fg-txt" x="150" y="324" text-anchor="middle">Buyer</text>
+
+        <path class="fg-paper" d="M640 244H900V256H640Z"/>
+        <path class="fg-line" d="M656 256V290M884 256V290"/>
+        <path class="fg-paper" d="M800 256H884V290H800ZM800 273H884"/>
+        <path class="fg-paper" d="M690 174H770V226H690Z"/>
+        <path class="fg-line" d="M730 226V244M716 244H744"/>
+        <path class="fg-soft2" d="M698 186H742M698 194H758M698 202H736"/><circle class="fg-b" cx="762" cy="182" r="2"/>
+        <path class="fg-paper" d="M806 226H882V244H806Z"/>
+        <path class="fg-soft" d="M640 304H900M640 301V307M900 301V307"/>
+        <text class="fg-txt" x="770" y="324" text-anchor="middle">Business</text>
+
+        <path id="tender-route" class="fg-route" d="M150 262C330 80 640 60 844 201"/>
+        <circle class="fg-line" cx="150" cy="262" r="3"/><circle class="fg-line" cx="844" cy="201" r="3"/>
+
+        <path class="fg-soft fl fl1" d="M140 46V124"/>
+        <path class="fg-soft fl fl2" d="M478 46V112"/>
+        <path class="fg-soft fl fl3" d="M708 46V166"/>
+
+        <g id="tender-sheet" transform="translate(844 201) rotate(0) translate(-22 -29)">${sheetShape}</g>      </svg>
+      <p class="fn fn1" style="left:14%"><b>1</b>${esc(notes[0])}</p>
+      <p class="fn fn2" style="left:49%"><b>2</b>${esc(notes[1])}</p>
+      <p class="fn fn3" style="left:73%"><b>3</b>${esc(notes[2])}</p>
+    </div>`;
+
+const sceneDesk = () => `
+        <svg class="fig" viewBox="0 0 520 420" role="img" aria-label="A top-down view of a desk that fills with work as a single tender document is read, checked and broken into tasks.">
+          <g class="dg fade s5"><path class="fg-paper" d="M300 24h20v20h-20z"/><path class="fg-soft" d="M312 24v8h8"/><path class="fg-paper" d="M328 28h20v20h-20z"/><path class="fg-paper" d="M356 24h20v20h-20z"/><path class="fg-y" d="M300 24h20v20h-20z"/><path class="fg-s" d="M328 28h20v20h-20z"/><path class="fg-vt" d="M356 24h20v20h-20z"/></g>
+
+          <g transform="translate(58 62) scale(4.4)">
+            <g class="dg fade s2"><path class="fg-paper" d="M0 0H34L44 10V58H0Z" transform="translate(4 -4)"/><path class="fg-paper" d="M0 0H34L44 10V58H0Z" transform="translate(2 -2)"/></g>
+            <g class="s1">${sheetShape}</g>
+            <g class="dg fade s2"><rect class="fg-y" x="5" y="25.5" width="33" height="3"/><rect class="fg-s" x="5" y="37.5" width="28" height="3"/><rect class="fg-vt" x="5" y="49.5" width="20" height="3"/>
+              <rect class="fg-y" x="44" y="15" width="4" height="5"/><rect class="fg-s" x="44" y="29" width="4" height="5"/><rect class="fg-vt" x="44" y="43" width="4" height="5"/></g>
+          </g>
+
+          <g class="dg s3">
+            <rect x="290" y="60" width="200" height="170" rx="4" class="fg-paper"/>
+            <path class="fg-soft" d="M290 86H490"/>
+            <text class="fg-txt" x="304" y="78">Eligibility</text>
+            <rect x="304" y="102" width="12" height="12" class="fg-line"/><path class="fg-ok" d="M307 108l3 3 5-6"/><path class="fg-soft2" d="M326 108H460"/>
+            <rect x="304" y="130" width="12" height="12" class="fg-line"/><path class="fg-ok" d="M307 136l3 3 5-6"/><path class="fg-soft2" d="M326 136H440"/>
+            <rect x="304" y="158" width="12" height="12" class="fg-line"/><circle class="fg-y" cx="310" cy="164" r="3.5"/><path class="fg-soft2" d="M326 164H452"/>
+            <rect x="304" y="186" width="12" height="12" class="fg-line"/><circle class="fg-v" cx="310" cy="192" r="3.5"/><path class="fg-soft2" d="M326 192H430"/>
+            <rect x="304" y="212" width="12" height="12" class="fg-line"/><path class="fg-soft2" d="M326 218H446"/>
+            <path class="fg-route" d="M252 140C272 140 270 108 290 108"/>
+          </g>
+
+          <g class="dg fade s4">
+            <path class="fg-route c-y" d="M222 181C262 181 262 267 290 267"/>
+            <path class="fg-route c-s" d="M200 234C250 234 262 309 290 309"/>
+            <path class="fg-route c-v" d="M178 286C240 286 262 351 290 351"/>
+          </g>
+          <g class="dg fade s4">
+            <g class="chip" style="--cd:0ms"><rect x="290" y="250" width="200" height="34" rx="4" class="fg-paper"/><rect x="290" y="250" width="5" height="34" class="fg-y"/><text class="fg-txt2" x="308" y="271">Find certificate</text><circle class="fg-line" cx="470" cy="267" r="7"/></g>
+            <g class="chip" style="--cd:120ms"><rect x="290" y="292" width="200" height="34" rx="4" class="fg-paper"/><rect x="290" y="292" width="5" height="34" class="fg-s"/><text class="fg-txt2" x="308" y="313">Confirm owner</text><circle class="fg-line" cx="470" cy="309" r="7"/></g>
+            <g class="chip" style="--cd:240ms"><rect x="290" y="334" width="200" height="34" rx="4" class="fg-paper"/><rect x="290" y="334" width="5" height="34" class="fg-v"/><text class="fg-txt2" x="308" y="355">Get signature</text><circle class="fg-line" cx="470" cy="351" r="7"/></g>
+          </g>
+
+          <g class="dg s5">
+            <path class="fg-line" d="M70 340V332H240V340M80 332V325H230V332"/>
+            <path class="fg-paper" d="M58 400V350L66 342H104L112 350H252V400Z"/>
+            <text class="fg-txt" x="72" y="382">Submission</text>
+            <circle class="fg-ok-c" cx="232" cy="376" r="9"/><path class="fg-ok" d="M227 376l3.5 3.5 6-7"/>
+            <circle class="fg-line" cx="470" cy="388" r="11"/><path class="fg-line" d="M481 384a5 5 0 0 1 0 9"/>
+          </g>
+          <path class="fg-soft" d="M300 402H380M300 399V405M380 399V405"/>
+          <text class="fg-txt" x="340" y="395" text-anchor="middle">10 cm</text>
+        </svg>`;
+
+const storyScenes = (sc) => `
+  <section class="case-block story-block" style="max-width:1040px">
+    <p class="beat">${esc(sc.context.beat)}</p>
+    <h2>${esc(sc.context.heading)}</h2>
+    ${sceneOrigin(sc.context.notes)}
+    <p class="fig-closing">${esc(sc.context.closing)}</p>
+  </section>
+
+  <section class="case-block story-block" style="max-width:1040px">
+    <p class="beat">${esc(sc.team.beat)}</p>
+    <h2>${esc(sc.team.heading)}</h2>
+    <div class="story-desk">
+      <div class="story-stage">
+        <div class="desk-fig">${sceneDesk()}
+        </div>
+        <div class="desk-copy">
+          <ol class="desk-steps">${sc.team.steps
+            .map(
+              (s, i) =>
+                `<li class="ds"><span class="ds-n">0${i + 1}</span><div><h4>${esc(s.title)}</h4><p>${esc(s.text)}</p></div></li>`
+            )
+            .join("")}</ol>
+          <p class="desk-final">${esc(sc.team.final)}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+`;
+
 const explainer = (e) => `
-  <section class="case-block hook">
-    <p class="beat">The story</p>
-    <h2 class="hook-title">${esc(e.hookTitle)}</h2>
-    <p class="hook-sub">${esc(e.hookSub)}</p>
+  <section class="case-block" style="max-width:980px">
+    <p class="beat">Project snapshot</p>
     <div class="snapshot">${e.snapshot
       .map((x) => `<div class="snapshot-item ${esc(x.cls)}"><span>${esc(x.label)}</span><p>${esc(x.text)}</p></div>`)
       .join("")}</div>
   </section>
-
-  <section class="case-block world">
-    <p class="beat">${esc(e.world.beat)}</p>
-    <h2>${esc(e.world.heading)}</h2>
-    <div class="flow flow-vertical">${e.world.steps
-      .map((s, i) => (i === 0 ? "" : `<div class="flow-arrow">↓</div>`) + `<div class="flow-step">${esc(s)}</div>`)
-      .join("")}</div>
-    <p>${esc(e.world.closing)}</p>
-  </section>
-
-  <section class="case-block journey">
-    <p class="beat">${esc(e.journey.beat)}</p>
-    <h2>${esc(e.journey.heading)}</h2>
-    <div class="flow">${e.journey.steps
-      .map((s, i) => (i === 0 ? "" : `<div class="flow-arrow">→</div>`) + `<div class="flow-step">${esc(s)}</div>`)
-      .join("")}</div>
-    <p>${esc(e.journey.closing)}</p>
+${storyScenes(e.scene)}
+  <section class="case-block">
+    <p class="beat">${esc(e.challenge.beat)}</p>
+    <h2>${esc(e.challenge.heading)}</h2>
+    ${e.challenge.paragraphs.map((x) => `<p>${esc(x)}</p>`).join("")}
+    <h3 class="sub-head">${esc(e.challenge.opportunityHeading)}</h3>
+    <p>${esc(e.challenge.opportunityIntro)}</p>
+    <ul class="ticks">${e.challenge.questions.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
+    <p class="context-note">${esc(e.challenge.closing)}</p>
   </section>
 
   <section class="case-block zoom">
-    <p class="beat">${esc(e.zoom.beat)}</p>
-    <h2>${esc(e.zoom.heading)}</h2>
-    <div class="flow">${e.zoom.steps
-      .map(
-        (s, i) =>
-          (i === 0 ? "" : `<div class="flow-arrow">→</div>`) +
-          `<div class="flow-step${s.friction ? " flow-friction" : ""}">${esc(s.text)}</div>`
-      )
+    <p class="beat">${esc(e.manual.beat)}</p>
+    <h2>${esc(e.manual.heading)}</h2>
+    <div class="flow">${e.manual.steps
+      .map((s, i) => (i === 0 ? "" : `<div class="flow-arrow">→</div>`) + `<div class="flow-step">${esc(s.label)}</div>`)
       .join("")}</div>
-    <div class="annotations">${e.zoom.annotations
-      .map((a) => `<div class="annotation"><span>${esc(a.label)}</span><p>${esc(a.text)}</p></div>`)
+    <div class="annotations">${e.manual.steps
+      .map((s, i) => `<div class="annotation"><span>${i + 1}. ${esc(s.label)}</span><p>${esc(s.text)}</p></div>`)
       .join("")}</div>
-  </section>
-${e.persona ? persona(e.persona) : ""}`;
-
-const persona = (pe) => `
-  <section class="case-block" style="max-width:980px">
-    <p class="beat">A day in the life</p>
-    <div class="persona-head">
-      <div class="avatar">${esc(pe.initials)}</div>
-      <h2 style="margin:0">${esc(pe.name)}</h2>
-    </div>
-    <p>${esc(pe.intro)}</p>
-    <div class="mtimeline">${pe.day
-      .map((d) => `<div class="mt-row"><span class="mt-day">${esc(d.time)}</span><span class="mt-text">${esc(d.text)}</span></div>`)
-      .join("")}</div>
+    <p class="context-note">${esc(e.manual.closing)}</p>
   </section>
 
   <section class="case-block" style="max-width:980px">
-    <p class="beat">Ideation</p>
-    <h2>From problem to solution — the roads not taken</h2>
-    <p>${esc(pe.problemsIntro)}</p>
-    ${pe.sets
-      .map(
-        (s, i) => `
-    <div class="solution-set">
-      <h4>${i + 1}. ${esc(s.problem)}</h4>
-      ${s.illo ? `<div class="issue-illo">${s.illo}</div>` : ""}
-      <div class="variant-grid">${s.variations
-        .map(
-          (v) => `
-        <div class="variant-card${v.selected ? " selected" : ""}">
-          ${v.selected ? `<span class="variant-badge">Selected</span>` : ""}
-          <h5>${esc(v.name)}</h5>
-          <p class="vdesc">${esc(v.desc)}</p>
-          <ul class="pc pros">${v.pros.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
-          <ul class="pc cons">${v.cons.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
-        </div>`
-        )
-        .join("")}</div>
-      <div class="proto-ph"><span>Prototype placeholder — the final interaction for this flow goes here</span></div>
-    </div>`
-      )
-      .join("")}
-    <p class="context-note">${esc(pe.closing)}</p>
+    <p class="beat">${esc(e.discovery.beat)}</p>
+    <h2>${esc(e.discovery.heading)}</h2>
+    ${e.discovery.paragraphs.map((x) => `<p>${esc(x)}</p>`).join("")}
+    <h3 class="sub-head">${esc(e.discovery.questionsHeading)}</h3>
+    <ul class="ticks">${e.discovery.questions.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
+    <div class="proto-ph"><span>${esc(e.discovery.evidence)}</span></div>
   </section>
 
   <section class="case-block" style="max-width:980px">
-    <p class="beat">Designing for fallback</p>
-    <h2>What happens when AI doesn't get it right</h2>
-    <p>${esc(pe.fallback.intro)}</p>
-    <div class="rgrid-2">${pe.fallback.cases
+    <p class="beat">${esc(e.ideation.beat)}</p>
+    <h2>${esc(e.ideation.heading)}</h2>
+    <p>${esc(e.ideation.intro)}</p>
+    <div class="rgrid-2">${e.ideation.directions
       .map(
-        (c) => `<div class="rcard c-blue"><p class="rk">If this happens</p><h4>${esc(c.scenario)}</h4><p>${esc(c.fix)}</p></div>`
+        (d) =>
+          `<div class="rcard c-violet"><p class="rk">${esc(d.key)}</p><h4>${esc(d.name)}</h4><p>${esc(d.desc)}</p><p class="rk" style="margin-top:12px">Potential value</p><p>${esc(d.value)}</p></div>`
       )
       .join("")}</div>
+    <div class="proto-ph"><span>${esc(e.ideation.evidence)}</span></div>
   </section>
 
   <section class="case-block" style="max-width:980px">
-    <p class="beat">Outcome</p>
-    <h2>What these choices are meant to change</h2>
-    <div class="metric-grid">${pe.outcome.metrics
+    <p class="beat">${esc(e.decisions.beat)}</p>
+    <h2>${esc(e.decisions.heading)}</h2>
+    <p>${esc(e.decisions.intro)}</p>
+  </section>
+${e.decisions.items
+  .map(
+    (d) => `
+  <section class="case-block" style="max-width:980px">
+    <p class="beat">${esc(d.num)}</p>
+    <h2>${esc(d.title)}</h2>
+    <dl class="decision">
+      <div><dt>The problem</dt><dd>${esc(d.problem)}</dd></div>
+      <div><dt>The design response</dt><dd>${esc(d.response)}</dd></div>
+      <div><dt>The trade-off</dt><dd>${esc(d.tradeoff)}</dd></div>
+    </dl>
+    ${shotFigure(d.shots, d.caption)}
+  </section>`
+  )
+  .join("")}
+
+  <section class="case-block" style="max-width:980px">
+    <p class="beat">${esc(e.outcome.beat)}</p>
+    <h2>${esc(e.outcome.heading)}</h2>
+    ${e.outcome.paragraphs.map((x) => `<p>${esc(x)}</p>`).join("")}
+    <div class="rgrid-2">${e.outcome.cards
       .map(
-        (m) => `
-      <div class="metric-card">
-        <p class="rk">${esc(m.label)}</p>
-        <div class="metric-row">
-          <div class="metric-col"><span class="metric-tag before">Before</span><p>${esc(m.before)}</p></div>
-          <div class="metric-arrow">→</div>
-          <div class="metric-col"><span class="metric-tag after">After</span><p>${esc(m.after)}</p></div>
-        </div>
-      </div>`
+        (c) =>
+          `<div class="rcard c-blue"><p class="rk">${esc(c.label)}</p><p>${esc(c.text)}</p><p><span class="score tbd">${esc(c.value)}</span></p></div>`
       )
       .join("")}</div>
+    <p class="context-note">${esc(e.outcome.note)}</p>
   </section>
 `;
 
@@ -1119,6 +1212,116 @@ ${footer()}
 
 fs.writeFileSync(path.join(OUT, "index.html"), index);
 
+const scrollFxScript = `
+<script>
+(function () {
+  var d = document, root = d.documentElement;
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var bar = d.createElement("div");
+  bar.className = "read-progress";
+  bar.setAttribute("aria-hidden", "true");
+  d.body.appendChild(bar);
+  function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
+
+  var figA = d.querySelector(".fig-a");
+  var sheet = d.getElementById("tender-sheet");
+  var route = d.getElementById("tender-route");
+  var desk = d.querySelector(".story-desk");
+  var steps = desk ? Array.prototype.slice.call(desk.querySelectorAll(".ds")) : [];
+  var stage = desk ? desk.querySelector(".story-stage") : null;
+  var live = !reduce && figA && sheet && route && desk && stage;
+  if (live) { figA.classList.add("story-live"); desk.classList.add("story-live"); }
+
+  function updateStory() {
+    if (!live) return;
+    var vh = window.innerHeight;
+    var r = figA.getBoundingClientRect();
+    var t = clamp((vh * 0.9 - (r.top + r.height / 2)) / (vh * 0.5), 0, 1);
+    var e = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+    var pt = route.getPointAtLength(route.getTotalLength() * e);
+    sheet.setAttribute("transform", "translate(" + pt.x + " " + pt.y + ") rotate(" + (-10 * (1 - e)) + ") translate(-22 -29)");
+    sheet.style.opacity = clamp(t * 12, 0, 1);
+    figA.classList.toggle("na-1", t > 0.02);
+    figA.classList.toggle("na-2", t > 0.35);
+    figA.classList.toggle("na-3", t > 0.8);
+
+    var top = parseFloat(getComputedStyle(stage).top) || 0;
+    var dr = desk.getBoundingClientRect();
+    var total = desk.offsetHeight - stage.offsetHeight;
+    var p = total > 0 ? clamp((top - dr.top) / total, 0, 1) : 0;
+    var step = Math.min(5, Math.floor(p * 6));
+    for (var n = 1; n <= 6; n++) desk.classList.toggle("on-" + n, n <= step + 1);
+    var active = Math.min(step, steps.length - 1);
+    steps.forEach(function (li, i) {
+      li.classList.toggle("is-on", i === active);
+      li.classList.toggle("is-done", i < active);
+    });
+  }
+
+  var ticking = false;
+  function paint() {
+    var h = root.scrollHeight - window.innerHeight;
+    bar.style.transform = "scaleX(" + (h > 0 ? Math.min(1, window.scrollY / h) : 0) + ")";
+    updateStory();
+    ticking = false;
+  }
+  window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(paint); } }, { passive: true });
+  window.addEventListener("resize", paint);
+  paint();
+
+  if (!("IntersectionObserver" in window)) return;
+
+  var sections = Array.prototype.slice.call(d.querySelectorAll(".sheet .case-block"));
+
+  if (!reduce) {
+    var targets = d.querySelectorAll(".sheet .case-block:not(.story-block), .sheet .rcard, .sheet .annotation, .sheet .snapshot-item, .sheet .decision > div, .sheet .flow-step, .sheet .shot img, .sheet .shot-ph, .sheet .proto-ph, .sheet .context-note");
+    var seen = new Map();
+    Array.prototype.forEach.call(targets, function (el) {
+      var key = el.parentNode;
+      var n = seen.get(key) || 0;
+      seen.set(key, n + 1);
+      el.style.setProperty("--d", Math.min(n * 90, 450) + "ms");
+      el.classList.add("rv");
+    });
+    var reveal = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("rv-in"); reveal.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+    Array.prototype.forEach.call(targets, function (el) { reveal.observe(el); });
+  }
+
+  if (window.matchMedia && matchMedia("(min-width: 1280px)").matches) {
+    var rail = d.createElement("nav");
+    rail.className = "chapter-rail";
+    rail.setAttribute("aria-label", "Case study sections");
+    var links = [];
+    sections.forEach(function (sec, i) {
+      var beat = sec.querySelector(".beat");
+      if (!beat) return;
+      if (!sec.id) sec.id = "sec-" + (i + 1);
+      var a = d.createElement("a");
+      a.href = "#" + sec.id;
+      a.setAttribute("aria-label", beat.textContent);
+      var span = d.createElement("span");
+      span.textContent = beat.textContent;
+      a.appendChild(span);
+      rail.appendChild(a);
+      links.push({ sec: sec, a: a });
+    });
+    d.body.appendChild(rail);
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (l) { l.a.classList.toggle("on", l.sec === e.target); });
+      });
+    }, { rootMargin: "-40% 0px -55% 0px" });
+    links.forEach(function (l) { spy.observe(l.sec); });
+  }
+})();
+</script>`;
+
 // ---------- case studies ----------
 const workDir = path.join(OUT, "work");
 fs.mkdirSync(workDir, { recursive: true });
@@ -1136,19 +1339,22 @@ linkedProjects.forEach((p, idx) => {
   const meta = [
     p.timeline ? ["Timeline", p.timeline] : null,
     ["Role", p.roleLead.split(" — ")[0].split(".")[0]],
+    p.scope ? ["Scope", p.scope] : null,
+    p.productDesc ? ["Product", p.productDesc] : null,
     p.permission ? ["Public display", p.permission] : null,
   ].filter(Boolean);
 
   const s = p.story;
-  const page = `${head(`${p.title} — ${site.name}`, "../")}
+  const page = `${head(`${p.product ? `${p.product} — ` : ""}${p.title} — ${site.name}`, "../")}
 <body>
 ${nav("../")}
 <main class="case">
   <a class="back" href="../index.html#work">← All work</a>
   <header class="case-hero" data-key="${esc(p.id[0])}">
-    <p class="eyebrow">Case study</p>
+    <p class="eyebrow">Case study${p.product ? ` · ${esc(p.product)}` : ""}</p>
     <h1>${esc(p.title)}</h1>
-    <p class="lede">${esc(p.short)}</p>
+    <p class="lede">${esc(p.short)}</p>${p.tags ? `
+    <div class="tags">${p.tags.map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>` : ""}
     <div class="meta">${meta
       .map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`)
       .join("")}</div>
@@ -1230,7 +1436,7 @@ ${nav("../")}
     <a href="${next.slug}.html">${esc(next.title)} →</a>
   </nav>
 </main>
-${footer("../")}
+${footer("../")}${p.scrollFx ? scrollFxScript : ""}
 </body></html>`;
 
   fs.writeFileSync(path.join(workDir, `${p.slug}.html`), page);

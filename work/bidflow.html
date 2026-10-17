@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BidFlow — AI Bid Management System — Tejaswini Gedam</title>
+<title>BidFlow — Designing the workflow behind AI-powered tender management — Tejaswini Gedam</title>
 <meta name="description" content="Tejaswini Gedam — Product &amp; UX Designer. I design clear, human-centered products for complex, information-heavy workflows.">
 <link rel="preload" as="font" type="font/woff2" href="../fonts/instrument-serif-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="../fonts/space-mono-latin.woff2" crossorigin>
@@ -25,19 +25,11 @@
 <main class="case">
   <a class="back" href="../index.html#work">← All work</a>
   <header class="case-hero" data-key="B">
-    <p class="eyebrow">Case study</p>
-    <h1>How I Turned a Fragmented Tender Process Into an AI-Integrated Workflow</h1>
+    <p class="eyebrow">Case study · BidFlow</p>
+    <h1>Designing the workflow behind AI-powered tender management</h1>
     <p class="lede">Designing BidFlow from 0→1 to help tender teams understand requirements, verify eligibility, and turn them into actionable work.</p>
-    <div class="tags">
-      <span class="tag">0→1 Product Design</span>
-      <span class="tag">Founding Designer</span>
-      <span class="tag">AI-Native Design</span>
-      <span class="tag">Designing for AI Limitations</span>
-      <span class="tag">Human + AI Collaboration</span>
-      <span class="tag">Enterprise UX</span>
-      <span class="tag">Designing for Trust &amp; Verification</span>
-    </div>
-    <div class="meta"><div><dt>Timeline</dt><dd>7 months</dd></div><div><dt>Role</dt><dd>Founding Designer</dd></div></div>
+    <div class="tags"><span class="tag">0→1 Product Design</span><span class="tag">Founding Designer</span><span class="tag">AI-Native Design</span><span class="tag">Designing for AI Limitations</span><span class="tag">Human + AI Collaboration</span><span class="tag">Enterprise UX</span><span class="tag">Designing for Trust &amp; Verification</span></div>
+    <div class="meta"><div><dt>Timeline</dt><dd>7 months</dd></div><div><dt>Role</dt><dd>Founding Designer</dd></div><div><dt>Scope</dt><dd>Product thinking, workflow design, information architecture, interaction design and UI</dd></div><div><dt>Product</dt><dd>AI-powered tender analysis and bid-management software</dd></div></div>
   </header>
 
   
@@ -45,183 +37,199 @@
   <div class="sheet">
   <section class="case-block" style="max-width:980px">
     <p class="beat">Project snapshot</p>
-    <div class="snapshot">
-      <div class="snapshot-item problem"><span>Problem</span><p>Tender teams spent hours reading lengthy tender documents, cross-checking eligibility, gathering documents, and manually turning requirements into bid tasks. The process was fragmented, making it easy to miss requirements and slowing down decisions.</p></div>
-      <div class="snapshot-item focus"><span>Solution</span><p>A unified bid workflow that uses AI to extract and organize tender requirements, surface eligibility gaps, and turn requirements into actionable tasks and document checklists, while keeping users in control of verification and decisions.</p></div>
-      <div class="snapshot-item outcome"><span>Impact</span><p>Tender turnaround time reduced from X → Y, with 0 → X customers supported through the early product. Established a repeatable workflow for understanding, verifying, and preparing bids.</p></div>
+    <div class="snapshot"><div class="snapshot-item problem"><span>Problem</span><p>Tender teams spent hours reading lengthy tender documents, cross-checking eligibility, gathering documents, and manually turning requirements into bid tasks. The process was fragmented, making it easy to miss requirements and slowing down decisions.</p></div><div class="snapshot-item focus"><span>Solution</span><p>A unified bid workflow that uses AI to extract and organize tender requirements, surface eligibility gaps, and turn requirements into actionable tasks and document checklists, while keeping users in control of verification and decisions.</p></div><div class="snapshot-item outcome"><span>Impact</span><p>The product moved from zero to its first customers, and the team observed a substantial reduction in the time from receiving a tender to preparing a proposal. A repeatable workflow now connects tender analysis to bid preparation.</p></div></div>
+  </section>
+
+  <section class="case-block story-block" style="max-width:1040px">
+    <p class="beat">Context</p>
+    <h2>First, what is a tender?</h2>
+    
+    <div class="fig-a">
+      <svg class="fig" viewBox="0 0 960 340" role="img" aria-label="An illustrated scene. A buyer's building publishes a tender document, which travels across to a business's desk.">
+        <defs><pattern id="gridA" width="24" height="24" patternUnits="userSpaceOnUse"><path class="fg-grid" d="M24 0H0V24"/></pattern></defs>
+        <rect width="960" height="340" fill="url(#gridA)"/>
+        <line class="fg-soft" x1="30" y1="290" x2="930" y2="290"/>
+        <path class="fg-soft" d="M30 290v5M90 290v5M150 290v5M210 290v5M270 290v5M330 290v5M390 290v5M450 290v5M510 290v5M570 290v5M630 290v5M690 290v5M750 290v5M810 290v5M870 290v5M930 290v5"/>
+
+        <path class="fg-paper" d="M90 170H210V290H90Z"/>
+        <path class="fg-paper" d="M80 170L150 128L220 170Z"/>
+        <path class="fg-line" d="M108 178V290M132 178V240M168 178V240M192 178V290"/>
+        <path class="fg-paper" d="M136 290V240H164V290"/>
+        <path class="fg-line" d="M82 290H218M86 284H214"/>
+        <circle class="fg-line" cx="150" cy="152" r="6"/><circle class="fg-v" cx="150" cy="152" r="2"/>
+        <path class="fg-soft" d="M90 304H210M90 301V307M210 301V307"/>
+        <text class="fg-txt" x="150" y="324" text-anchor="middle">Buyer</text>
+
+        <path class="fg-paper" d="M640 244H900V256H640Z"/>
+        <path class="fg-line" d="M656 256V290M884 256V290"/>
+        <path class="fg-paper" d="M800 256H884V290H800ZM800 273H884"/>
+        <path class="fg-paper" d="M690 174H770V226H690Z"/>
+        <path class="fg-line" d="M730 226V244M716 244H744"/>
+        <path class="fg-soft2" d="M698 186H742M698 194H758M698 202H736"/><circle class="fg-b" cx="762" cy="182" r="2"/>
+        <path class="fg-paper" d="M806 226H882V244H806Z"/>
+        <path class="fg-soft" d="M640 304H900M640 301V307M900 301V307"/>
+        <text class="fg-txt" x="770" y="324" text-anchor="middle">Business</text>
+
+        <path id="tender-route" class="fg-route" d="M150 262C330 80 640 60 844 201"/>
+        <circle class="fg-line" cx="150" cy="262" r="3"/><circle class="fg-line" cx="844" cy="201" r="3"/>
+
+        <path class="fg-soft fl fl1" d="M140 46V124"/>
+        <path class="fg-soft fl fl2" d="M478 46V112"/>
+        <path class="fg-soft fl fl3" d="M708 46V166"/>
+
+        <g id="tender-sheet" transform="translate(844 201) rotate(0) translate(-22 -29)"><path class="fg-paper" d="M0 0H34L44 10V58H0Z"/><path class="fg-line" d="M34 0V10H44"/><rect x="6" y="8" width="20" height="3" class="fg-v"/><path class="fg-soft2" d="M6 15H16 M6 21H38 M6 27H36 M6 33H40 M6 39H32 M6 45H38 M6 51H24"/></g>      </svg>
+      <p class="fn fn1" style="left:14%"><b>1</b>Government / enterprise needs something</p>
+      <p class="fn fn2" style="left:49%"><b>2</b>Publishes a tender</p>
+      <p class="fn fn3" style="left:73%"><b>3</b>Companies compete to win the contract</p>
+    </div>
+    <p class="fig-closing">The company I worked with helps businesses discover these opportunities and manage the work required to bid for them.</p>
+  </section>
+
+  <section class="case-block story-block" style="max-width:1040px">
+    <p class="beat">The team</p>
+    <h2>So what does a tender team actually do?</h2>
+    <div class="story-desk">
+      <div class="story-stage">
+        <div class="desk-fig">
+        <svg class="fig" viewBox="0 0 520 420" role="img" aria-label="A top-down view of a desk that fills with work as a single tender document is read, checked and broken into tasks.">
+          <g class="dg fade s5"><path class="fg-paper" d="M300 24h20v20h-20z"/><path class="fg-soft" d="M312 24v8h8"/><path class="fg-paper" d="M328 28h20v20h-20z"/><path class="fg-paper" d="M356 24h20v20h-20z"/><path class="fg-y" d="M300 24h20v20h-20z"/><path class="fg-s" d="M328 28h20v20h-20z"/><path class="fg-vt" d="M356 24h20v20h-20z"/></g>
+
+          <g transform="translate(58 62) scale(4.4)">
+            <g class="dg fade s2"><path class="fg-paper" d="M0 0H34L44 10V58H0Z" transform="translate(4 -4)"/><path class="fg-paper" d="M0 0H34L44 10V58H0Z" transform="translate(2 -2)"/></g>
+            <g class="s1"><path class="fg-paper" d="M0 0H34L44 10V58H0Z"/><path class="fg-line" d="M34 0V10H44"/><rect x="6" y="8" width="20" height="3" class="fg-v"/><path class="fg-soft2" d="M6 15H16 M6 21H38 M6 27H36 M6 33H40 M6 39H32 M6 45H38 M6 51H24"/></g>
+            <g class="dg fade s2"><rect class="fg-y" x="5" y="25.5" width="33" height="3"/><rect class="fg-s" x="5" y="37.5" width="28" height="3"/><rect class="fg-vt" x="5" y="49.5" width="20" height="3"/>
+              <rect class="fg-y" x="44" y="15" width="4" height="5"/><rect class="fg-s" x="44" y="29" width="4" height="5"/><rect class="fg-vt" x="44" y="43" width="4" height="5"/></g>
+          </g>
+
+          <g class="dg s3">
+            <rect x="290" y="60" width="200" height="170" rx="4" class="fg-paper"/>
+            <path class="fg-soft" d="M290 86H490"/>
+            <text class="fg-txt" x="304" y="78">Eligibility</text>
+            <rect x="304" y="102" width="12" height="12" class="fg-line"/><path class="fg-ok" d="M307 108l3 3 5-6"/><path class="fg-soft2" d="M326 108H460"/>
+            <rect x="304" y="130" width="12" height="12" class="fg-line"/><path class="fg-ok" d="M307 136l3 3 5-6"/><path class="fg-soft2" d="M326 136H440"/>
+            <rect x="304" y="158" width="12" height="12" class="fg-line"/><circle class="fg-y" cx="310" cy="164" r="3.5"/><path class="fg-soft2" d="M326 164H452"/>
+            <rect x="304" y="186" width="12" height="12" class="fg-line"/><circle class="fg-v" cx="310" cy="192" r="3.5"/><path class="fg-soft2" d="M326 192H430"/>
+            <rect x="304" y="212" width="12" height="12" class="fg-line"/><path class="fg-soft2" d="M326 218H446"/>
+            <path class="fg-route" d="M252 140C272 140 270 108 290 108"/>
+          </g>
+
+          <g class="dg fade s4">
+            <path class="fg-route c-y" d="M222 181C262 181 262 267 290 267"/>
+            <path class="fg-route c-s" d="M200 234C250 234 262 309 290 309"/>
+            <path class="fg-route c-v" d="M178 286C240 286 262 351 290 351"/>
+          </g>
+          <g class="dg fade s4">
+            <g class="chip" style="--cd:0ms"><rect x="290" y="250" width="200" height="34" rx="4" class="fg-paper"/><rect x="290" y="250" width="5" height="34" class="fg-y"/><text class="fg-txt2" x="308" y="271">Find certificate</text><circle class="fg-line" cx="470" cy="267" r="7"/></g>
+            <g class="chip" style="--cd:120ms"><rect x="290" y="292" width="200" height="34" rx="4" class="fg-paper"/><rect x="290" y="292" width="5" height="34" class="fg-s"/><text class="fg-txt2" x="308" y="313">Confirm owner</text><circle class="fg-line" cx="470" cy="309" r="7"/></g>
+            <g class="chip" style="--cd:240ms"><rect x="290" y="334" width="200" height="34" rx="4" class="fg-paper"/><rect x="290" y="334" width="5" height="34" class="fg-v"/><text class="fg-txt2" x="308" y="355">Get signature</text><circle class="fg-line" cx="470" cy="351" r="7"/></g>
+          </g>
+
+          <g class="dg s5">
+            <path class="fg-line" d="M70 340V332H240V340M80 332V325H230V332"/>
+            <path class="fg-paper" d="M58 400V350L66 342H104L112 350H252V400Z"/>
+            <text class="fg-txt" x="72" y="382">Submission</text>
+            <circle class="fg-ok-c" cx="232" cy="376" r="9"/><path class="fg-ok" d="M227 376l3.5 3.5 6-7"/>
+            <circle class="fg-line" cx="470" cy="388" r="11"/><path class="fg-line" d="M481 384a5 5 0 0 1 0 9"/>
+          </g>
+          <path class="fg-soft" d="M300 402H380M300 399V405M380 399V405"/>
+          <text class="fg-txt" x="340" y="395" text-anchor="middle">10 cm</text>
+        </svg>
+        </div>
+        <div class="desk-copy">
+          <ol class="desk-steps"><li class="ds"><span class="ds-n">01</span><div><h4>Find an opportunity</h4><p>One tender document arrives on an otherwise empty desk.</p></div></li><li class="ds"><span class="ds-n">02</span><div><h4>Understand requirements</h4><p>Pages turn. Clauses get highlighted. Tabs mark the sections that matter.</p></div></li><li class="ds"><span class="ds-n">03</span><div><h4>Check eligibility</h4><p>A checklist appears beside the document, with conditions to verify.</p></div></li><li class="ds"><span class="ds-n">04</span><div><h4>Prepare the bid</h4><p>Requirements peel away from the document and become tasks: find the certificate, confirm the owner, get the signature.</p></div></li><li class="ds"><span class="ds-n">05</span><div><h4>Submit</h4><p>The team assembles the final documents, but the desk is still full of all the work it took to get there.</p></div></li></ol>
+          <p class="desk-final">The interesting part starts after a tender is found: the team has to turn a long document into a clear set of requirements, checks, documents and actions.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="case-block hook">
-    <p class="beat">The story</p>
-    <h2 class="hook-title">The Hours Behind Every Tender Submission</h2>
-    <p class="hook-sub">How I explored a manual tender-preparation workflow and turned scattered steps into a more structured process.</p>
-    <div class="snapshot"><div class="snapshot-item problem"><span>Problem</span><p>Tender teams spend hours reading requirements, checking eligibility and preparing the work needed for submission.</p></div><div class="snapshot-item focus"><span>Focus</span><p>Understand where the manual effort comes from and explore ways to connect requirements, company documents and actions.</p></div><div class="snapshot-item outcome"><span>Outcome</span><p>A structured workflow designed to reduce repetitive work and make the process easier to execute.</p></div></div>
-  </section>
-
-  <section class="case-block world">
-    <p class="beat">Context</p>
-    <h2>First, what is a tender?</h2>
-    <div class="flow flow-vertical"><div class="flow-step">Government / enterprise needs something</div><div class="flow-arrow">↓</div><div class="flow-step">Publishes a tender</div><div class="flow-arrow">↓</div><div class="flow-step">Companies compete to win the contract</div></div>
-    <p>The company I worked with helps businesses discover these opportunities and manage the work required to bid for them.</p>
-  </section>
-
-  <section class="case-block journey">
-    <p class="beat">The team</p>
-    <h2>So what does a tender team actually do?</h2>
-    <div class="flow"><div class="flow-step">Find an opportunity</div><div class="flow-arrow">→</div><div class="flow-step">Understand requirements</div><div class="flow-arrow">→</div><div class="flow-step">Check eligibility</div><div class="flow-arrow">→</div><div class="flow-step">Prepare the bid</div><div class="flow-arrow">→</div><div class="flow-step">Submit</div></div>
-    <p>The interesting part starts after a tender is found: the team has to turn a long document into a clear set of requirements, checks, documents and actions.</p>
+  <section class="case-block">
+    <p class="beat">The challenge</p>
+    <h2>Turning a tender into an actionable plan</h2>
+    <p>Preparing a tender response involved much more than reading a document and writing a proposal.</p><p>Bid managers had to review lengthy tender documents, identify eligibility criteria, evaluate compliance against their company's capabilities, track deadlines, and identify every document required for submission.</p><p>For each required document, they also needed to determine whether it already existed, where to source it, which team or person owned it, and whether it needed to be newly prepared, reviewed, signed or stamped. Much of this work involved manually reading, copying, organising and cross-checking information across documents and teams.</p>
+    <h3 class="sub-head">The design opportunity</h3>
+    <p>The engineering team was building an AI agent to analyse tender documents. My challenge was to translate that analysis into an experience that helped bid managers make decisions and move work forward. Two questions guided the design:</p>
+    <ul class="ticks"><li>How might we make AI-extracted tender information understandable, verifiable and actionable?</li><li>How might we help bid managers coordinate the work required to prepare a complete tender response?</li></ul>
+    <p class="context-note">The opportunity was not simply to automate document reading. It was to connect tender analysis to the entire preparation workflow.</p>
   </section>
 
   <section class="case-block zoom">
-    <p class="beat">The friction</p>
-    <h2>This is where the manual work begins</h2>
-    <div class="flow"><div class="flow-step">Tender document</div><div class="flow-arrow">→</div><div class="flow-step">Read requirements</div><div class="flow-arrow">→</div><div class="flow-step">Identify dates &amp; eligibility</div><div class="flow-arrow">→</div><div class="flow-step flow-friction">Cross-check company documents</div><div class="flow-arrow">→</div><div class="flow-step flow-friction">Prepare / edit documents</div><div class="flow-arrow">→</div><div class="flow-step flow-friction">Create tasks &amp; checklist</div></div>
-    <div class="annotations"><div class="annotation"><span>Cross-check</span><p>Requirements from the tender had to be manually compared with the company's existing documents and credentials.</p></div><div class="annotation"><span>Prepare</span><p>Once eligible, the team had to figure out which documents needed editing or creation.</p></div><div class="annotation"><span>Tasks</span><p>The work then had to be manually translated into a task list.</p></div></div>
+    <p class="beat">The manual workflow</p>
+    <h2>The work hidden behind every tender</h2>
+    <div class="flow"><div class="flow-step">Read &amp; interpret</div><div class="flow-arrow">→</div><div class="flow-step">Check eligibility</div><div class="flow-arrow">→</div><div class="flow-step">Identify documents</div><div class="flow-arrow">→</div><div class="flow-step">Coordinate teams</div><div class="flow-arrow">→</div><div class="flow-step">Manage deadlines</div></div>
+    <div class="annotations"><div class="annotation"><span>1. Read &amp; interpret</span><p>Review tender documents and locate relevant requirements, eligibility criteria and legal or compliance conditions.</p></div><div class="annotation"><span>2. Check eligibility</span><p>Compare the tender's conditions with the company's qualifications, capabilities and available information.</p></div><div class="annotation"><span>3. Identify documents</span><p>Create a list of supporting documents and determine which are already available and which need to be prepared.</p></div><div class="annotation"><span>4. Coordinate teams</span><p>Source documents from the appropriate people, then track any required review, signatures, stamps or other actions.</p></div><div class="annotation"><span>5. Manage deadlines</span><p>Keep track of timelines, outstanding work and the final proposal documentation.</p></div></div>
+    <p class="context-note">Extracting text from the tender solved only the first of these steps. The rest of the work happened around the document, which is why analysis alone was not enough.</p>
   </section>
 
   <section class="case-block" style="max-width:980px">
-    <p class="beat">A day in the life</p>
-    <div class="persona-head">
-      <div class="avatar">AV</div>
-      <h2 style="margin:0">Meet Arjun Verma, Tender Manager</h2>
-    </div>
-    <p>Arjun manages twelve live tenders across three states for a mid-sized infrastructure firm. On any given day, he's the last line of defense between a hundred-page tender document and a bid his company can actually stand behind.</p>
-    <div class="mtimeline"><div class="mt-row"><span class="mt-day">9:00 AM</span><span class="mt-text">Opens his inbox to three new tender notifications and two stakeholders asking "are we bidding on this one?"</span></div><div class="mt-row"><span class="mt-day">11:30 AM</span><span class="mt-text">Starts reading a 140-page tender document, manually noting eligibility criteria and deadlines on a separate sheet.</span></div><div class="mt-row"><span class="mt-day">1:15 PM</span><span class="mt-text">Cross-checks the tender's document requirements against the company's compliance folder — some certificates turn out to be outdated.</span></div><div class="mt-row"><span class="mt-day">3:00 PM</span><span class="mt-text">Assigns sections of the bid response to five teammates over email, with no single place to see who owns what.</span></div><div class="mt-row"><span class="mt-day">5:30 PM</span><span class="mt-text">Finds a sub-clause buried on page 87 that needs a document format he doesn't have ready — two days before submission.</span></div><div class="mt-row"><span class="mt-day">7:00 PM</span><span class="mt-text">Still checking whether every requirement has been addressed before he lets himself stop for the day.</span></div></div>
+    <p class="beat">Discovery</p>
+    <h2>Understanding the bid manager's workflow</h2>
+    <p>I examined tender documents and the activities involved in preparing a response to understand how information moved from the original tender into the team's day-to-day work.</p><p>This helped frame the problem beyond document analysis. Extracted information needed to support several interconnected activities: eligibility assessment, compliance checks, document collection, task coordination and deadline management.</p>
+    <h3 class="sub-head">Key areas of investigation</h3>
+    <ul class="ticks"><li>How could requirements be extracted and organised into a useful summary?</li><li>How could bid managers verify extracted information against the original tender?</li><li>How could the product distinguish between documents already available and those requiring further action?</li><li>How could the analysis translate into a coordinated plan for completing the bid?</li></ul>
+    <div class="proto-ph"><span>Add tender excerpts, workflow notes or diagrams from discovery</span></div>
   </section>
 
   <section class="case-block" style="max-width:980px">
     <p class="beat">Ideation</p>
-    <h2>From problem to solution — the roads not taken</h2>
-    <p>Three connected problems repeat across Arjun's week, no matter which tender he's working on — read the document, check what's missing, then turn the gaps into work. For each step, I explored a few different directions before deciding what to build.</p>
-    
-    <div class="solution-set">
-      <h4>1. How do you make sense of a 140-page tender document — its requirements, eligibility, and dates?</h4>
-      
-      <div class="variant-grid">
-        <div class="variant-card">
-          
-          <h5>Manual read-through with margin notes</h5>
-          <p class="vdesc">Arjun reads the full PDF top to bottom, highlighting clauses and eligibility criteria by hand and jotting deadlines onto a separate sheet.</p>
-          <ul class="pc pros"><li>Nothing gets summarized wrong — every word passes under his eyes.</li></ul>
-          <ul class="pc cons"><li>Takes hours per document, and the notes live separately from the source — easy to lose track of.</li></ul>
-        </div>
-        <div class="variant-card">
-          
-          <h5>AI-generated summary only</h5>
-          <p class="vdesc">AI reads the document and returns a short paragraph summarizing what the tender is about and its key requirements.</p>
-          <ul class="pc pros"><li>Fast — gives Arjun the gist in seconds.</li></ul>
-          <ul class="pc cons"><li>A summary can't be checked against the source — if AI misses a clause, there's no way to know without rereading the whole document anyway.</li></ul>
-        </div>
-        <div class="variant-card selected">
-          <span class="variant-badge">Selected</span>
-          <h5>Side-by-side AI extraction — document, structured criteria, and dates</h5>
-          <p class="vdesc">The original document sits on the left with key clauses auto-highlighted; on the right, AI pulls every requirement and eligibility criterion into a clean, structured list linked back to its source clause — no comparison yet, just what the tender actually asks for. Every date mentioned in the document is pulled out separately into both a timeline and a calendar view.</p>
-          <ul class="pc pros"><li>Keeps the source document as the reference, so nothing is taken on faith</li><li>Turns scattered dates buried in prose into something Arjun can actually plan around</li></ul>
-          <ul class="pc cons"><li>Depends on accurate document parsing — an unusually formatted or poorly scanned tender can throw off highlights and dates, which Arjun still has to catch.</li></ul>
-        </div></div>
-      <div class="proto-ph"><span>Prototype placeholder — the final interaction for this flow goes here</span></div>
-    </div>
-    <div class="solution-set">
-      <h4>2. Which requirements has the company already met, and which are missing?</h4>
-      
-      <div class="variant-grid">
-        <div class="variant-card">
-          
-          <h5>Manual side-by-side checklist</h5>
-          <p class="vdesc">A split view where Arjun reads the tender text on one side and manually ticks off matching company documents on the other.</p>
-          <ul class="pc pros"><li>Full transparency — nothing hidden from Arjun's own judgment.</li></ul>
-          <ul class="pc cons"><li>Still requires reading the entire document — doesn't reduce the core time cost.</li></ul>
-        </div>
-        <div class="variant-card">
-          
-          <h5>Fully automated AI matcher</h5>
-          <p class="vdesc">AI reads the tender and automatically marks each requirement met or unmet against the company's document library — no review step.</p>
-          <ul class="pc pros"><li>Fastest possible option — zero manual reading.</li></ul>
-          <ul class="pc cons"><li>A wrong match on a mandatory clause could disqualify the bid with no human checkpoint.</li></ul>
-        </div>
-        <div class="variant-card selected">
-          <span class="variant-badge">Selected</span>
-          <h5>AI-suggested matches, manually confirmed</h5>
-          <p class="vdesc">AI pre-matches each requirement to a company document and flags gaps, but every match needs a one-tap confirm or reject from Arjun before it counts.</p>
-          <ul class="pc pros"><li>Cuts reading time dramatically</li><li>Keeps Arjun as the final judgment call on anything that matters</li></ul>
-          <ul class="pc cons"><li>Still needs Arjun's attention on every item — faster attention, not zero attention.</li></ul>
-        </div></div>
-      <div class="proto-ph"><span>Prototype placeholder — the final interaction for this flow goes here</span></div>
-    </div>
-    <div class="solution-set">
-      <h4>3. How do the extracted requirements and gaps turn into a set of trackable tasks?</h4>
-      
-      <div class="variant-grid">
-        <div class="variant-card">
-          
-          <h5>Build the checklist from scratch</h5>
-          <p class="vdesc">Arjun ignores the extracted criteria and gap list, and manually types every task, owner, and due date into a spreadsheet for each new tender.</p>
-          <ul class="pc pros"><li>Nothing about the tender surprises him — he wrote every line himself.</li></ul>
-          <ul class="pc cons"><li>Repetitive and error-prone, and throws away the extraction and gap-check work already done in steps 1 and 2.</li></ul>
-        </div>
-        <div class="variant-card">
-          
-          <h5>Fixed category templates</h5>
-          <p class="vdesc">Pick a tender category (e.g. "railways") and get a pre-built generic checklist, unrelated to what was actually extracted or flagged as missing.</p>
-          <ul class="pc pros"><li>Faster than starting from scratch.</li></ul>
-          <ul class="pc cons"><li>Generic templates miss clauses unique to this tender — Arjun still edits it by hand, and it ignores the gaps already found.</li></ul>
-        </div>
-        <div class="variant-card selected">
-          <span class="variant-badge">Selected</span>
-          <h5>Auto-generate tasks from the extracted checklist and gaps</h5>
-          <p class="vdesc">Every requirement pulled out in step 1 and every gap flagged in step 2 becomes a task automatically — owner, due date, and linked document slot pre-filled — which Arjun can then edit, reassign, and reorder.</p>
-          <ul class="pc pros"><li>Builds directly on work already done — nothing gets re-read or re-typed</li><li>Tasks map one-to-one to the tender's actual requirements, not a generic template</li></ul>
-          <ul class="pc cons"><li>Needs a post-generation review from Arjun to feel confident the task breakdown makes sense.</li></ul>
-        </div></div>
-      <div class="proto-ph"><span>Prototype placeholder — the final interaction for this flow goes here</span></div>
-    </div>
-    <p class="context-note">None of these choices were about picking the fanciest option — they were about deciding, case by case, how much judgment stays with Arjun and how much moves to the system. The common thread across all three: AI does the reading; Arjun keeps the decision.</p>
+    <h2>Four directions for connecting analysis to action</h2>
+    <p>There was more than one way to turn tender analysis into something useful. These are the directions I weighed, each answering a different part of the bid manager's workload.</p>
+    <div class="rgrid-2"><div class="rcard c-violet"><p class="rk">Direction A</p><h4>Automated tender summary</h4><p>Extract key requirements, eligibility conditions, dates and submission criteria into a prioritised summary.</p><p class="rk" style="margin-top:12px">Potential value</p><p>Reduce the effort required to locate important information.</p></div><div class="rcard c-violet"><p class="rk">Direction B</p><h4>Eligibility and gap analysis</h4><p>Compare tender requirements with company information to surface potential eligibility issues, compliance gaps and missing information.</p><p class="rk" style="margin-top:12px">Potential value</p><p>Help bid managers identify what needs attention before proceeding.</p></div><div class="rcard c-violet"><p class="rk">Direction C</p><h4>Automated checklist and document tracking</h4><p>Generate a list of required documents and tasks, with follow-up actions based on document availability and preparation needs.</p><p class="rk" style="margin-top:12px">Potential value</p><p>Connect tender analysis with execution.</p></div><div class="rcard c-violet"><p class="rk">Direction D</p><h4>Timeline and bid coordination</h4><p>Organise activities around deadlines, task ownership, reminders and submission milestones.</p><p class="rk" style="margin-top:12px">Potential value</p><p>Help teams coordinate the full preparation process.</p></div></div>
+    <div class="proto-ph"><span>Add sketches, wireframes or alternatives explored</span></div>
   </section>
 
   <section class="case-block" style="max-width:980px">
-    <p class="beat">Designing for fallback</p>
-    <h2>What happens when AI doesn't get it right</h2>
-    <p>AI reads a tender wrong sometimes — an unusual PDF layout, a scanned document, a clause phrased in a way the model misses. Every AI step in this flow was designed with a manual way out, so a bad read slows Arjun down instead of quietly breaking his bid.</p>
-    <div class="rgrid-2"><div class="rcard c-blue"><p class="rk">If this happens</p><h4>AI misses or misreads a requirement while extracting the document</h4><p>Every extracted criterion is editable — Arjun can add a missed requirement, correct a wrong one, or re-upload a cleaner copy of the document to re-run extraction.</p></div><div class="rcard c-blue"><p class="rk">If this happens</p><h4>AI can't confidently match a requirement to a company document</h4><p>Unmatched items are flagged as "needs review" rather than silently marked missing — Arjun manually searches or uploads the right document himself.</p></div><div class="rcard c-blue"><p class="rk">If this happens</p><h4>AI generates a checklist that doesn't fit how this tender actually works</h4><p>The checklist is a starting draft, not a locked list — tasks can be added, deleted, reassigned, or reordered freely after generation.</p></div><div class="rcard c-blue"><p class="rk">If this happens</p><h4>AI is unavailable, or the document fails to parse at all</h4><p>Every screen still works as a manual tool with AI switched off — register, checklist, and requirements can all be built by hand from a blank state.</p></div></div>
+    <p class="beat">Design decisions</p>
+    <h2>Three decisions that shaped the product</h2>
+    <p>Three design challenges shaped how tender analysis became something a bid manager could trust and act on.</p>
   </section>
 
   <section class="case-block" style="max-width:980px">
-    <p class="beat">Outcome</p>
-    <h2>What these choices are meant to change</h2>
-    <div class="metric-grid">
-      <div class="metric-card">
-        <p class="rk">Time to read &amp; extract a 140-page tender document</p>
-        <div class="metric-row">
-          <div class="metric-col"><span class="metric-tag before">Before</span><p>~3–4 hrs of manual reading &amp; note-taking</p></div>
-          <div class="metric-arrow">→</div>
-          <div class="metric-col"><span class="metric-tag after">After</span><p>~30–40 min reviewing AI-extracted criteria &amp; dates</p></div>
-        </div>
-      </div>
-      <div class="metric-card">
-        <p class="rk">Requirements missed or caught only at final review</p>
-        <div class="metric-row">
-          <div class="metric-col"><span class="metric-tag before">Before</span><p>Buried clauses found late, close to deadline</p></div>
-          <div class="metric-arrow">→</div>
-          <div class="metric-col"><span class="metric-tag after">After</span><p>Flagged and confirmed early, against the full extracted list</p></div>
-        </div>
-      </div>
-      <div class="metric-card">
-        <p class="rk">Time to build a tender's task checklist</p>
-        <div class="metric-row">
-          <div class="metric-col"><span class="metric-tag before">Before</span><p>~1–2 hrs typing tasks from scratch</p></div>
-          <div class="metric-arrow">→</div>
-          <div class="metric-col"><span class="metric-tag after">After</span><p>~10–15 min reviewing an auto-generated checklist</p></div>
-        </div>
-      </div>
-      <div class="metric-card">
-        <p class="rk">Late-stage scrambles before submission</p>
-        <div class="metric-row">
-          <div class="metric-col"><span class="metric-tag before">Before</span><p>Common — driven by requirements found too late</p></div>
-          <div class="metric-arrow">→</div>
-          <div class="metric-col"><span class="metric-tag after">After</span><p>Rare — dates and gaps are visible from day one</p></div>
-        </div>
-      </div></div>
+    <p class="beat">Decision 01</p>
+    <h2>Making AI uncertainty visible</h2>
+    <dl class="decision">
+      <div><dt>The problem</dt><dd>Tender documents didn't follow a single consistent template. Variations in structure and formatting meant the AI could miss information or extract it incorrectly.</dd></div>
+      <div><dt>The design response</dt><dd>I introduced AI confidence scores to communicate the system's confidence in its extracted information.</dd></div>
+      <div><dt>The trade-off</dt><dd>Confidence indicators could help users identify information that deserved closer attention, but they could not guarantee that an extraction was correct. The interface still needed to support verification.</dd></div>
+    </dl>
+    <figure class="shot">
+      <div class="shot-ph"><span>Add the AI analysis screen showing confidence scores</span></div>
+      <figcaption>AI analysis with confidence scores.</figcaption>
+    </figure>
+  </section>
+  <section class="case-block" style="max-width:980px">
+    <p class="beat">Decision 02</p>
+    <h2>Keeping the original tender within reach</h2>
+    <dl class="decision">
+      <div><dt>The problem</dt><dd>Even when the AI produced a useful analysis, bid managers still needed to check whether the information matched the original document.</dd></div>
+      <div><dt>The design response</dt><dd>I designed a quick-access panel to make the analysis accessible alongside the source document, supporting a verification workflow without requiring users to rely solely on the AI's interpretation.</dd></div>
+      <div><dt>The trade-off</dt><dd>Presenting the analysis more conveniently could reduce the effort of switching between views, but it did not remove the need for users to review the source.</dd></div>
+    </dl>
+    <figure class="shot grid-shots">
+      <div class="shot-ph"><span>Add the quick-access panel screen</span></div><img src="img/bidflow-register.jpg" alt="BidFlow Register opportunity screen with Open bid document and Register with AI actions" loading="lazy">
+      <figcaption>The quick-access panel (to be added), and where analysis starts: “Register with AI” sits beside “Open bid document”.</figcaption>
+    </figure>
+  </section>
+  <section class="case-block" style="max-width:980px">
+    <p class="beat">Decision 03</p>
+    <h2>Extending analysis into bid execution</h2>
+    <dl class="decision">
+      <div><dt>The problem</dt><dd>Understanding a tender was only the beginning. Bid managers still had to identify missing documents, source existing ones, assign work and prepare new materials before the deadline.</dd></div>
+      <div><dt>The design response</dt><dd>The product extended into document requirements, checklists, task management and timeline-related workflows, so the analysis led directly into the work of preparing the bid.</dd></div>
+      <div><dt>The trade-off</dt><dd>A richer workflow could support more of the bid-preparation process, but it also introduced more information and coordination to manage. The design needed to make the next actions clear without overwhelming the user.</dd></div>
+    </dl>
+    <figure class="shot grid-shots">
+      <img src="img/bidflow-dashboard.jpg" alt="BidFlow Opportunities dashboard with stage tracker and deadline countdown" loading="lazy"><img src="img/bidflow-checklist.jpg" alt="BidFlow checklist creator with categorized tasks, assignees, due dates and linked files" loading="lazy">
+      <figcaption>The Opportunities dashboard tracks each bid's stage and deadline; the checklist creator turns requirements into categorized, assignable tasks with a due date and linked file. (Client details anonymized.)</figcaption>
+    </figure>
+  </section>
+
+  <section class="case-block" style="max-width:980px">
+    <p class="beat">Outcomes</p>
+    <h2>From document analysis to a broader bid-management workflow</h2>
+    <p>The product was designed to bring together tender analysis and the activities required to prepare a response, rather than leaving bid managers to coordinate every step manually.</p><p>During my time on BidFlow, the product progressed from zero customers to its first customers as early sales began, and the team observed a substantial reduction in the time required to move from receiving a tender to preparing a proposal.</p>
+    <div class="rgrid-2"><div class="rcard c-blue"><p class="rk">Customers</p><p>From zero customers to its first customers as early sales began.</p><p><span class="score tbd">To be added</span></p></div><div class="rcard c-blue"><p class="rk">Tender-to-proposal turnaround</p><p>A substantial reduction in the time from receiving a tender to preparing a proposal, observed by the team.</p><p><span class="score tbd">To be added</span></p></div></div>
+    <p class="context-note">These are early product outcomes, not a controlled measurement of design impact. I would not attribute the turnaround improvement to any single feature.</p>
   </section>
 
   </div>
@@ -240,4 +248,112 @@
   </div>
   <p class="fine">© 2026 Tejaswini Gedam · Designed &amp; built as a living portfolio.</p>
 </footer>
+<script>
+(function () {
+  var d = document, root = d.documentElement;
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var bar = d.createElement("div");
+  bar.className = "read-progress";
+  bar.setAttribute("aria-hidden", "true");
+  d.body.appendChild(bar);
+  function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
+
+  var figA = d.querySelector(".fig-a");
+  var sheet = d.getElementById("tender-sheet");
+  var route = d.getElementById("tender-route");
+  var desk = d.querySelector(".story-desk");
+  var steps = desk ? Array.prototype.slice.call(desk.querySelectorAll(".ds")) : [];
+  var stage = desk ? desk.querySelector(".story-stage") : null;
+  var live = !reduce && figA && sheet && route && desk && stage;
+  if (live) { figA.classList.add("story-live"); desk.classList.add("story-live"); }
+
+  function updateStory() {
+    if (!live) return;
+    var vh = window.innerHeight;
+    var r = figA.getBoundingClientRect();
+    var t = clamp((vh * 0.9 - (r.top + r.height / 2)) / (vh * 0.5), 0, 1);
+    var e = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+    var pt = route.getPointAtLength(route.getTotalLength() * e);
+    sheet.setAttribute("transform", "translate(" + pt.x + " " + pt.y + ") rotate(" + (-10 * (1 - e)) + ") translate(-22 -29)");
+    sheet.style.opacity = clamp(t * 12, 0, 1);
+    figA.classList.toggle("na-1", t > 0.02);
+    figA.classList.toggle("na-2", t > 0.35);
+    figA.classList.toggle("na-3", t > 0.8);
+
+    var top = parseFloat(getComputedStyle(stage).top) || 0;
+    var dr = desk.getBoundingClientRect();
+    var total = desk.offsetHeight - stage.offsetHeight;
+    var p = total > 0 ? clamp((top - dr.top) / total, 0, 1) : 0;
+    var step = Math.min(5, Math.floor(p * 6));
+    for (var n = 1; n <= 6; n++) desk.classList.toggle("on-" + n, n <= step + 1);
+    var active = Math.min(step, steps.length - 1);
+    steps.forEach(function (li, i) {
+      li.classList.toggle("is-on", i === active);
+      li.classList.toggle("is-done", i < active);
+    });
+  }
+
+  var ticking = false;
+  function paint() {
+    var h = root.scrollHeight - window.innerHeight;
+    bar.style.transform = "scaleX(" + (h > 0 ? Math.min(1, window.scrollY / h) : 0) + ")";
+    updateStory();
+    ticking = false;
+  }
+  window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(paint); } }, { passive: true });
+  window.addEventListener("resize", paint);
+  paint();
+
+  if (!("IntersectionObserver" in window)) return;
+
+  var sections = Array.prototype.slice.call(d.querySelectorAll(".sheet .case-block"));
+
+  if (!reduce) {
+    var targets = d.querySelectorAll(".sheet .case-block:not(.story-block), .sheet .rcard, .sheet .annotation, .sheet .snapshot-item, .sheet .decision > div, .sheet .flow-step, .sheet .shot img, .sheet .shot-ph, .sheet .proto-ph, .sheet .context-note");
+    var seen = new Map();
+    Array.prototype.forEach.call(targets, function (el) {
+      var key = el.parentNode;
+      var n = seen.get(key) || 0;
+      seen.set(key, n + 1);
+      el.style.setProperty("--d", Math.min(n * 90, 450) + "ms");
+      el.classList.add("rv");
+    });
+    var reveal = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("rv-in"); reveal.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+    Array.prototype.forEach.call(targets, function (el) { reveal.observe(el); });
+  }
+
+  if (window.matchMedia && matchMedia("(min-width: 1280px)").matches) {
+    var rail = d.createElement("nav");
+    rail.className = "chapter-rail";
+    rail.setAttribute("aria-label", "Case study sections");
+    var links = [];
+    sections.forEach(function (sec, i) {
+      var beat = sec.querySelector(".beat");
+      if (!beat) return;
+      if (!sec.id) sec.id = "sec-" + (i + 1);
+      var a = d.createElement("a");
+      a.href = "#" + sec.id;
+      a.setAttribute("aria-label", beat.textContent);
+      var span = d.createElement("span");
+      span.textContent = beat.textContent;
+      a.appendChild(span);
+      rail.appendChild(a);
+      links.push({ sec: sec, a: a });
+    });
+    d.body.appendChild(rail);
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (l) { l.a.classList.toggle("on", l.sec === e.target); });
+      });
+    }, { rootMargin: "-40% 0px -55% 0px" });
+    links.forEach(function (l) { spy.observe(l.sec); });
+  }
+})();
+</script>
 </body></html>
