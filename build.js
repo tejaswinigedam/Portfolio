@@ -426,6 +426,8 @@ const site = {
         jtbd: {
           beat: "Jobs to be done",
           heading: "Analysing a tender document",
+          intro:
+            "To ideate solutions, we first mapped all the jobs a bid manager has to get done when analysing a tender. Mapping every job, not just the obvious ones, gave us a complete picture of the work, so each solution we explored could be traced back to a specific job.",
           core: {
             when: "When a tender appears worth pursuing,",
             need: "I need to understand its requirements, evaluate them against my company's capabilities, and determine the work involved,",
@@ -1177,6 +1179,7 @@ ${storyScenes(e.scene)}
   <section class="case-block" style="max-width:980px">
     <p class="beat">${esc(e.jtbd.beat)}</p>
     <h2>${esc(e.jtbd.heading)}</h2>
+    <p>${esc(e.jtbd.intro)}</p>
     <p class="jtbd-core"><span class="jc-k">Core job</span><span class="jc-w">${esc(e.jtbd.core.when)}</span> <span class="jc-n">${esc(e.jtbd.core.need)}</span> <span class="jc-s">${esc(e.jtbd.core.so)}</span></p>
     <div class="jt-grid">${e.jtbd.steps
       .map(
