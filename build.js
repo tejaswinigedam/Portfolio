@@ -325,19 +325,6 @@ const site = {
           closing:
             "The opportunity was not simply to automate document reading. It was to connect tender analysis to the entire preparation workflow.",
         },
-        manual: {
-          beat: "The manual workflow",
-          heading: "The work hidden behind every tender",
-          steps: [
-            { label: "Read & interpret", text: "Review tender documents and locate relevant requirements, eligibility criteria and legal or compliance conditions." },
-            { label: "Check eligibility", text: "Compare the tender's conditions with the company's qualifications, capabilities and available information." },
-            { label: "Identify documents", text: "Create a list of supporting documents and determine which are already available and which need to be prepared." },
-            { label: "Coordinate teams", text: "Source documents from the appropriate people, then track any required review, signatures, stamps or other actions." },
-            { label: "Manage deadlines", text: "Keep track of timelines, outstanding work and the final proposal documentation." },
-          ],
-          closing:
-            "Extracting text from the tender solved only the first of these steps. The rest of the work happened around the document, which is why analysis alone was not enough.",
-        },
         discovery: {
           beat: "Discovery",
           heading: "Understanding the bid manager's workflow",
@@ -352,7 +339,89 @@ const site = {
             "How could the product distinguish between documents already available and those requiring further action?",
             "How could the analysis translate into a coordinated plan for completing the bid?",
           ],
-          evidence: "Add tender excerpts, workflow notes or diagrams from discovery",
+          quotesHeading: "In their words",
+          quotes: [
+            {
+              title: "Missing a clause because the requirement is buried in another section",
+              role: "Tender analyst, Indian infrastructure company",
+              quote: [
+                "When I start analysing a tender, I usually read the NIT first, then the eligibility criteria, technical specifications, and commercial conditions. But the problem is that the requirements are not arranged in the order in which I need to understand them. I might read the experience criteria on page 20, and then find a condition related to that experience in an annexure on page 146.",
+                "For example, the main section might say that bidders must have completed similar projects above a certain value. It sounds straightforward. But somewhere else, the tender defines what counts as a similar project, which completion period is acceptable, and what information the certificate must contain. If I read those sections several hours apart, I have to remember that they are connected.",
+                "I end up searching the PDF repeatedly, checking the table of contents, following references, and rereading clauses just to make sure I have not missed a condition. Even after finishing the document, I am not always confident that I have found every requirement relevant to a particular eligibility criterion.",
+              ],
+              problem: "The document does not present related requirements together. The analyst must manually discover and connect clauses distributed across the document.",
+            },
+            {
+              title: "Understanding what a clause actually means",
+              role: "Bid manager, manufacturing MSME",
+              quote: [
+                "The hardest part is not always finding the clause. Sometimes I find it immediately, but I still don't know how it should be interpreted. A tender might use terms like ‘similar nature of work’, ‘successfully completed’, or ‘average annual turnover’ without making the practical meaning obvious in that particular context.",
+                "For instance, if the tender asks for experience in similar work, does supplying the equipment alone count, or does the authority expect installation and commissioning as well? The answer may depend on the definition given somewhere else in the tender. I have to read the surrounding clauses and look for qualifications that change the meaning.",
+                "I don't want a tool that simply highlights the sentence containing the word ‘experience’. I need help understanding the complete condition, including its exceptions, definitions, and references. Otherwise, I still have to do the same interpretation work manually.",
+              ],
+              problem: "Locating a clause is different from interpreting it in context. The challenge is understanding definitions, qualifiers, exceptions, and the precise scope of a requirement.",
+            },
+            {
+              title: "Identifying contradictions between different sections",
+              role: "Contracts analyst, Indian EPC contractor",
+              quote: [
+                "While reviewing a tender, I sometimes come across two clauses that appear to say different things. One section may specify a delivery period of 90 days, while another schedule appears to give 120 days. At first glance, it looks like a contradiction, but I cannot conclude that immediately. One might refer to delivery and the other to overall completion, or the clauses might genuinely be inconsistent.",
+                "The difficulty is that I have to identify these differences myself. I search for the relevant terms, compare the surrounding paragraphs, and follow any references to the contract conditions. The wording may be different enough that a basic keyword search does not bring both clauses to my attention.",
+                "What takes time is establishing whether two statements are actually inconsistent, whether one qualifies the other, or whether they apply to different circumstances. I would like to see potentially conflicting clauses together, with their exact locations, so I can examine them instead of discovering them accidentally during a second or third read.",
+              ],
+              problem: "The analyst must detect potential contradictions and distinguish genuine conflicts from requirements that apply in different contexts.",
+            },
+            {
+              title: "Understanding which requirements are mandatory and which are not",
+              role: "Technical bid analyst, electrical equipment supplier",
+              quote: [
+                "A tender can contain hundreds of technical requirements, and not every requirement has the same consequence. Some are mandatory eligibility conditions, some are technical pass/fail requirements, some contribute to evaluation scores, and others describe contractual obligations after award.",
+                "When I read a clause, I have to establish what role it plays in the evaluation. If I interpret a scored feature as compulsory, I might incorrectly conclude that our product is ineligible. On the other hand, if I treat a mandatory condition as merely desirable, we could prepare a bid that fails technical evaluation.",
+                "The difficulty is that these distinctions are not always presented in one consistent format. The document might describe a condition in the technical section and explain its evaluation consequence somewhere else. I need to connect the requirement to the relevant evaluation rules rather than classify it based on a single sentence.",
+              ],
+              problem: "Classifying requirements according to their actual role and consequences, using the complete tender rather than isolated wording.",
+            },
+            {
+              title: "Cross-references make the meaning of a clause incomplete",
+              role: "Tender consultant, government procurement bids",
+              quote: [
+                "Sometimes I read a technical specification that refers me to a particular schedule, and that schedule refers to an annexure or a separate standard. The original clause by itself does not contain enough information to understand the complete requirement.",
+                "For example, a specification may mention compliance with a particular standard, but the detailed acceptance criteria or testing requirements are provided elsewhere. I have to follow the reference, locate the correct version of the referenced material, and determine whether there are further references within it.",
+                "When there are many such references, it becomes difficult to keep track of what I have already checked and what remains unresolved. A clause can look simple until you follow all the references attached to it. I would like to see the connected provisions together without losing the exact source of each statement.",
+              ],
+              problem: "The analyst must follow chains of references across schedules, annexures, standards, and other incorporated documents.",
+            },
+            {
+              title: "Comparing the original tender with corrigenda",
+              role: "Senior tender executive, Indian engineering company",
+              quote: [
+                "When a corrigendum is issued, I cannot just read the amendment and assume I understand its impact. It might replace a sentence, change a numerical threshold, delete a condition, or revise a schedule. Sometimes it refers to a particular clause without reproducing the original wording.",
+                "For example, if an eligibility threshold changes, I need to compare the amended clause with the original one and establish exactly what is different. If the corrigendum changes a technical specification, I need to locate the corresponding original requirement and understand whether any related provisions have also changed.",
+                "We often end up opening two PDFs side by side and manually comparing the wording. That works for a small amendment, but it gets tedious when there are multiple corrigenda. The real problem is identifying what has changed in meaning, not just spotting different words.",
+              ],
+              problem: "Detecting changes between versions and tracing them to the original clauses they modify.",
+            },
+            {
+              title: "Interpreting tables, footnotes, and complex eligibility formulas",
+              role: "Tender analyst, Indian public-sector supplier",
+              quote: [
+                "Some of the most important conditions are inside tables rather than normal paragraphs. The eligibility criteria might be presented in a table with different thresholds for different categories, followed by footnotes explaining exceptions or special cases.",
+                "For example, a turnover requirement may depend on the number of financial years considered, while the table footnote explains how a particular category of bidder is treated. If I extract the main table without its footnotes, I could end up interpreting the requirement incorrectly.",
+                "Financial and technical criteria can also involve calculations, date ranges, units, or multiple conditions that must be satisfied together. I cannot just copy the numbers out of the document. I need to understand what each number represents and which conditions apply to it.",
+              ],
+              problem: "Correctly interpreting structured information, including table headers, footnotes, units, formulas, exceptions, and conditions that apply across rows.",
+            },
+            {
+              title: "Knowing whether the document has been analysed completely",
+              role: "Head of tendering, medium-sized Indian company",
+              quote: [
+                "After I finish reading a tender, I usually prepare a summary of the eligibility criteria, technical requirements, important dates, and contractual conditions. But I have no objective way to establish that the summary covers every important requirement in the original document.",
+                "I can review the document twice and still wonder whether I missed a footnote, an exception, a declaration requirement, or a clause that was referenced elsewhere. The problem becomes more serious when the tender is long and several documents are issued together.",
+                "When another person reviews my summary, they often go back to the original PDF and start checking the clauses independently. In practice, that means we are repeating much of the analysis instead of verifying a structured set of findings. I want to know not just what the analysis found, but also which sections have been reviewed, which references have been followed, and which issues remain uncertain.",
+              ],
+              problem: "There is no reliable measure of review completeness or clear distinction between verified findings, unresolved questions, and sections that have not yet been analysed.",
+            },
+          ],
         },
         ideation: {
           beat: "Ideation",
@@ -897,6 +966,71 @@ const storyScenes = (sc) => `
   </section>
 `;
 
+const avatarSpecs = [
+  { skin: "#e8c4a0", hair: "long", hairC: "#2b2b2b", glasses: true, top: "#8b5cf6" },
+  { skin: "#d9a77f", hair: "short", hairC: "#2b2b2b", stache: true, top: "#3fb1d1" },
+  { skin: "#c68b63", hair: "curly", hairC: "#2b2b2b", glasses: true, top: "#ffc63f" },
+  { skin: "#e8c4a0", hair: "bun", hairC: "#5a4636", top: "#3b4ce0" },
+  { skin: "#a9714b", hair: "bald", hairC: "#2b2b2b", beard: true, top: "#1f8f5a" },
+  { skin: "#d9a77f", hair: "short", hairC: "#9a9a9a", glasses: true, tie: true, top: "#8a8a85" },
+  { skin: "#c68b63", hair: "bob", hairC: "#2b2b2b", top: "#8b5cf6" },
+  { skin: "#e8c4a0", hair: "long", hairC: "#5a4636", scarf: true, top: "#3fb1d1" },
+];
+
+const avatar = (s) => {
+  const hairBack =
+    s.hair === "long" ? `<path class="av-l" fill="${s.hairC}" d="M24 42C22 20 58 20 56 42L58 66H22Z"/>`
+    : s.hair === "bob" ? `<path class="av-l" fill="${s.hairC}" d="M24 44C22 20 58 20 56 44L55 52H25Z"/>`
+    : "";
+  const hairFront =
+    s.hair === "short" ? `<path class="av-l" fill="${s.hairC}" d="M26 36C25 21 55 21 54 36C50 29 30 29 26 36Z"/>`
+    : s.hair === "bun" ? `<circle class="av-l" cx="40" cy="17" r="6" fill="${s.hairC}"/><path class="av-l" fill="${s.hairC}" d="M26 36C25 21 55 21 54 36C50 29 30 29 26 36Z"/>`
+    : s.hair === "curly" ? `<g class="av-l" fill="${s.hairC}"><circle cx="29" cy="30" r="6"/><circle cx="36" cy="25" r="6"/><circle cx="44" cy="25" r="6"/><circle cx="51" cy="30" r="6"/></g>`
+    : s.hair === "long" || s.hair === "bob" ? `<path class="av-l" fill="${s.hairC}" d="M26 38C25 22 55 22 54 38C48 28 34 28 26 38Z"/>`
+    : "";
+  return `<svg class="avatar-ill" viewBox="0 0 80 80" aria-hidden="true">
+    <circle cx="40" cy="40" r="39" fill="${s.top}" fill-opacity=".14" class="av-l"/>
+    <g clip-path="url(#avclip)">
+      ${hairBack}
+      <path class="av-l" fill="${s.top}" fill-opacity=".55" d="M10 82C12 64 27 57 40 57C53 57 68 64 70 82Z"/>
+      <path class="av-l" fill="${s.skin}" d="M35 48H45V59C45 62 35 62 35 59Z"/>
+      ${s.scarf ? `<path class="av-l" fill="${s.top}" fill-opacity=".8" d="M30 57C34 62 46 62 50 57L52 64C46 68 34 68 28 64Z"/>` : ""}
+      ${s.tie ? `<path class="av-l" fill="#8b5cf6" d="M38 59H42L43.5 72H36.5Z"/>` : ""}
+      ${s.beard ? `<path class="av-l" fill="${s.hairC}" d="M26 40C27 56 53 56 54 40C50 48 30 48 26 40Z"/>` : ""}
+      <ellipse class="av-l" fill="${s.skin}" cx="40" cy="38" rx="14" ry="16"/>
+      ${s.beard ? `<path class="av-l" fill="${s.hairC}" d="M26 40C27 56 53 56 54 40C50 48 30 48 26 40Z"/>` : ""}
+      ${hairFront}
+      <circle cx="34.5" cy="38" r="1.3" fill="#2b2b2b"/><circle cx="45.5" cy="38" r="1.3" fill="#2b2b2b"/>
+      ${s.glasses ? `<circle class="av-l" cx="34.5" cy="38" r="5" fill="none"/><circle class="av-l" cx="45.5" cy="38" r="5" fill="none"/><path class="av-l" d="M39.5 38H40.5"/>` : ""}
+      ${s.stache ? `<path class="av-l" fill="${s.hairC}" d="M34 45C37 43 43 43 46 45C43 47 37 47 34 45Z"/>` : `<path class="av-l" fill="none" d="M37 46C39 47.5 41 47.5 43 46"/>`}
+    </g>
+    <circle cx="40" cy="40" r="39" fill="none" class="av-l"/>
+  </svg>`;
+};
+
+const quoteRail = (qs, heading) => `
+    <div class="vq-wrap">
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><clipPath id="avclip"><circle cx="40" cy="40" r="39"/></clipPath></defs></svg>
+      <div class="vq-bar"><p class="vq-label">${esc(heading)}</p>
+        <div class="vq-nav"><button type="button" class="vq-btn" data-dir="-1" aria-label="Previous quote" hidden>&larr;</button><button type="button" class="vq-btn" data-dir="1" aria-label="Next quote" hidden>&rarr;</button></div>
+      </div>
+      <div class="vq-rail" tabindex="0" aria-label="User quotes, scroll horizontally">${qs
+        .map((q, i) => {
+          const first = q.quote[0];
+          const rest = q.quote.slice(1);
+          return `
+        <article class="vq">
+          <div class="vq-head">${avatar(avatarSpecs[i % avatarSpecs.length])}<div><p class="vq-n">0${i + 1}</p><p class="vq-role">${esc(q.role)}</p></div></div>
+          <h4 class="vq-title">${esc(q.title)}</h4>
+          <blockquote class="vq-body"><p>&ldquo;${esc(first)}</p><details><summary>Read more</summary>${rest
+            .map((p, j) => `<p>${esc(p)}${j === rest.length - 1 ? "&rdquo;" : ""}</p>`)
+            .join("")}</details></blockquote>
+          <p class="vq-prob"><span>Specific analytical problem</span>${esc(q.problem)}</p>
+        </article>`;
+        })
+        .join("")}</div>
+    </div>`;
+
 const explainer = (e) => `
   <section class="case-block" style="max-width:980px">
     <p class="beat">Project snapshot</p>
@@ -905,6 +1039,15 @@ const explainer = (e) => `
       .join("")}</div>
   </section>
 ${storyScenes(e.scene)}
+  <section class="case-block" style="max-width:980px">
+    <p class="beat">${esc(e.discovery.beat)}</p>
+    <h2>${esc(e.discovery.heading)}</h2>
+    ${e.discovery.paragraphs.map((x) => `<p>${esc(x)}</p>`).join("")}
+    <h3 class="sub-head">${esc(e.discovery.questionsHeading)}</h3>
+    <ul class="ticks">${e.discovery.questions.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
+    ${quoteRail(e.discovery.quotes, e.discovery.quotesHeading)}
+  </section>
+
   <section class="case-block">
     <p class="beat">${esc(e.challenge.beat)}</p>
     <h2>${esc(e.challenge.heading)}</h2>
@@ -913,27 +1056,6 @@ ${storyScenes(e.scene)}
     <p>${esc(e.challenge.opportunityIntro)}</p>
     <ul class="ticks">${e.challenge.questions.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
     <p class="context-note">${esc(e.challenge.closing)}</p>
-  </section>
-
-  <section class="case-block zoom">
-    <p class="beat">${esc(e.manual.beat)}</p>
-    <h2>${esc(e.manual.heading)}</h2>
-    <div class="flow">${e.manual.steps
-      .map((s, i) => (i === 0 ? "" : `<div class="flow-arrow">→</div>`) + `<div class="flow-step">${esc(s.label)}</div>`)
-      .join("")}</div>
-    <div class="annotations">${e.manual.steps
-      .map((s, i) => `<div class="annotation"><span>${i + 1}. ${esc(s.label)}</span><p>${esc(s.text)}</p></div>`)
-      .join("")}</div>
-    <p class="context-note">${esc(e.manual.closing)}</p>
-  </section>
-
-  <section class="case-block" style="max-width:980px">
-    <p class="beat">${esc(e.discovery.beat)}</p>
-    <h2>${esc(e.discovery.heading)}</h2>
-    ${e.discovery.paragraphs.map((x) => `<p>${esc(x)}</p>`).join("")}
-    <h3 class="sub-head">${esc(e.discovery.questionsHeading)}</h3>
-    <ul class="ticks">${e.discovery.questions.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
-    <div class="proto-ph"><span>${esc(e.discovery.evidence)}</span></div>
   </section>
 
   <section class="case-block" style="max-width:980px">
@@ -1269,6 +1391,25 @@ const scrollFxScript = `
   window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(paint); } }, { passive: true });
   window.addEventListener("resize", paint);
   paint();
+
+  Array.prototype.forEach.call(d.querySelectorAll(".vq-wrap"), function (w) {
+    var rail = w.querySelector(".vq-rail");
+    var btns = w.querySelectorAll(".vq-btn");
+    function sync() {
+      btns[0].disabled = rail.scrollLeft < 4;
+      btns[1].disabled = rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 4;
+    }
+    Array.prototype.forEach.call(btns, function (b) {
+      b.hidden = false;
+      b.addEventListener("click", function () {
+        var card = rail.querySelector(".vq");
+        var step = (card ? card.getBoundingClientRect().width : 320) + 16;
+        rail.scrollBy({ left: step * Number(b.getAttribute("data-dir")), behavior: reduce ? "auto" : "smooth" });
+      });
+    });
+    rail.addEventListener("scroll", sync, { passive: true });
+    sync();
+  });
 
   if (!("IntersectionObserver" in window)) return;
 
