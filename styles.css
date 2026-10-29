@@ -399,6 +399,33 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
   .rv { opacity: 1; transform: none; transition: none; }
 }
 
+/* ---------- Jobs to be done ---------- */
+.jtbd-core {
+  margin: 8px 0 24px; padding: 22px 24px; background: var(--paper); border: 1px solid var(--line); border-left: 3px solid var(--violet); border-radius: var(--r-sm);
+  font-family: var(--serif); font-style: italic; font-size: clamp(19px, 2.6vw, 25px); line-height: 1.45; color: var(--ink);
+}
+.jtbd-core .jc-k { display: block; margin-bottom: 8px; font: 700 11px/1 var(--mono); font-style: normal; text-transform: uppercase; letter-spacing: .1em; color: var(--violet); }
+.jtbd-core .jc-w { background: linear-gradient(transparent 62%, rgba(255, 198, 63, .55) 62%); }
+.jtbd-core .jc-n { background: linear-gradient(transparent 62%, rgba(63, 177, 209, .4) 62%); }
+.jtbd-core .jc-s { background: linear-gradient(transparent 62%, rgba(139, 92, 246, .3) 62%); }
+.jt-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; align-items: start; }
+@media (max-width: 720px) { .jt-grid { grid-template-columns: 1fr; } }
+.jt { background: var(--paper); border: 1px solid var(--line); border-top: 3px solid var(--line); border-radius: var(--r-sm); padding: 20px; }
+.jt-n { margin: 0 0 6px; font: 700 11.5px/1 var(--mono); letter-spacing: .08em; color: var(--violet); }
+.jt h4 { margin: 0 0 12px; font-family: var(--display); font-size: 17px; line-height: 1.3; }
+.jt-goal, .jt-out { margin: 0; font-size: 14.5px; color: var(--ink-soft); }
+.jt-goal span, .jt-out span { display: block; margin-bottom: 3px; font: 700 11px/1 var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--ink-soft); }
+.jt details { margin: 14px 0; }
+.jt summary {
+  cursor: pointer; list-style: none; font: 700 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .04em; color: var(--blue);
+}
+.jt summary::-webkit-details-marker { display: none; }
+.jt summary::before { content: "+ "; }
+.jt details[open] summary::before { content: "– "; }
+.jt details .ticks { margin-top: 12px; gap: 8px; font-size: 14px; }
+.jt-out { padding-top: 12px; border-top: 1px solid var(--line); }
+.jt-out span { color: var(--violet); }
+
 /* ---------- User quotes (horizontal rail) ---------- */
 .vq-wrap { margin-top: 30px; }
 .vq-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 14px; }

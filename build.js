@@ -423,6 +423,122 @@ const site = {
             },
           ],
         },
+        jtbd: {
+          beat: "Jobs to be done",
+          heading: "Analysing a tender document",
+          core: {
+            when: "When a tender appears worth pursuing,",
+            need: "I need to understand its requirements, evaluate them against my company's capabilities, and determine the work involved,",
+            so: "so I can make an informed decision and know what it will take to prepare a compliant bid.",
+          },
+          steps: [
+            {
+              title: "Understand the tender and its scope",
+              goal: "Build an accurate picture of what the buyer is asking for.",
+              activities: [
+                "Identify the type of tender and the organization issuing it.",
+                "Understand the purpose and scope of the project.",
+                "Identify the products, services, or work being requested.",
+                "Understand the expected deliverables and technical specifications.",
+                "Identify the locations, quantities, and project duration, where applicable.",
+                "Understand contractual conditions and special requirements.",
+                "Identify the structure of the document and locate relevant sections.",
+                "Navigate between the main tender document, annexures, schedules, and referenced documents.",
+                "Identify amendments or corrigenda that may change the original requirements.",
+                "Clarify unfamiliar terminology or ambiguous instructions.",
+              ],
+              outcome: "Understand what the buyer expects and the boundaries of the work.",
+            },
+            {
+              title: "Extract and interpret requirements",
+              goal: "Identify exactly what the company must satisfy or provide.",
+              activities: [
+                "Locate eligibility and qualification criteria.",
+                "Identify mandatory versus conditional requirements.",
+                "Extract technical specifications and compliance conditions.",
+                "Identify financial and commercial requirements.",
+                "Find submission instructions and prescribed formats.",
+                "Identify required declarations, certificates, and supporting documents.",
+                "Extract submission deadlines, pre-bid meeting dates, and other important dates.",
+                "Identify fees, earnest money deposit (EMD), and performance security requirements, where applicable.",
+                "Understand the evaluation criteria and selection process.",
+                "Identify requirements that depend on other clauses or documents.",
+                "Check whether requirements have changed in a corrigendum.",
+                "Verify extracted information against the original source.",
+              ],
+              outcome: "A structured, traceable understanding of the tender's requirements.",
+            },
+            {
+              title: "Assess company eligibility",
+              goal: "Determine whether the company satisfies the tender's qualification conditions.",
+              activities: [
+                "Check minimum turnover and financial criteria.",
+                "Verify required years of experience.",
+                "Compare past projects against experience requirements.",
+                "Check technical qualifications, certifications, and registrations.",
+                "Verify licenses or authorizations, where required.",
+                "Review consortium, subcontracting, or partnership conditions, where applicable.",
+                "Compare each requirement against available company credentials.",
+                "Identify missing, expired, or insufficient evidence.",
+                "Determine whether a requirement is clearly met, unmet, or uncertain.",
+                "Identify conditions requiring clarification or additional verification.",
+                "Assess whether the company can realistically satisfy the mandatory conditions.",
+              ],
+              outcome: "An evidence-based assessment of eligibility, including gaps and uncertainties.",
+            },
+            {
+              title: "Evaluate the effort and implications of bidding",
+              goal: "Understand what pursuing the tender would involve.",
+              activities: [
+                "Identify the volume and complexity of documentation required.",
+                "Assess the technical capabilities and resources needed.",
+                "Identify financial commitments, fees, deposits, or guarantees.",
+                "Understand delivery timelines and contractual obligations.",
+                "Identify requirements that may involve other departments or external parties.",
+                "Estimate the effort required to prepare responses and supporting documents.",
+                "Identify potential risks, dependencies, and restrictive conditions.",
+                "Determine whether unresolved questions could affect the decision to bid.",
+                "Weigh the opportunity against the effort and risks involved.",
+              ],
+              outcome: "Understand the practical implications of pursuing the opportunity.",
+            },
+            {
+              title: "Identify documentation gaps",
+              goal: "Establish what evidence and paperwork will be needed.",
+              activities: [
+                "List the documents explicitly required by the tender.",
+                "Determine which documents are already available internally.",
+                "Check whether existing certificates and credentials are current.",
+                "Identify documents that need to be obtained from other departments.",
+                "Identify documents that need drafting, updating, or customization.",
+                "Determine whether a prescribed template or format must be followed.",
+                "Identify supporting evidence needed for individual eligibility claims.",
+                "Check whether multiple requirements depend on the same document.",
+                "Flag unclear or conflicting documentation instructions.",
+                "Identify gaps that could prevent the company from meeting mandatory conditions.",
+              ],
+              outcome: "A clear picture of what is available, missing, outdated, or needs further work.",
+            },
+            {
+              title: "Translate the analysis into actionable next steps",
+              goal: "Turn the findings into a plan for preparing the bid.",
+              activities: [
+                "Consolidate the requirements into a checklist.",
+                "Link each requirement to its relevant source in the tender.",
+                "Convert requirements into specific preparation tasks.",
+                "Identify the documents and evidence needed for each task.",
+                "Determine which tasks depend on other tasks being completed first.",
+                "Identify the people or departments whose input is needed.",
+                "Establish internal deadlines ahead of the official submission deadline.",
+                "Highlight critical requirements that need early attention.",
+                "Identify outstanding questions that must be resolved.",
+                "Summarize the tender's key requirements, eligibility findings, and preparation needs.",
+                "Establish what must happen next before the team can proceed confidently.",
+              ],
+              outcome: "A practical, organized action plan based on the tender analysis.",
+            },
+          ],
+        },
         ideation: {
           beat: "Ideation",
           heading: "Four directions for connecting analysis to action",
@@ -1056,6 +1172,24 @@ ${storyScenes(e.scene)}
     <p>${esc(e.challenge.opportunityIntro)}</p>
     <ul class="ticks">${e.challenge.questions.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
     <p class="context-note">${esc(e.challenge.closing)}</p>
+  </section>
+
+  <section class="case-block" style="max-width:980px">
+    <p class="beat">${esc(e.jtbd.beat)}</p>
+    <h2>${esc(e.jtbd.heading)}</h2>
+    <p class="jtbd-core"><span class="jc-k">Core job</span><span class="jc-w">${esc(e.jtbd.core.when)}</span> <span class="jc-n">${esc(e.jtbd.core.need)}</span> <span class="jc-s">${esc(e.jtbd.core.so)}</span></p>
+    <div class="jt-grid">${e.jtbd.steps
+      .map(
+        (s, i) => `
+      <article class="jt">
+        <p class="jt-n">0${i + 1}</p>
+        <h4>${esc(s.title)}</h4>
+        <p class="jt-goal"><span>Goal</span>${esc(s.goal)}</p>
+        <details><summary>${s.activities.length} activities</summary><ul class="ticks">${s.activities.map((a) => `<li>${esc(a)}</li>`).join("")}</ul></details>${s.outcome ? `
+        <p class="jt-out"><span>Desired outcome</span>${esc(s.outcome)}</p>` : ""}
+      </article>`
+      )
+      .join("")}</div>
   </section>
 
   <section class="case-block" style="max-width:980px">
