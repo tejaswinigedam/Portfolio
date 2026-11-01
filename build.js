@@ -645,6 +645,187 @@ const site = {
       ],
     },
     {
+      id: "Seascanner",
+      scrollFx: true,
+      title: "Seascanner — Product Critique & Heuristic Evaluation",
+      short: "A heuristic evaluation of a cruise-booking platform: 22 severity-rated issues across search, details and booking, with the business outcomes of fixing them.",
+      who: "Cruise travellers with very different needs: first-time planners, multi-generational families, experienced luxury cruisers and spontaneous solo travellers.",
+      problem: [],
+      roleLead: "UX Evaluator — I ran the critique solo, from research and scenarios through heuristic evaluation, severity scoring and documentation, as a course project for Pragmatic UX Product Critique.",
+      role: [
+        "Researched the audience through secondary research: SimilarWeb data and four cruise-industry reports.",
+        "Defined four scenarios across distinct traveller segments and devices.",
+        "Evaluated search, cruise-detail and booking tasks against usability heuristics, recording each issue on screen.",
+        "Scored every issue for severity by hand, with the working shown.",
+        "Wrote recommendations and mapped each fix to an expected user behaviour change and business outcome.",
+      ],
+      timeline: "3 days · ~10 hours",
+      permission: "Academic course project: Pragmatic UX Product Critique.",
+      scores: {},
+      critique: {
+        hookTitle: "Booking a cruise on Seascanner, through four travellers' eyes",
+        hookSub:
+          "A heuristic evaluation grounded in secondary research and four scenarios, with 22 issues rated by severity and tied to the outcomes fixing them should deliver.",
+        snapshot: [
+          { label: "Problem", cls: "problem", text: "Cruise booking is a long, multi-session decision made by very different travellers, from first-timers to retired luxury cruisers. Where does Seascanner's search, detail and booking experience let them down?" },
+          { label: "Approach", cls: "focus", text: "Secondary research to understand the audience, four scenarios, then a heuristic evaluation of each task with every issue severity-scored." },
+          { label: "Outcome", cls: "outcome", text: "22 severity-rated issues (0 critical, 5 major, 13 minor, 3 irritants, 1 cosmetic), four top recommendations, and the expected user and business outcomes of fixing them." },
+        ],
+        time: {
+          beat: "How I worked",
+          heading: "About ten hours over three days",
+          rows: [
+            { day: "Day 1", text: "30 mins: secondary research on SimilarWeb, extracting insights." },
+            { day: "Day 2", text: "1.5 hours reading reports, extracting insights and defining scenarios. 1 hour finding issues. 40 mins identifying severity manually." },
+            { day: "Day 3", text: "2 hours finding issues. 1.5 hours identifying severity manually. 3 hours creating the documentation file." },
+          ],
+        },
+        research: {
+          beat: "Secondary research",
+          heading: "Who cruises, and how they look for it",
+          intro: "I wasn't the core cruise traveller, so I couldn't rely on my own intuition. Secondary research grounded the evaluation in who actually uses the product and how.",
+          stats: [
+            { n: "67%", t: "of cruisers are Gen X or younger" },
+            { n: "36%", t: "are Millennials: mobile-first, with the highest loyalty" },
+            { n: "31%", t: "are first-time cruisers, a record high" },
+            { n: "28%", t: "are multi-generational families" },
+            { n: "12%", t: "are solo travellers" },
+            { n: "58%", t: "of visits are on mobile, against 42% on desktop" },
+            { n: "59%", t: "of global volume is North America, then Europe 24% and Asia/Oceania 11%" },
+            { n: "47%", t: "of traffic is organic search, with 29% direct" },
+          ],
+          notes: [
+            "Gen Z is the fastest-growing group, travelling solo and on shorter trips. Boomers spend the most per trip.",
+            "Asia/Oceania is a mobile-driven comeback.",
+          ],
+          topicsHeading: "What people search for",
+          topics: [
+            { h: "Value & first-time cruising", items: ["Best cruises for first-time travelers", "All-inclusive cruises 2025", "No hidden fees cruise"] },
+            { h: "Premium & luxury travel", items: ["Luxury cruise 2025", "Ultra-luxury small ship cruise", "Alaska cruises 2025", "Caribbean cruise"] },
+            { h: "Solo & flexible travel", items: ["Solo cruise cabins", "Best cruise for solo travelers", "Cruise Wifi packages", "Cruise with best internet"] },
+            { h: "Experience & itinerary focus", items: ["Cruise themed vacations", "Cruise with activities", "Cruise port reviews", "Best cruise itineraries"] },
+          ],
+          sourcesHeading: "Sources",
+          sources: [
+            { t: "SimilarWeb: seascanner.com overview", u: "https://www.similarweb.com/website/seascanner.com/#overview" },
+            { t: "Ocean Cruise Outlook 2025, Travel Market Report", u: "https://www.travelmarketreport.com/media/Outlooks/OceanCruiseOutlook2025.pdf" },
+            { t: "State of the Cruise Industry Report 2025, CLIA", u: "https://cruising.org/resources/state-cruise-industry-report-2025" },
+            { t: "Understanding diverse cruise market segments in 2025, Columbia CS", u: "https://columbia-cs.com/understanding-diverse-cruise-market-segments-in-2025/" },
+            { t: "Travel trends for cruises, Kantar", u: "https://www.kantar.com/inspiration/research-services/travel-trends-for-cruises-pf" },
+          ],
+        },
+        scenarios: {
+          beat: "Scenarios",
+          heading: "Four travellers, four ways of planning",
+          intro: "Each scenario shaped which tasks I evaluated and which issues mattered most.",
+          items: [
+            {
+              name: "Sarah", tag: "The First-Time Planner",
+              desc: "A 34-year-old marketing manager from New York City planning her first cruise for a winter break with her partner. She's comparing cruises to an all-inclusive resort and wants a 7-night Caribbean cruise that includes food, drinks, Wi-Fi and gratuities. She browses casually on her mobile during commutes and in the evenings.",
+              goal: "To find and book a relaxing, all-inclusive cruise that feels easy to plan and offers clear value.",
+              action: "She explores different cruises on her phone over a few days, checks what's included, compares a shortlist, and books once she feels confident.",
+              avatars: [{ skin: "#e8c4a0", hair: "long", hairC: "#5a4636", top: "#8b5cf6" }],
+            },
+            {
+              name: "Priya", tag: "The Multi-Generational Organizer",
+              desc: "A 45-year-old mother from Chicago planning a summer cruise for her multi-generational family, including grandparents and kids. They want to sail the Mediterranean for 7–10 nights, departing from Barcelona. She is experienced at planning trips but new to cruises.",
+              goal: "To find a cruise with suitable cabins, activities and dining that works for her diverse family.",
+              action: "She browses options over multiple sessions, collects key details, discusses choices with her family, and finalizes the booking once everyone agrees.",
+              avatars: [{ skin: "#c68b63", hair: "bun", hairC: "#2b2b2b", top: "#3fb1d1" }],
+            },
+            {
+              name: "Linda & Robert", tag: "The Veterans",
+              desc: "A retired couple from Toronto in their late 60s, planning their next premium cruise to either Alaska or the Mediterranean. They prefer small ships, suites and immersive excursions. They plan carefully at their desktop over several weeks, comparing ships and what's included.",
+              goal: "To select a high-comfort, well-rated luxury cruise that matches their previous cruise experiences.",
+              action: "They compare multiple cruise lines and itineraries and book once they are confident the experience meets their expectations.",
+              avatars: [
+                { skin: "#e8c4a0", hair: "bob", hairC: "#9a9a9a", scarf: true, top: "#ffc63f" },
+                { skin: "#e8c4a0", hair: "bald", hairC: "#9a9a9a", glasses: true, top: "#3b4ce0" },
+              ],
+            },
+            {
+              name: "Jonas", tag: "The Spontaneous Solo Traveler",
+              desc: "A 26-year-old solo traveller from Berlin who wants a quick escape within the next few weeks. He browses short 3–5 night Mediterranean cruises on his phone while commuting. It's his first cruise, and he's price-sensitive and prefers to avoid paying extra as a solo traveller.",
+              goal: "To find and book an affordable, simple solo cruise that fits his short timeline.",
+              action: "He checks a few cruise options on his phone, reviews key trip details, and books once he finds one that fits his dates and budget.",
+              avatars: [{ skin: "#d9a77f", hair: "short", hairC: "#2b2b2b", top: "#1f8f5a" }],
+            },
+          ],
+        },
+        summary: {
+          beat: "Executive summary",
+          heading: "22 issues, none critical, five major",
+          counts: [
+            { n: 0, label: "Critical", lvl: 5 },
+            { n: 5, label: "Major", lvl: 4 },
+            { n: 13, label: "Minor", lvl: 3 },
+            { n: 3, label: "Irritants", lvl: 2 },
+            { n: 1, label: "Cosmetic", lvl: 1 },
+          ],
+          recsHeading: "Top recommendations",
+          recs: [
+            "Add ratings and reviews to gain trust.",
+            "Assist first-time cruisers to improve clarity.",
+            "Show booking status upfront to avoid surprises.",
+            "Cater to multi-session experience.",
+          ],
+          positivesHeading: "Top positives",
+          positives: ["The Deals section highlights promotions.", "Rich filter options."],
+        },
+        issuesHeading: "Every issue, rated",
+        issuesIntro: "Each finding names the task, the heuristic it breaks, why it got its severity score, and a suggested fix. The first five are the major issues; the rest open on click. Where I recorded the issue on screen, the recording is linked.",
+        issues: [
+          { code: "Major #1", lvl: 4, sev: "Major", score: "3+2−1", title: "Itinerary is not clear day-wise", task: "View cruise details", heuristic: "Match Between System and the Real World", hnote: "Travelers expect a clear daily plan: Day 1, Day 2, Day 3.", issue: "The itinerary is shown as a map and a stop list. There are no visual cues to assist. It lists stops by port but not grouped day-by-day, so users must read dates and times to figure out the daily plan.", why: "All users read the itinerary to plan daily activities and compare ships. The unclear day list wastes time and doesn't provide easy understanding.", fix: "Show a simple day-by-day view alongside the map and port list along with imagery/video media.", video: "https://drive.google.com/file/d/1zBzFNCUiMFoy53Os1W_1otlQCJjwjCRU/view?usp=sharing" },
+          { code: "Major #2", lvl: 4, sev: "Major", score: "3+2−1", title: "No ratings on mobile version", task: "Compare cruise results", heuristic: "Visibility of System Status", hnote: "Ratings and reviews help users see what others think, building trust.", issue: "Cruise listings and detail pages do not show clear passenger ratings or reviews. Users can't easily judge quality or trustworthiness when comparing options.", why: "Almost all mobile users lose an easy trust cue. They may cross-check on desktop or other sites.", fix: "Show clear star ratings & review snippets on mobile cards and detail pages.", video: "https://drive.google.com/file/d/1aWHiJ13qqxJARjJRz8Gh__LXuMuY6I7y/view?usp=sharing" },
+          { code: "Major #3", lvl: 4, sev: "Major", score: "3+2−1", title: "Price Overview is confusing", task: "View cruise details", heuristic: "Help and Documentation", hnote: "There's no clear, simple explanation for each option.", issue: "The Price Overview lists cabin types using unclear terms. It's not obvious what these mean or how they differ. Users may feel lost trying to compare options.", why: "All users compare options. Unclear terms waste time but don't fully stop them.", fix: "Use plain language for payment types; add simple tooltips." },
+          { code: "Major #4", lvl: 4, sev: "Major", score: "3+2−1", title: "Ratings lack detail", task: "View cruise details", heuristic: "Match Between System and the Real World", hnote: "Travelers expect real stories, not just scores.", issue: "The Ratings & Reviews section only shows numbers for categories. There are no real passenger stories, photos, or detailed reviews to help users judge what to expect.", why: "All travelers rely on passenger reviews for trust. Without real stories, they may feel unsure but can still compare based on numeric scores or check elsewhere.", fix: "Add verified passenger comments or written reviews alongside numeric scores.", video: "https://drive.google.com/file/d/1Jg8cru8dKSP4R_F4CzD2t9yj-lzV-S4j/view?usp=sharing" },
+          { code: "Major #5", lvl: 4, sev: "Major", score: "2+3−1", title: "Booking status unclear until end", task: "Book the cruise", heuristic: "Visibility of System Status", hnote: "The real booking status should be visible upfront. Also, time to value.", issue: "Seascanner does not show the booking status (confirmed, optional, waitlist) early in the flow. Users fill out all passenger details, pick a cabin, and only learn at the end whether they can pay and secure it immediately, hold an option, or just join a waitlist.", why: "Many booking users hit this. Surprise status may cause drop-offs or booking failures.", fix: "Show booking availability early, e.g., Confirmed vs Waitlist upfront.", video: "https://drive.google.com/file/d/1Ppj8-mNxPn40fysfZCzt8G-urDfCSBbG/view?usp=sharing" },
+          { code: "Minor #1", lvl: 3, sev: "Workaround", score: "2+2−1", title: "Search input feels complex for new users", task: "Search for cruises", heuristic: "Match Between System and the Real World", hnote: "Assumes people think like cruise experts, uses unclear cruise-specific terms that first-time users may not easily understand.", issue: "The search form shows many fields (travelers, duration, region, cruise line) upfront and many advanced filters. While not required, it can confuse new users.", why: "Many first-time or casual travelers may struggle to understand advanced search fields. Repeat cruisers are less affected. Users can skip or trial-and-error some fields to continue.", fix: "Make search easier to understand by adding plain-language labels, smart defaults, or quick tips." },
+          { code: "Minor #2", lvl: 3, sev: "Workaround", score: "1+3−1", title: "Limits on number of travelers", task: "Search for a cruise for a large family", heuristic: "Flexibility and Efficiency of Use", hnote: "Users can't easily adapt the search to real group sizes. They must do manual workarounds.", issue: "In the main search, the Number of Travelers input limits users to a maximum of about 8 people. Larger families or groups cannot search for multiple cabins automatically and must send a manual message instead.", why: "Only large groups face this cap. It fully blocks direct searching for them, but they can use a manual workaround.", fix: "Allow the search tool to accept larger groups and show possible multi-cabin combinations automatically.", video: "https://drive.google.com/file/d/1QrgufVf1wVKVz1FYBWSo_ClP63uRv-jC/view?usp=sharing" },
+          { code: "Minor #3", lvl: 3, sev: "Workaround", score: "1+3−1", title: "Contact form limits large group input", task: "Search for a cruise for a large family", heuristic: "Flexibility and Efficiency of Use", hnote: "The fallback form does not solve the limit of group sizes.", issue: "When users try to contact Seascanner for larger groups, the Get in Touch form still limits the number of adults, children, or cabins to about 8. There's no way to easily enter bigger numbers, so planners must describe their group in free text.", why: "Only large groups trying to book multiple cabins face this. It blocks smooth requests but they can type numbers manually in free text as a fragile workaround.", fix: "Remove caps in the form & allow realistic large groups and cabins.", video: "https://drive.google.com/file/d/1Z6LpdllRyw0Mnqilq01t-0jMZN1aOSRf/view?usp=sharing" },
+          { code: "Minor #4", lvl: 3, sev: "Workaround", score: "2+2−1", title: "Ship Finder layout is cluttered and overlapping", task: "Search for a cruise through ShipFinder", heuristic: "Aesthetic and Minimalist Design", hnote: "Layout should be clear, readable, and well-spaced.", issue: "The ShipFinder feature has a confusing layout with overlapping text and buttons.", why: "Many users may try ShipFinder to get matched with ships, but they can still browse manually if it's unusable.", fix: "Fix layout: clear spacing, proper sections, mobile checks.", video: "https://drive.google.com/file/d/1Gg_5S-ke9LhlKTfjowpBs61J6lVa269j/view?usp=sharing" },
+          { code: "Minor #5", lvl: 3, sev: "Workaround", score: "2+2−1", title: "No currency flexibility for price filter", task: "Search for a cruise", heuristic: "Match Between System and the Real World", hnote: "Users think in their own currency.", issue: "Cruise results and price filters show only EUR. There's no easy option to change to USD, GBP, CAD, SGD, or other major currencies.", why: "Many non-Euro users must convert prices themselves. It wastes time but does not stop booking.", fix: "Find solutions on how to match the user's geography through various parameters like language and currency to support a worldwide user base." },
+          { code: "Minor #6", lvl: 3, sev: "Workaround", score: "2+2−1", title: "Sliders for price and duration lack clear scale", task: "Search for a cruise for a large family", heuristic: "Visibility of System Status", hnote: "Users need to see what they're about to pick.", issue: "When adjusting sliders for price or duration, the input shows the current selected value but there are no scale labels or hover states to guide the choice.", why: "Many users will adjust price/duration sliders to refine results. Lack of clear scale wastes time but does not fully block searching. Users can retry to get closer.", fix: "Add a scale, labels, and live value preview for easier, faster filtering.", video: "https://drive.google.com/file/d/1F_NaiW8sKvuhKWFKQrt82ttEYScsNHH6/view?usp=sharing" },
+          { code: "Minor #7", lvl: 3, sev: "Workaround", score: "2+2−1", title: "No easy way to reuse past passenger details", task: "Book the cruise", heuristic: "Recognition Rather Than Recall", hnote: "Users must recall booking numbers instead of simply logging in.", issue: "When filling passenger details, returning users can only reuse past info by entering a previous booking number and email. There's no account system to store passenger profiles, so they must remember old details each time.", why: "Repeat travelers must retype info each time. Not a full blocker but very inefficient.", fix: "Add account profiles or passenger detail memory." },
+          { code: "Minor #8", lvl: 3, sev: "Workaround", score: "2+2−1", title: "No way to save or shortlist cruises", task: "Search for a cruise", heuristic: "User Control and Freedom", hnote: "Users can't save options to compare later. Also affects continuity of experience.", issue: "There's no way to save, favorite, or shortlist cruises. Without an account system, users must repeat searches and re-find trips every time.", why: "Many people research in sessions. No save means repeating work each time.", fix: "Think about how we can make searching sessions experience better and guide to save/shortlist.", video: "https://drive.google.com/file/d/1Oi2DkWrNqzE7kGTUQ_v2Zl5wXilA04IJ/view?usp=sharing" },
+          { code: "Minor #9", lvl: 3, sev: "Workaround", score: "2+2−1", title: "Deals pages lack standard filters", task: "Search for a cruise through deals", heuristic: "Flexibility and Efficiency of Use", hnote: "Browsing deals should feel as easy as regular search filtering.", issue: "The Deals pages show lists of cruises but do not allow users to filter by destination, duration, date, or other standard options. Users must manually read through every result.", why: "Many users want deals with filters. Manual scanning wastes effort but doesn't block booking.", fix: "Add standard filters for deals pages.", video: "https://drive.google.com/file/d/1Jv98zsnqVCVFJMG8oMyHDaLLMIkKVnlQ/view?usp=sharing" },
+          { code: "Minor #10", lvl: 3, sev: "Workaround", score: "1+3−1", title: "Booking flow does not guide large group sizes", task: "Book the cruise", heuristic: "Error Prevention", hnote: "The system should prevent unaccepted group sizes for a single cabin.", issue: "Users can select more passengers than a cabin can hold (e.g. 10). The system shows an error but still lets them continue, sometimes booking fewer passengers without clear feedback.", why: "Large groups can get mismatches and may end up booking fewer spots than needed.", fix: "Tie passenger input to cabin capacity logic.", video: "https://drive.google.com/file/d/1gQLjN3OJXwymDB59_gaA0Zow9nig-XSA/view?usp=sharing" },
+          { code: "Minor #11", lvl: 3, sev: "Workaround", score: "2+2−1", title: "No real-time validation for payment details", task: "Book the cruise", heuristic: "Error Prevention", hnote: "The system should prevent obvious mistakes.", issue: "While entering payment info, the system accepts any input like invalid card numbers, expired dates, wrong formats without warning. Errors appear only after pressing Submit.", why: "Many users will enter invalid payment info by mistake. They can't complete the booking until they fix it.", fix: "Add real-time payment field checks.", video: "https://drive.google.com/file/d/1OhZunj6UUzs8c9tfHdmzzzD9a9gcZBdA/view?usp=sharing" },
+          { code: "Minor #12", lvl: 3, sev: "Workaround", score: "3+1−1", title: "Progress stepper does not match actual booking step", task: "Book the cruise", heuristic: "Visibility of System Status", hnote: "Progress should be accurate.", issue: "The Booking Flow's progress bar at the top shows the wrong step. For example, when the user is on Passengers, the stepper highlights Options Selection. The stepper is always one step behind.", why: "All users see the stepper. Misalignment confuses but is not a blocker.", fix: "Fix step logic to match actual step.", video: "https://drive.google.com/file/d/1tneT94A1gHOIVHVlXfG6kiPrj80EMmkc/view?usp=sharing" },
+          { code: "Minor #13", lvl: 3, sev: "Workaround", score: "2+2−1", title: "Quick Search fails for common keywords", task: "Search for all-inclusive / luxury cruises", heuristic: "Match Between System and the Real World", hnote: "Users expect the system to handle familiar travel terms.", issue: "The Quick Search field allows users to type in free-text queries (e.g., “all-inclusive cruises,” “luxury cruises,” “cruise with Wi-Fi”), but returns “no results” even for extremely common or high-intent keywords.", why: "Many users type common travel keywords. The system fails to interpret these, so they waste time hunting through broad lists instead of jumping straight to relevant options.", fix: "Improve search logic to support common phrases like “all-inclusive” or “luxury.”", video: "https://drive.google.com/file/d/1xzQPCFD9Egxy53-36Eu6cqu_OFXds1x5/view?usp=sharing" },
+          { code: "Irritant #1", lvl: 2, sev: "Irritant", score: "2+1−1", title: "Breadcrumbs clear active filters", task: "Search for a cruise", heuristic: "User Control and Freedom", hnote: "Breadcrumbs should help move backward without losing filters.", issue: "When using breadcrumbs to navigate back to cruise results, any filters (like destination, duration) are removed, forcing users to start over.", why: "Many users may click back with breadcrumbs. They can reapply filters, but it wastes time.", fix: "Keep filters active when navigating with breadcrumbs.", video: "https://drive.google.com/file/d/18LHObWQr5iMQv9mJ8fP9BUasDXZi3DXj/view?usp=sharing" },
+          { code: "Irritant #2", lvl: 2, sev: "Irritant", score: "2+1−1", title: "Inconsistent language and untranslated terms", task: "Search and book a cruise", heuristic: "Consistency and Standards", hnote: "The site should keep one clear language per session.", issue: "Parts of the site sometimes show different-language, untranslated terms. This makes labels and actions unclear.", why: "Many users may see mixed language bits. Doesn't block booking but feels untrustworthy.", fix: "Take care of language consistency." },
+          { code: "Irritant #3", lvl: 2, sev: "Irritant", score: "1+2−1", title: "No input validation for booking details", task: "Book the cruise", heuristic: "Error Prevention", hnote: "The system should prevent clear mistakes like numbers in name fields.", issue: "In the Passenger Details form, the fields accept any characters, including numbers or symbols, without checks. This can lead to invalid info on booking documents.", why: "Many users enter these fields. Bad data risks booking errors later.", fix: "Add inline validation rules for names, zip codes, cities.", video: "https://drive.google.com/file/d/1-j1O58ip9qFHqygIOPAvFohaPTvQ7pXW/view?usp=sharing" },
+          { code: "Cosmetic #1", lvl: 1, sev: "Cosmetic", score: "1+1−1", title: "Wrong flag shown after country selection", task: "Book the cruise", heuristic: "Consistency and Standards", hnote: "The drop-down and final display should match.", issue: "In the Passenger Details form, when a user picks the United States, the drop-down shows the right flag and code (+1). After selection, the country code stays correct, but the flag icon next to it sometimes shows the wrong flag, which can feel buggy and cause doubt.", why: "Some users will see the mismatch. It can feel untrustworthy but does not stop booking.", fix: "Fix flag image logic for phone codes." },
+        ],
+        outcomes: {
+          beat: "Expected outcomes",
+          heading: "What fixing these should change",
+          head: ["UX improvement", "User behaviour change", "Business outcome"],
+          rows: [
+            ["Show ratings & reviews on mobile", "Builds trust early, especially for first-timers", "↑ Mobile conversion rate, ↓ drop-offs"],
+            ["Clarify booking status early (Confirmed/Waitlist)", "Reduces last-step surprises", "↑ Completed bookings, ↓ cart abandonment"],
+            ["Simplify pricing with plain language/tooltips", "Makes comparison easier for all users", "↑ Booking confidence, ↑ clarity"],
+            ["Enable saving/shortlisting cruises", "Supports multi-session planning and return visits", "↑ Repeat visits, ↑ retention"],
+            ["Passenger profile memory", "Speeds up repeat bookings for returning users", "↑ Loyalty, ↑ repeat booking rate"],
+            ["Improve mobile layout & usability", "Reduces friction during browsing and filtering", "↑ Mobile engagement, ↑ mobile funnel flow"],
+            ["Add day-by-day itinerary view", "Easier to understand and compare cruises", "↑ Itinerary clarity, ↑ booking decisions"],
+            ["Support large group bookings", "Makes Seascanner usable for multi-gen families and friend groups", "↑ Group booking value, ↑ lead generation"],
+            ["Currency switcher for global users", "Aligns pricing with the user's expectations", "↑ Global conversion rate, ↓ cognitive effort"],
+            ["Standard filters on Deals page", "Helps users navigate offers more effectively", "↑ Deal page conversions, ↑ value-based booking"],
+          ],
+        },
+        learnings: [
+          "Working on this Seascanner critique pushed me to grow well beyond identifying usability issues. One of the most important realizations was that I wasn't the user, and I had to actively work to understand people whose needs, motivations, and behaviors were very different from mine.",
+          "Because I didn't belong to the core cruise travel demographic, I couldn't rely on my own intuition. I had to dig into secondary research, segmentation data, and scenario building to ground my evaluation in reality. This helped me shift from a design-thinking lens to a product-thinking mindset, where every UX choice is tied to business value, like how unclear pricing or missing trust signals can directly impact conversions.",
+          "The biggest shift was understanding that a critique doesn't exist in isolation. I had to think beyond the scope of the immediate interface. A cruise booking platform sits inside a larger ecosystem of decision-making, research, group coordination, and long-term planning. This meant evaluating not just single flows, but entire behaviors and journeys, including what happens before and after users land on a page. It made the work more complex, but also much more meaningful.",
+          "A major growth point for me was around prioritization and severity scoring. Thanks to practice from earlier assignments, I've become much more confident and efficient at identifying what actually matters.",
+        ],
+        takeaway:
+          "Across the 22 issues, the sharpest problems weren't visual defects. They were missing information at moments of commitment: no ratings on mobile, price terms with no explanation, and a booking status revealed only after the traveller had entered every detail.",
+      },
+    },
+    {
       id: "Educator AI Platform",
       comingSoon: true,
       title: "Educator AI Platform",
@@ -1356,6 +1537,122 @@ const research = (r, p) => `
   </section>
 `;
 
+const critique = (c, p) => `
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><clipPath id="avclip"><circle cx="40" cy="40" r="39"/></clipPath></defs></svg>
+  <section class="case-block hook">
+    <p class="beat">The critique</p>
+    <h2 class="hook-title">${esc(c.hookTitle)}</h2>
+    <p class="hook-sub">${esc(c.hookSub)}</p>
+    <div class="snapshot">${c.snapshot
+      .map((x) => `<div class="snapshot-item ${esc(x.cls)}"><span>${esc(x.label)}</span><p>${esc(x.text)}</p></div>`)
+      .join("")}</div>
+  </section>
+
+  <section class="case-block" style="max-width:980px">
+    <p class="beat">${esc(c.time.beat)}</p>
+    <h2>${esc(c.time.heading)}</h2>
+    <div class="mtimeline">${c.time.rows
+      .map((r) => `<div class="mt-row"><span class="mt-day">${esc(r.day)}</span><span class="mt-text">${esc(r.text)}</span></div>`)
+      .join("")}</div>
+  </section>
+
+  <section class="case-block" style="max-width:980px">
+    <p class="beat">${esc(c.research.beat)}</p>
+    <h2>${esc(c.research.heading)}</h2>
+    <p>${esc(c.research.intro)}</p>
+    <div class="stat-grid">${c.research.stats
+      .map((s) => `<div class="stat"><b>${esc(s.n)}</b><span>${esc(s.t)}</span></div>`)
+      .join("")}</div>
+    ${c.research.notes.map((n) => `<p class="fine-note">${esc(n)}</p>`).join("")}
+    <h3 class="sub-head">${esc(c.research.topicsHeading)}</h3>
+    <div class="rgrid-2">${c.research.topics
+      .map((t) => `<div class="rcard c-sky"><h4>${esc(t.h)}</h4><ul class="ticks">${t.items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul></div>`)
+      .join("")}</div>
+    <h3 class="sub-head">${esc(c.research.sourcesHeading)}</h3>
+    <ul class="src-list">${c.research.sources
+      .map((s) => `<li><a href="${esc(s.u)}" target="_blank" rel="noopener noreferrer">${esc(s.t)}</a></li>`)
+      .join("")}</ul>
+  </section>
+
+  <section class="case-block" style="max-width:980px">
+    <p class="beat">${esc(c.scenarios.beat)}</p>
+    <h2>${esc(c.scenarios.heading)}</h2>
+    <p>${esc(c.scenarios.intro)}</p>
+    <div class="rgrid-2">${c.scenarios.items
+      .map(
+        (s) => `
+      <article class="rcard c-violet scn">
+        <div class="scn-head"><div class="scn-av">${s.avatars.map((a) => avatar(a)).join("")}</div><div><h4>${esc(s.name)}</h4><p class="rk" style="margin:0">${esc(s.tag)}</p></div></div>
+        <p>${esc(s.desc)}</p>
+        <p class="scn-k"><span>Goal</span>${esc(s.goal)}</p>
+        <p class="scn-k"><span>Action</span>${esc(s.action)}</p>
+      </article>`
+      )
+      .join("")}</div>
+  </section>
+
+  <section class="case-block" style="max-width:980px">
+    <p class="beat">${esc(c.summary.beat)}</p>
+    <h2>${esc(c.summary.heading)}</h2>
+    <div class="sev-row">${c.summary.counts
+      .map((k) => `<div class="sev-tile" data-lvl="${esc(k.lvl)}"><b>${esc(k.n)}</b><span>${esc(k.label)}</span></div>`)
+      .join("")}</div>
+    <div class="rgrid-2" style="margin-top:22px">
+      <div><p class="rk">${esc(c.summary.recsHeading)}</p><ul class="ticks">${c.summary.recs.map((r) => `<li>${esc(r)}</li>`).join("")}</ul></div>
+      <div><p class="rk">${esc(c.summary.positivesHeading)}</p><ul class="ticks">${c.summary.positives.map((r) => `<li>${esc(r)}</li>`).join("")}</ul></div>
+    </div>
+  </section>
+
+  <section class="case-block" style="max-width:980px">
+    <p class="beat">Findings</p>
+    <h2>${esc(c.issuesHeading)}</h2>
+    <p>${esc(c.issuesIntro)}</p>
+    <div class="iss-list">${c.issues
+      .map(
+        (i) => `
+      <details class="iss"${i.lvl === 4 ? " open" : ""}>
+        <summary><span class="iss-code">${esc(i.code)}</span><span class="iss-title">${esc(i.title)}</span><span class="severity" data-lvl="${esc(i.lvl)}">${esc(i.lvl)} · ${esc(i.sev)}</span></summary>
+        <dl class="decision">
+          <div><dt>Task</dt><dd>${esc(i.task)}</dd></div>
+          <div><dt>The issue</dt><dd>${esc(i.issue)}</dd></div>
+          <div><dt>Heuristic violated</dt><dd><strong>${esc(i.heuristic)}.</strong> ${esc(i.hnote)}</dd></div>
+          <div><dt>Severity ${esc(i.lvl)} (${esc(i.score)})</dt><dd>${esc(i.why)}</dd></div>
+          <div><dt>Suggestion</dt><dd>${esc(i.fix)}</dd></div>${i.video ? `
+          <div><dt>Recording</dt><dd><a href="${esc(i.video)}" target="_blank" rel="noopener noreferrer">Watch the screen recording</a></dd></div>` : ""}
+        </dl>
+      </details>`
+      )
+      .join("")}</div>
+  </section>
+
+  <section class="case-block" style="max-width:980px">
+    <p class="beat">${esc(c.outcomes.beat)}</p>
+    <h2>${esc(c.outcomes.heading)}</h2>
+    <div class="table-wrap"><table class="itable">
+      <thead><tr>${c.outcomes.head.map((h) => `<th>${esc(h)}</th>`).join("")}</tr></thead>
+      <tbody>${c.outcomes.rows
+        .map((r) => `<tr><td><strong>${esc(r[0])}</strong></td><td>${esc(r[1])}</td><td>${esc(r[2])}</td></tr>`)
+        .join("")}</tbody>
+    </table></div>
+  </section>
+
+  <section class="case-block">
+    <p class="beat">Reflection</p>
+    <h2>What I learned</h2>
+    ${c.learnings.map((x) => `<p>${esc(x)}</p>`).join("")}
+  </section>
+
+  <section class="case-block">
+    <p class="beat">Where it landed</p>
+    <h2>The takeaway</h2>
+    <p class="takeaway">${esc(c.takeaway)}</p>
+    <details class="role-full">
+      <summary>The full scope of what I did</summary>
+      <ul class="ticks">${p.role.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
+    </details>
+  </section>
+`;
+
 const head = (title, rel = "") => `<!doctype html>
 <html lang="en">
 <head>
@@ -1438,7 +1735,7 @@ ${nav()}
   <section id="work" class="section">
     <div class="section-head">
       <h2>Selected work</h2>
-      <p>Seven projects across enterprise, education, healthcare, and UX research — most involving AI, complex workflows, and dense information.</p>
+      <p>Eight projects across enterprise, education, healthcare, travel, and UX research — most involving AI, complex workflows, and dense information.</p>
     </div>
     <div class="grid">${cards}</div>
   </section>
@@ -1638,7 +1935,7 @@ ${nav("../")}
       .join("")}</div>
   </header>
 
-  ${p.explainer || p.research ? "" : `<figure class="shot hero-shot">
+  ${p.explainer || p.research || p.critique ? "" : `<figure class="shot hero-shot">
     ${p.images && p.images.cover
       ? `<img src="${p.images.cover}" alt="${esc(p.title)} — product screenshot" loading="lazy">`
       : `<div class="shot-ph" data-key="${esc(p.id[0])}"><span>Add cover image — <code>${p.slug}-cover.jpg</code></span></div>`}
@@ -1649,6 +1946,8 @@ ${nav("../")}
     ? explainer(p.explainer)
     : p.research
     ? research(p.research, p)
+    : p.critique
+    ? critique(p.critique, p)
     : `
   <section class="case-block scene">
     <p class="beat">One moment</p>
