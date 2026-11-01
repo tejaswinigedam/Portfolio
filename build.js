@@ -24,6 +24,7 @@ const site = {
   projects: [
     {
       id: "Meetup",
+      type: "UX Research",
       title: "Meetup — UX Research for Indian Market Adoption",
       short: "A mixed-methods research study into why Meetup struggles to earn trust with users in India.",
       who: "Three segments of the Indian event-going public: people who discover events offline only, people who use other platforms (Instagram, Eventbrite, WhatsApp groups) but not Meetup, and current or past Meetup users.",
@@ -230,9 +231,11 @@ const site = {
     },
     {
       id: "BidFlow",
+      type: "Product Design",
       title: "Designing the workflow behind AI-powered tender management",
       product: "BidFlow",
       scrollFx: true,
+      uniform: true,
       productDesc: "AI-powered tender analysis and bid-management software",
       scope: "Product thinking, workflow design, information architecture, interaction design and UI",
       tags: [
@@ -646,6 +649,7 @@ const site = {
     },
     {
       id: "Seascanner",
+      type: "Heuristic Evaluation",
       scrollFx: true,
       title: "Seascanner — Product Critique & Heuristic Evaluation",
       short: "A heuristic evaluation of a cruise-booking platform: 22 severity-rated issues across search, details and booking, with the business outcomes of fixing them.",
@@ -1237,14 +1241,14 @@ const sceneDesk = () => `
         </svg>`;
 
 const storyScenes = (sc) => `
-  <section class="case-block story-block" style="max-width:1040px">
+  <section class="case-block story-block">
     <p class="beat">${esc(sc.context.beat)}</p>
     <h2>${esc(sc.context.heading)}</h2>
     ${sceneOrigin(sc.context.notes)}
     <p class="fig-closing">${esc(sc.context.closing)}</p>
   </section>
 
-  <section class="case-block story-block" style="max-width:1040px">
+  <section class="case-block story-block">
     <p class="beat">${esc(sc.team.beat)}</p>
     <h2>${esc(sc.team.heading)}</h2>
     <div class="story-desk">
@@ -1331,14 +1335,14 @@ const quoteRail = (qs, heading) => `
     </div>`;
 
 const explainer = (e) => `
-  <section class="case-block" style="max-width:980px">
+  <section class="case-block">
     <p class="beat">Project snapshot</p>
     <div class="snapshot">${e.snapshot
       .map((x) => `<div class="snapshot-item ${esc(x.cls)}"><span>${esc(x.label)}</span><p>${esc(x.text)}</p></div>`)
       .join("")}</div>
   </section>
 ${storyScenes(e.scene)}
-  <section class="case-block" style="max-width:980px">
+  <section class="case-block">
     <p class="beat">${esc(e.discovery.beat)}</p>
     <h2>${esc(e.discovery.heading)}</h2>
     ${e.discovery.paragraphs.map((x) => `<p>${esc(x)}</p>`).join("")}
@@ -1357,7 +1361,7 @@ ${storyScenes(e.scene)}
     <p class="context-note">${esc(e.challenge.closing)}</p>
   </section>
 
-  <section class="case-block" style="max-width:980px">
+  <section class="case-block">
     <p class="beat">${esc(e.jtbd.beat)}</p>
     <h2>${esc(e.jtbd.heading)}</h2>
     <p>${esc(e.jtbd.intro)}</p>
@@ -1376,7 +1380,7 @@ ${storyScenes(e.scene)}
       .join("")}</div>
   </section>
 
-  <section class="case-block" style="max-width:980px">
+  <section class="case-block">
     <p class="beat">${esc(e.ideation.beat)}</p>
     <h2>${esc(e.ideation.heading)}</h2>
     <p>${esc(e.ideation.intro)}</p>
@@ -1389,7 +1393,7 @@ ${storyScenes(e.scene)}
     <div class="proto-ph"><span>${esc(e.ideation.evidence)}</span></div>
   </section>
 
-  <section class="case-block" style="max-width:980px">
+  <section class="case-block">
     <p class="beat">${esc(e.decisions.beat)}</p>
     <h2>${esc(e.decisions.heading)}</h2>
     <p>${esc(e.decisions.intro)}</p>
@@ -1397,7 +1401,7 @@ ${storyScenes(e.scene)}
 ${e.decisions.items
   .map(
     (d) => `
-  <section class="case-block" style="max-width:980px">
+  <section class="case-block">
     <p class="beat">${esc(d.num)}</p>
     <h2>${esc(d.title)}</h2>
     <dl class="decision">
@@ -1410,7 +1414,7 @@ ${e.decisions.items
   )
   .join("")}
 
-  <section class="case-block" style="max-width:980px">
+  <section class="case-block">
     <p class="beat">${esc(e.outcome.beat)}</p>
     <h2>${esc(e.outcome.heading)}</h2>
     ${e.outcome.paragraphs.map((x) => `<p>${esc(x)}</p>`).join("")}
@@ -1690,22 +1694,20 @@ const footer = (rel = "") => `
 </footer>`;
 
 // ---------- index.html ----------
+const thumbImgs = {
+  Meetup: "work/img/meetup-thumb.jpg",
+  BidFlow: "work/img/bidflow-dashboard.jpg",
+  Seascanner: "work/img/seascanner-thumb.jpg",
+};
 const cards = site.projects
-  .map((p, i) =>
-    p.comingSoon
-      ? `
-    <div class="card card-soon">
-      <div class="card-media">0${i + 1}</div>
-      <div class="card-body">
-        <h3>${esc(p.title)}</h3>
-        <p>${esc(p.short)}</p>
-      </div>
-      <span class="card-cta">Case study coming soon</span>
-    </div>`
-      : `
+  .filter((p) => !p.comingSoon)
+  .map(
+    (p, i) => `
     <a class="card" href="work/${p.slug}.html">
       <div class="card-media">0${i + 1}</div>
-      <div class="card-body">
+      <div class="card-thumb" aria-hidden="true">${thumbImgs[p.id] ? `<img src="${thumbImgs[p.id]}" alt="" loading="lazy">` : ""}</div>
+      <div class="card-body">${p.type ? `
+        <span class="type-tag">${esc(p.type)}</span>` : ""}
         <h3>${esc(p.title)}</h3>
         <p>${esc(p.short)}</p>
       </div>
@@ -1736,7 +1738,7 @@ ${nav()}
   <section id="work" class="section">
     <div class="section-head">
       <h2>Selected work</h2>
-      <p>Eight projects across enterprise, education, healthcare, travel, and UX research — most involving AI, complex workflows, and dense information.</p>
+      <p>Three case studies across enterprise software, travel, and UX research — most involving AI, complex workflows, and dense information.</p>
     </div>
     <div class="grid">${cards}</div>
   </section>
@@ -1924,10 +1926,11 @@ linkedProjects.forEach((p, idx) => {
   const page = `${head(`${p.product ? `${p.product} — ` : ""}${p.title} — ${site.name}`, "../")}
 <body>
 ${nav("../")}
-<main class="case">
+<main class="case${p.uniform ? " uniform" : ""}">
   <a class="back" href="../index.html#work">← All work</a>
   <header class="case-hero" data-key="${esc(p.id[0])}">
-    <p class="eyebrow">Case study${p.product ? ` · ${esc(p.product)}` : ""}</p>
+    <p class="eyebrow">Case study${p.product ? ` · ${esc(p.product)}` : ""}</p>${p.type ? `
+    <span class="type-tag">${esc(p.type)}</span>` : ""}
     <h1>${esc(p.title)}</h1>
     <p class="lede">${esc(p.short)}</p>${p.tags ? `
     <div class="tags">${p.tags.map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>` : ""}
