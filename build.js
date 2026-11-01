@@ -8,7 +8,18 @@ const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-
 const site = {
   name: "Tejaswini Gedam",
   role: "Product & UX Designer",
-  tagline: "I design clear, human-centered products for complex, information-heavy workflows.",
+  tagline: "I get to the crux of messy problems, generate ideas, prioritize what matters, design and help ship solutions.",
+  heroTitle: "Hi, I’m Tejaswini.",
+  heroEm: "Tejaswini",
+  heroLines: [
+    "I get to the crux of messy problems, generate ideas, prioritize what matters, design and help ship solutions.",
+  ],
+  heroHover: [
+    { t: "messy problems", k: "web" },
+    { t: "generate ideas", k: "bulb" },
+    { t: "prioritize what matters", k: "prio" },
+    { t: "design and help ship solutions", k: "ship" },
+  ],
   email: "tejugedam93@gmail.com",
   about: [
     "I'm a product designer who enjoys untangling messy, high-stakes workflows — tender management, clinical records, grading, healthcare staffing — and turning them into experiences that feel calm and obvious to use.",
@@ -1676,10 +1687,12 @@ const nav = (rel = "") => `
 <header class="nav">
   <a class="brand" href="${rel}index.html">${esc(site.name)}</a>
   <nav>
-    <a href="${rel}index.html#work">Work</a>
-    <a href="${rel}index.html#about">About</a>
-    <a href="${rel}Tejaswini-Gedam-Resume.pdf" target="_blank" rel="noopener">Resume</a>
-    <a href="mailto:${site.email}">Contact</a>
+    <div class="nav-links">
+      <a href="${rel}index.html#work">Work</a>
+      <a href="${rel}index.html#about">About</a>
+      <a href="${rel}Tejaswini-Gedam-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
+    <a class="nav-cta" href="mailto:${site.email}">Contact</a>
   </nav>
 </header>`;
 
@@ -1722,13 +1735,93 @@ const approach = site.approach
   )
   .join("");
 
+const heroIll = `
+      <svg class="ill ill-web" viewBox="0 0 260 200">
+        <g class="web-g">
+          <path class="ln w" pathLength="1" d="M40 60C130 -20 200 200 230 120"/>
+          <path class="ln w" pathLength="1" d="M110 30C260 70 -20 120 90 150"/>
+          <path class="ln w" pathLength="1" d="M190 55C275 150 110 205 35 110"/>
+          <path class="ln w" pathLength="1" d="M170 160C60 225 -35 115 40 60"/>
+          <path class="ln w pk" pathLength="1" d="M130 95C225 15 35 30 90 120C125 175 215 105 130 95"/>
+          <path class="ln w" pathLength="1" d="M230 120C265 15 165 -25 110 30"/>
+          <path class="ln w" pathLength="1" d="M90 150C170 90 40 15 190 55"/>
+          <circle class="ln fl nd" cx="40" cy="60" r="5"/><circle class="ln fl nd" cx="110" cy="30" r="5"/>
+          <circle class="ln fl nd" cx="190" cy="55" r="5"/><circle class="ln fl nd" cx="230" cy="120" r="5"/>
+          <circle class="ln fl nd" cx="170" cy="160" r="5"/><circle class="ln fl nd" cx="90" cy="150" r="5"/>
+          <circle class="ln fl nd" cx="35" cy="110" r="5"/><circle class="ln fp nd" cx="130" cy="95" r="7"/>
+        </g>
+      </svg>
+      <svg class="ill ill-bulb" viewBox="0 0 260 200">
+        <circle class="glow" cx="130" cy="92" r="60"/>
+        <g class="rays">
+          <path class="ln pk" d="M130 30V14M161 38L169 24M99 38L91 24M184 61L198 53M76 61L62 53M192 92H208M68 92H52"/>
+        </g>
+        <path class="ln fl glass" d="M130 42a46 46 0 0 0-28 82c8 7 10 13 10 22h36c0-9 2-15 10-22a46 46 0 0 0-28-82z"/>
+        <path class="ln pk fil" d="M118 130l6-24 6 14 6-14 6 24"/>
+        <path class="ln" d="M114 154h32M116 164h28M122 174h16"/>
+        <path class="ln pk spark s1" d="M35 40h10M40 35v10"/>
+        <path class="ln pk spark s2" d="M215 150h10M220 145v10"/>
+        <path class="ln pk spark s3" d="M55 150h8M59 146v8"/>
+      </svg>
+      <svg class="ill ill-prio" viewBox="0 0 260 200">
+        <g class="row r1"><rect class="ln fl" x="30" y="22" width="170" height="30" rx="8"/><circle class="ln fl" cx="48" cy="37" r="5"/><path class="ln soft" d="M64 37h92"/></g>
+        <g class="row r2"><rect class="ln fl" x="30" y="60" width="170" height="30" rx="8"/><circle class="ln fl" cx="48" cy="75" r="5"/><path class="ln soft" d="M64 75h70"/></g>
+        <g class="row r3"><rect class="ln fl" x="30" y="98" width="170" height="30" rx="8"/><circle class="ln fl" cx="48" cy="113" r="5"/><path class="ln soft" d="M64 113h104"/></g>
+        <g class="row r4 hot"><rect class="ln hotbox" x="30" y="136" width="170" height="30" rx="8"/><circle class="ln fp" cx="48" cy="151" r="5"/><path class="ln pk" d="M64 151h80"/></g>
+        <g class="arr up"><path class="ln pk" d="M228 74V42M217 53l11-11 11 11"/></g>
+        <g class="arr down"><path class="ln" d="M228 112v32M217 133l11 11 11-11"/></g>
+      </svg>
+      <svg class="ill ill-ship" viewBox="0 0 260 200">
+        <g class="win">
+          <rect class="ln fl" x="18" y="52" width="92" height="84" rx="8"/>
+          <path class="ln" d="M18 72h92"/>
+          <circle class="ln fp" cx="30" cy="62" r="2.5"/><circle class="ln fl" cx="40" cy="62" r="2.5"/><circle class="ln fl" cx="50" cy="62" r="2.5"/>
+          <rect class="ln" x="28" y="82" width="38" height="22" rx="3"/>
+          <path class="ln soft" d="M74 88h26M74 98h20M28 114h72M28 124h50"/>
+        </g>
+        <path class="ln pk route" d="M112 96C140 34 196 34 214 98"/>
+        <g class="plane"><path class="ln fl" d="M14 0L-12-9-6 0-12 9z"/><path class="ln" d="M14 0L-6 0"/></g>
+        <g class="done"><circle class="ln fl" cx="230" cy="106" r="16"/><path class="ln pk" d="M222 106l6 6 11-12"/></g>
+      </svg>`;
+
+const heroHoverScript = `
+<script>
+(function () {
+  var h = document.querySelector(".hero");
+  if (!h) return;
+  var items = h.querySelectorAll(".hv");
+  function on(k) { h.setAttribute("data-k", k); }
+  function off() { h.removeAttribute("data-k"); }
+  Array.prototype.forEach.call(items, function (el) {
+    var k = el.getAttribute("data-k");
+    el.addEventListener("mouseenter", function () { on(k); });
+    el.addEventListener("mouseleave", off);
+    el.addEventListener("focus", function () { on(k); });
+    el.addEventListener("blur", off);
+    el.addEventListener("click", function () { on(k); });
+  });
+  document.addEventListener("click", function (e) { if (!e.target.closest(".hv")) off(); });
+})();
+</script>`;
+
+const heroLine = (l) => {
+  let out = esc(l);
+  site.heroHover.forEach((p) => {
+    out = out.replace(esc(p.t), `<span class="hv" data-k="${p.k}" tabindex="0">${esc(p.t)}</span>`);
+  });
+  return out;
+};
+
 const index = `${head(`${site.name} — ${site.role}`)}
 <body>
 ${nav()}
 <main>
   <section class="hero">
     <p class="eyebrow">${esc(site.role)}</p>
-    <h1>${esc(site.tagline).replace("human-centered", "<em>human-centered</em>")}</h1>
+    <h1>${esc(site.heroTitle).replace(esc(site.heroEm), `<em>${esc(site.heroEm)}</em>`)}</h1>
+    ${site.heroLines.map((l) => `<p class="hero-sub">${heroLine(l)}</p>`).join("\n    ")}
+    <div class="hero-ill" aria-hidden="true">${heroIll}
+    </div>
     <div class="hero-actions">
       <a class="btn" href="#work">See my work</a>
       <a class="btn ghost" href="mailto:${site.email}">Get in touch</a>
@@ -1738,7 +1831,6 @@ ${nav()}
   <section id="work" class="section">
     <div class="section-head">
       <h2>Selected work</h2>
-      <p>Three case studies across enterprise software, travel, and UX research — most involving AI, complex workflows, and dense information.</p>
     </div>
     <div class="grid">${cards}</div>
   </section>
@@ -1766,7 +1858,7 @@ ${nav()}
     <div class="pillars">${approach}</div>
   </section>
 </main>
-${footer()}
+${footer()}${heroHoverScript}
 </body></html>`;
 
 fs.writeFileSync(path.join(OUT, "index.html"), index);
