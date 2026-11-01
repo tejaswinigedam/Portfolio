@@ -71,6 +71,12 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 .nav nav a:hover { background: var(--accent); color: var(--accent-ink); }
 .nav nav a:last-child { background: var(--ink); color: #fff; }
 .nav nav a:last-child:hover { background: var(--ink); color: var(--accent); }
+@media (max-width: 520px) {
+  .nav { gap: 8px; padding: 9px 8px 9px 16px; }
+  .brand { font-size: 14px; line-height: 1.15; }
+  .nav nav { gap: 0; }
+  .nav nav a { font-size: 10.5px; letter-spacing: .03em; padding: 7px 8px; }
+}
 
 /* ---------- Hero ---------- */
 .hero {

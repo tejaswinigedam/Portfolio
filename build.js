@@ -1674,6 +1674,7 @@ const nav = (rel = "") => `
   <nav>
     <a href="${rel}index.html#work">Work</a>
     <a href="${rel}index.html#about">About</a>
+    <a href="${rel}Tejaswini-Gedam-Resume.pdf" target="_blank" rel="noopener">Resume</a>
     <a href="mailto:${site.email}">Contact</a>
   </nav>
 </header>`;
