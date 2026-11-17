@@ -96,3 +96,11 @@ em, i { font-style: normal; }
 .case-hero .meta > div:nth-child(2) { flex: 0 0 auto; }
 .case-hero .meta dd { font-size: 14px; line-height: 1.35; }
 @media (max-width: 900px) { .case-hero .meta { flex-wrap: wrap; } .case-hero .meta > div { flex: 1 1 40%; } }
+
+/* extra layouts for the longer case studies */
+.shot.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 720px; }
+.shot.trio img { height: auto; }
+.shot + .shot { margin-top: 20px; }
+.case-block ol.olist { max-width: 72ch; padding-left: 22px; margin: 8px 0 20px; color: #222; }
+.case-block ol.olist li { margin: 0 0 8px; padding-left: 4px; }
+.case-block a { color: var(--blue); text-underline-offset: 3px; }

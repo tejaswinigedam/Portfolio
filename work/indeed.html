@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indeed — Helping retired individuals navigate re-employment — Tejaswini Gedam</title>
+<meta name="description" content="A UX case study on helping retired individuals re-enter the workforce through a redesigned Indeed iOS experience.">
+<link rel="preload" as="font" type="font/woff2" href="../fonts/instrument-serif-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../fonts/space-mono-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../fonts/dm-sans-latin.woff2" crossorigin>
+<link rel="stylesheet" href="../fonts/fonts.css">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../case-theme.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="../index.html">Tejaswini</a>
+  <nav>
+    <div class="nav-links">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../Tejaswini-Gedam-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
+    <a class="nav-cta" href="mailto:tejugedam93@gmail.com">Contact</a>
+  </nav>
+</header>
+<main class="case uniform">
+  <a class="back" href="../index.html#work">← All work</a>
+  <header class="case-hero">
+    <span class="type-tag">UX Case Study</span>
+    <h1>Indeed</h1>
+    <p class="lede">Helping retired individuals navigate re-employment</p>
+    <div class="meta"><div><dt>Role</dt><dd>Research &amp; design</dd></div><div><dt>Objective</dt><dd>To design a solution for retired people to re-enter the workforce</dd></div><div><dt>Tools</dt><dd>Figma</dd></div></div>
+  </header>
+
+  <div class="sheet">
+  <section class="case-block">
+    <figure class="shot"><img src="img/indeed-hero.png" alt="Indeed case study cover" loading="lazy"></figure>
+  </section>
+
+  <section class="case-block">
+    <p class="beat">Background</p>
+    <p>We’ve all seen the movie <em>The Intern</em> and fallen in love with Robert De Niro’s character. He showed us that retired folks can not only be extremely charismatic and driven, but also how valuable their experience is.</p>
+    <p>There is an increase in life-span with improved healthcare services and quality of life, which gives us a larger senior population.</p>
+    <p>Trends show that even when a majority of these individuals want to work after retirement, they are not able to explore further.</p>
+    <figure class="shot"><img src="img/indeed-intern.png" alt="Still from The Intern" loading="lazy"></figure>
+  </section>
+
+  <section class="case-block">
+    <p class="beat">The challenge</p>
+    <dl class="decision">
+      <div><dt>Device constraints</dt><dd>Designing for iOS only.</dd></div>
+      <div><dt>Target users</dt><dd>Retired individuals between the ages of 55 and 65.</dd></div>
+    </dl>
+  </section>
+
+  <section class="case-block">
+    <p class="beat">Process</p>
+    <figure class="shot"><img src="img/indeed-process.png" alt="Design process: research, define, ideate, design, validate" loading="lazy"></figure>
+  </section>
+
+  <section class="case-block">
+    <p class="beat">Research</p>
+    <h2>Desk research</h2>
+    <p>To understand the problem space, I did some desk research that gave me the following insights.</p>
+    <figure class="shot"><img src="img/indeed-desk-research.png" alt="Desk research insights" loading="lazy"></figure>
+
+    <h2 style="margin-top:36px">Interviews</h2>
+    <p>Conducted qualitative interviews with 5 retired individuals.</p>
+    <figure class="shot"><img src="img/indeed-interviews.png" alt="Interview findings" loading="lazy"></figure>
+
+    <h2 style="margin-top:36px">Task and observational analysis</h2>
+    <p>I asked them to use the current Indeed app. The task was “Try to look for jobs and apply if you like any.” I asked them to describe what they saw and what they tried to do. This was done to understand what they comprehend and to note the pain points. (I briefed them a little on what the app is about. I gave them a signed-up app, as signing up was not my focus.)</p>
+    <figure class="shot trio">
+      <img src="img/indeed-observation-1.png" alt="Current Indeed app screen shown to participants" loading="lazy">
+      <img src="img/indeed-observation-2.png" alt="Current Indeed app screen shown to participants" loading="lazy">
+      <img src="img/indeed-observation-3.png" alt="Current Indeed app screen shown to participants" loading="lazy">
+    </figure>
+    <p><strong>Insights from observations</strong></p>
+    <ul class="ticks">
+      <li>Scrolling through the job feed first.</li>
+      <li>They missed all the smaller text, which made them miss the search and filter.</li>
+      <li>Couldn’t navigate to find work of their interest.</li>
+      <li>Had trouble applying, as they got redirected to a different website to apply, and they quit at this point.</li>
+    </ul>
+  </section>
+
+  <section class="case-block">
+    <p class="beat">Define</p>
+    <h2>Personas</h2>
+    <p>Created 2 personas taking the research findings into consideration. One focus was more on learning, while the other’s was employability.</p>
+    <figure class="shot"><img src="img/indeed-persona-1.png" alt="Persona 1" loading="lazy"></figure>
+    <figure class="shot"><img src="img/indeed-persona-2.png" alt="Persona 2" loading="lazy"></figure>
+
+    <h2 style="margin-top:36px">Journey map</h2>
+    <p>I struggled a bit creating the journey map, as there is currently no proper journey they were following. This made me empathise with them even more.</p>
+    <figure class="shot"><img src="img/indeed-journey-1.png" alt="Journey map, part 1" loading="lazy"></figure>
+    <figure class="shot"><img src="img/indeed-journey-2.png" alt="Journey map, part 2" loading="lazy"></figure>
+  </section>
+
+  <section class="case-block">
+    <p class="beat">Ideate</p>
+    <h2>How might we’s and solution key points</h2>
+    <p>Came up with some HMWs based on the pain points gathered from the research, to be more specific with the problem to solve. I finalized these key HMWs.</p>
+    <p>Brainstormed some solutions on the basis of the HMWs. I had other solutions in mind, such as a voice assistant and a chatbot, but decided to go ahead with these first, as those two would act better as add-ons.</p>
+    <ul class="ticks">
+      <li><strong>Job preferences wizard</strong> would decrease the cognitive load of searching and filtering through one screen.</li>
+      <li><strong>Video resume:</strong> inspiration was taken from prompts on Hinge. It leads to a more impactful and open persona creation on the app.</li>
+      <li><strong>Job card and company insights:</strong> the seniors had low confidence in the application process, as they felt they would not be suitable. Hence the job card design changes ensure display of accommodations and their needs at work. A section showing insights about companies’ behaviour towards retired employees would help to build trust.</li>
+      <li><strong>Courses:</strong> courses are found a lot these days on different platforms, but being able to see courses on a big platform like Indeed, with a claim of building skills to pursue a specific career, would be impressive.</li>
+    </ul>
+    <figure class="shot"><img src="img/indeed-hmw.png" alt="How might we statements and solution key points" loading="lazy"></figure>
+
+    <h2 style="margin-top:36px">User flow diagram</h2>
+    <p>Created a basic flow with the new features and flows to understand navigation and get an idea about the different directions the flows may go in.</p>
+    <figure class="shot"><img src="img/indeed-userflow.png" alt="User flow diagram" loading="lazy"></figure>
+  </section>
+
+  <section class="case-block">
+    <p class="beat">Design</p>
+    <p>I followed accessibility guidelines for font sizes and contrast. Each element should catch the eye and be completely readable. The stroke sizes and selection states were made distinct from default states, to highlight them easily.</p>
+    <p>The wizard was constructed from preferences that the research participants mentioned and the current app filters.</p>
+    <p>The video resume was something very experimental, but I decided to go with it. I broke it into 3 basic questions that job-seekers are always asked. Through this, not only is there an opportunity to make the UI less text-based, but I hypothesized that it would create more impact for recruiters as well. The search on the home page had to be made more accessible. The badge for retiree-friendly was fairly simple to conclude and design. For the retiree-employment card in job details, I gave weightage to stats and added a rating section to make it more trust-building.</p>
+
+    <h2 style="margin-top:36px">Low-fidelity wireframing</h2>
+    <figure class="shot"><img src="img/indeed-lofi-1.png" alt="Low-fidelity wireframes, part 1" loading="lazy"></figure>
+    <figure class="shot"><img src="img/indeed-lofi-2.png" alt="Low-fidelity wireframes, part 2" loading="lazy"></figure>
+    <figure class="shot"><img src="img/indeed-lofi-3.png" alt="Low-fidelity wireframes, part 3" loading="lazy"></figure>
+
+    <h2 style="margin-top:36px">High-fidelity designs</h2>
+    <figure class="shot"><img src="img/indeed-hifi-1.png" alt="High-fidelity designs, part 1" loading="lazy"></figure>
+    <figure class="shot"><img src="img/indeed-hifi-2.png" alt="High-fidelity designs, part 2" loading="lazy"></figure>
+    <figure class="shot"><img src="img/indeed-hifi-3.png" alt="High-fidelity designs, part 3" loading="lazy"></figure>
+    <figure class="shot"><img src="img/indeed-hifi-4.png" alt="High-fidelity designs, part 4" loading="lazy"></figure>
+
+    <h2 style="margin-top:36px">Prototype</h2>
+    <p>The clickable prototype and walkthrough videos live in the original write-up: <a href="https://screeching-volleyball-c97.notion.site/Indeed-case-study-Helping-retired-individuals-navigate-re-employment-ac19fa2f5fb549ceb01ba1394b1c977a" target="_blank" rel="noopener">view the prototype and videos on Notion →</a></p>
+
+    <h2 style="margin-top:36px">Component library</h2>
+    <ul class="ticks">
+      <li>Font should be no smaller than 16px, to take care of legibility.</li>
+      <li>Contrast ratio to be followed according to web accessibility guidelines.</li>
+    </ul>
+    <figure class="shot"><img src="img/indeed-components.png" alt="Component library" loading="lazy"></figure>
+  </section>
+
+  <section class="case-block">
+    <p class="beat">Validate</p>
+    <p>Conducted a quick test study with 3 users to see what they think and do. I was quite happy with the results.</p>
+    <figure class="shot"><img src="img/indeed-validation.png" alt="Validation results" loading="lazy"></figure>
+  </section>
+
+  <section class="case-block">
+    <p class="beat">Reflection</p>
+    <h2>Pitfalls</h2>
+    <ul class="ticks">
+      <li>The process might be too long for some people.</li>
+      <li>A video resume might not be accessible for people with disabilities.</li>
+    </ul>
+    <h2 style="margin-top:28px">My learnings</h2>
+    <ul class="ticks">
+      <li>Through this case study I understood the impact of UI and UX for different user types.</li>
+      <li>I learned to consider senior personas for future work, as they are a huge chunk of users. If we design for them, it automatically solves a lot of UX issues, as you need to pay more attention to the understanding and simplicity of each element.</li>
+    </ul>
+    <h2 style="margin-top:28px">What I would do differently</h2>
+    <ul class="ticks">
+      <li>Due to lack of time, I wish I could have done more interviews to gather more insights.</li>
+      <li>I would also talk to the employer side to see their views on the problem space.</li>
+      <li>I need to practice journey maps more.</li>
+    </ul>
+    <p class="context-note">Copyright credits: images taken from Unsplash and Canva.</p>
+  </section>
+  </div>
+</main>
+<footer class="foot">
+  <div>
+    <h3>Let's talk</h3>
+    <p>Open to product &amp; UX design opportunities.</p>
+    <a class="btn" href="mailto:tejugedam93@gmail.com">tejugedam93@gmail.com</a>
+  </div>
+  <p class="fine">© 2026 Tejaswini Gedam.</p>
+</footer>
+</body></html>

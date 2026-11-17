@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Astryl Shifts — Shift attendance and time tracking for nurses — Tejaswini Gedam</title>
+<meta name="description" content="Designing a clock-in and clock-out experience for temporary-shift nurses on Astryl, a healthcare recruitment platform.">
+<link rel="preload" as="font" type="font/woff2" href="../fonts/instrument-serif-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../fonts/space-mono-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../fonts/dm-sans-latin.woff2" crossorigin>
+<link rel="stylesheet" href="../fonts/fonts.css">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../case-theme.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="../index.html">Tejaswini</a>
+  <nav>
+    <div class="nav-links">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../Tejaswini-Gedam-Resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
+    <a class="nav-cta" href="mailto:tejugedam93@gmail.com">Contact</a>
+  </nav>
+</header>
+<main class="case uniform">
+  <a class="back" href="../index.html#work">← All work</a>
+  <header class="case-hero">
+    <span class="type-tag">HR Tech · App Design</span>
+    <h1>Astryl Shifts</h1>
+    <p class="lede">Shift attendance and time tracking for nurses</p>
+    <div class="meta"><div><dt>Timeline</dt><dd>1 month</dd></div><div><dt>Role</dt><dd>Research, conceptualisation, design, user testing and dev-handoff of designs</dd></div></div>
+  </header>
+
+  <div class="sheet">
+  <section class="case-block">
+    <figure class="shot"><img src="img/astryl-shift-hero.png" alt="Astryl Shifts clock-in screen on a phone" loading="lazy"></figure>
+    <p class="context-note">Note: I have documented, rebranded and improvised this case study to meet the NDA.</p>
+  </section>
+
+  <section class="case-block">
+    <p class="beat">Overview</p>
+    <p>As a UX designer for Astryl, I helped design a new shift time tracking feature for nurses.</p>
+  </section>
+
+  <section class="case-block">
+    <p class="beat">Context</p>
+    <h2>The company and the project</h2>
+    <dl class="decision">
+      <div><dt>The company</dt><dd>Astryl is a healthcare recruitment product solutions company. Their aim is to digitize all parts of the workforce recruitment and management process for healthcare.</dd></div>
+      <div><dt>The project</dt><dd>“Shifts” is a new project for creating a streamlined and automated scheduling workflow to help healthcare facilities fill quick staffing jobs. My role was to take care of the shift management from the nurses’ end of the app.</dd></div>
+    </dl>
+  </section>
+
+  <section class="case-block">
+    <p class="beat">Scoping</p>
+    <h2>Where nurses’ time goes missing</h2>
+    <p>Nurses working on temporary shifts are not recognized as full-time employees, so they are not put on facility clocks for attendance tracking.</p>
+    <p>Currently, nurses use paper timesheets for submission of their attendance and work hours.</p>
+    <p>The biggest priority of my task was creating the clock-in and clock-out experience for nurses on our app.</p>
+    <p class="context-note"><strong>How might we</strong> design a seamless and efficient journey for nurses to clock in and clock out for their shifts?</p>
+  </section>
+
+  <section class="case-block">
+    <p class="beat">Research</p>
+    <h2>1 · Current journey</h2>
+    <p>We interviewed a few temp-shift-working nurses to see how they currently filled timesheets.</p>
+    <ol class="olist">
+      <li>Go to the facility reception, provide ID, and fill in their details in the registry.</li>
+      <li>Ask for a timesheet.</li>
+      <li>Write the check-in time before beginning the shift.</li>
+      <li>During breaks, get back to the reception and note the break.</li>
+      <li>After finishing work, at shift end time, come back to the reception and write the time. Along with this they needed the manager’s sign-off for successful submission.</li>
+      <li>The manager would then upload these details in the hospital management system and the approved timesheet would get processed for payroll.</li>
+    </ol>
+    <figure class="shot"><img src="img/astryl-shift-journey.png" alt="The current paper-timesheet journey for temp-shift nurses" loading="lazy"></figure>
+
+    <h2 style="margin-top:36px">2 · Benchmarking</h2>
+    <p>We tried to gain some insights from gig-economy industry partner apps like Swiggy, Zomato and Urban Company, as these also had factors of time, location and gig completion underlying their scope.</p>
+    <figure class="shot"><img src="img/astryl-shift-benchmark.png" alt="Benchmarking of gig-economy apps" loading="lazy"></figure>
+  </section>
+
+  <section class="case-block">
+    <p class="beat">Designs</p>
+    <h2>Home screen</h2>
+    <figure class="shot"><img src="img/astryl-shift-home.png" alt="Astryl Shifts home screen" loading="lazy"></figure>
+    <h2 style="margin-top:36px">The clock-in and clock-out happy flow</h2>
+    <figure class="shot"><img src="img/astryl-shift-flow.png" alt="The clock-in and clock-out happy flow" loading="lazy"></figure>
+  </section>
+
+  <section class="case-block">
+    <p class="beat">Refining the designs</p>
+    <h2>How can we ensure that the nurse is actually at the facility and working?</h2>
+    <p>Designing the happy flow, we noticed some gaps that needed to be thought over.</p>
+    <p>To tackle this question, we decided to enable clocking in based on location validation. If the user’s location is not at the facility, the clock-in feature will not work and will throw an error.</p>
+    <figure class="shot"><img src="img/astryl-shift-location.png" alt="Location validation error when a nurse tries to clock in away from the facility" loading="lazy"></figure>
+  </section>
+
+  <section class="case-block">
+    <p class="beat">The outcome</p>
+    <p>This app is not launched in public. We are still testing the usability of all our features on the staging application.</p>
+    <p>We got positive feedback from the nurses using the application.</p>
+  </section>
+  </div>
+</main>
+<footer class="foot">
+  <div>
+    <h3>Let's talk</h3>
+    <p>Open to product &amp; UX design opportunities.</p>
+    <a class="btn" href="mailto:tejugedam93@gmail.com">tejugedam93@gmail.com</a>
+  </div>
+  <p class="fine">© 2026 Tejaswini Gedam.</p>
+</footer>
+</body></html>
