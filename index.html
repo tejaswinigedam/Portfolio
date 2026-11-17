@@ -10,9 +10,9 @@
 <link rel="preload" as="font" type="font/woff2" href="fonts/bricolage-grotesque-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="fonts/dm-sans-latin.woff2" crossorigin>
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="home.css">
 </head>
-<body>
+<body class="home">
 
 <header class="nav">
   <a class="brand" href="index.html">Tejaswini Gedam</a>
@@ -27,61 +27,55 @@
 </header>
 <main>
   <section class="hero">
-    <p class="eyebrow">Product &amp; UX Designer</p>
-    <h1>Hi, I’m <em>Tejaswini</em>.</h1>
-    <p class="hero-sub">I get to the crux of <span class="hv" data-k="web" tabindex="0">messy problems</span>, <span class="hv" data-k="bulb" tabindex="0">generate ideas</span>, <span class="hv" data-k="prio" tabindex="0">prioritize what matters</span>, <span class="hv" data-k="ship" tabindex="0">design and help ship solutions</span>.</p>
-    <div class="hero-ill" aria-hidden="true">
-      <svg class="ill ill-web" viewBox="0 0 260 200">
-        <g class="web-g">
-          <path class="ln w" pathLength="1" d="M40 60C130 -20 200 200 230 120"/>
-          <path class="ln w" pathLength="1" d="M110 30C260 70 -20 120 90 150"/>
-          <path class="ln w" pathLength="1" d="M190 55C275 150 110 205 35 110"/>
-          <path class="ln w" pathLength="1" d="M170 160C60 225 -35 115 40 60"/>
-          <path class="ln w pk" pathLength="1" d="M130 95C225 15 35 30 90 120C125 175 215 105 130 95"/>
-          <path class="ln w" pathLength="1" d="M230 120C265 15 165 -25 110 30"/>
-          <path class="ln w" pathLength="1" d="M90 150C170 90 40 15 190 55"/>
-          <circle class="ln fl nd" cx="40" cy="60" r="5"/><circle class="ln fl nd" cx="110" cy="30" r="5"/>
-          <circle class="ln fl nd" cx="190" cy="55" r="5"/><circle class="ln fl nd" cx="230" cy="120" r="5"/>
-          <circle class="ln fl nd" cx="170" cy="160" r="5"/><circle class="ln fl nd" cx="90" cy="150" r="5"/>
-          <circle class="ln fl nd" cx="35" cy="110" r="5"/><circle class="ln fp nd" cx="130" cy="95" r="7"/>
-        </g>
-      </svg>
-      <svg class="ill ill-bulb" viewBox="0 0 260 200">
-        <circle class="glow" cx="130" cy="92" r="60"/>
-        <g class="rays">
-          <path class="ln pk" d="M130 30V14M161 38L169 24M99 38L91 24M184 61L198 53M76 61L62 53M192 92H208M68 92H52"/>
-        </g>
-        <path class="ln fl glass" d="M130 42a46 46 0 0 0-28 82c8 7 10 13 10 22h36c0-9 2-15 10-22a46 46 0 0 0-28-82z"/>
-        <path class="ln pk fil" d="M118 130l6-24 6 14 6-14 6 24"/>
-        <path class="ln" d="M114 154h32M116 164h28M122 174h16"/>
-        <path class="ln pk spark s1" d="M35 40h10M40 35v10"/>
-        <path class="ln pk spark s2" d="M215 150h10M220 145v10"/>
-        <path class="ln pk spark s3" d="M55 150h8M59 146v8"/>
-      </svg>
-      <svg class="ill ill-prio" viewBox="0 0 260 200">
-        <g class="row r1"><rect class="ln fl" x="30" y="22" width="170" height="30" rx="8"/><circle class="ln fl" cx="48" cy="37" r="5"/><path class="ln soft" d="M64 37h92"/></g>
-        <g class="row r2"><rect class="ln fl" x="30" y="60" width="170" height="30" rx="8"/><circle class="ln fl" cx="48" cy="75" r="5"/><path class="ln soft" d="M64 75h70"/></g>
-        <g class="row r3"><rect class="ln fl" x="30" y="98" width="170" height="30" rx="8"/><circle class="ln fl" cx="48" cy="113" r="5"/><path class="ln soft" d="M64 113h104"/></g>
-        <g class="row r4 hot"><rect class="ln hotbox" x="30" y="136" width="170" height="30" rx="8"/><circle class="ln fp" cx="48" cy="151" r="5"/><path class="ln pk" d="M64 151h80"/></g>
-        <g class="arr up"><path class="ln pk" d="M228 74V42M217 53l11-11 11 11"/></g>
-        <g class="arr down"><path class="ln" d="M228 112v32M217 133l11 11 11-11"/></g>
-      </svg>
-      <svg class="ill ill-ship" viewBox="0 0 260 200">
-        <g class="win">
-          <rect class="ln fl" x="18" y="52" width="92" height="84" rx="8"/>
-          <path class="ln" d="M18 72h92"/>
-          <circle class="ln fp" cx="30" cy="62" r="2.5"/><circle class="ln fl" cx="40" cy="62" r="2.5"/><circle class="ln fl" cx="50" cy="62" r="2.5"/>
-          <rect class="ln" x="28" y="82" width="38" height="22" rx="3"/>
-          <path class="ln soft" d="M74 88h26M74 98h20M28 114h72M28 124h50"/>
-        </g>
-        <path class="ln pk route" d="M112 96C140 34 196 34 214 98"/>
-        <g class="plane"><path class="ln fl" d="M14 0L-12-9-6 0-12 9z"/><path class="ln" d="M14 0L-6 0"/></g>
-        <g class="done"><circle class="ln fl" cx="230" cy="106" r="16"/><path class="ln pk" d="M222 106l6 6 11-12"/></g>
-      </svg>
+    <div class="hero-main">
+      <p class="eyebrow">Product &amp; UX Designer</p>
+      <h1>Tejaswini</h1>
     </div>
-    <div class="hero-actions">
-      <a class="btn" href="#work">See my work</a>
-      <a class="btn ghost" href="mailto:tejugedam93@gmail.com">Get in touch</a>
+    <div class="hero-side">
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="rough" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="4.5"/></filter></svg>
+      <div class="scenes" role="img" aria-label="I get to the crux of messy problems, generate ideas, prioritize what matters, design and help ship solutions.">
+        <figure class="scene s1 on">
+          <svg viewBox="0 0 240 150" aria-hidden="true">
+            <path id="mess" class="mess" pathLength="1" d="M20 60 C60 40 110 30 160 60 C210 90 120 130 70 100"/>
+          </svg>
+        </figure>
+        <figure class="scene s2">
+          <svg viewBox="0 0 240 150" aria-hidden="true">
+            <path class="glass" pathLength="1" d="M120 24 C92 22 80 54 98 72 C106 80 106 86 107 96 L135 95 C134 86 135 80 143 72 C161 54 148 22 120 24Z"/>
+            <path class="fil" pathLength="1" d="M108 72 C112 58 117 76 120 62 C123 76 128 58 132 72"/>
+            <path class="base" pathLength="1" d="M108 106 L133 105 M111 116 L130 117 M116 127 L125 126"/>
+            <path class="ray" pathLength="1" style="--d:1.2s" d="M120 10 L121 -2"/>
+            <path class="ray" pathLength="1" style="--d:1.35s" d="M80 20 L70 9"/>
+            <path class="ray" pathLength="1" style="--d:1.5s" d="M161 19 L172 8"/>
+            <path class="ray" pathLength="1" style="--d:1.65s" d="M66 54 L53 51"/>
+            <path class="ray" pathLength="1" style="--d:1.8s" d="M175 53 L188 50"/>
+            <path class="sp" style="--d:2.3s" d="M40 96 L41 112 M33 104 L49 105"/>
+            <path class="sp" style="--d:2.9s" d="M206 34 L207 46 M200 40 L212 41"/>
+          </svg>
+        </figure>
+        <figure class="scene s3">
+          <svg viewBox="0 0 240 150" aria-hidden="true">
+            <g class="row ra" style="--from:92px"><path d="M22 16 L45 14 L46 38 L21 40 Z"/><path class="chk" pathLength="1" d="M26 28 L33 35 L45 17"/><path d="M58 26 C74 20 86 32 102 25 S134 29 152 24 S170 28 184 24"/><path class="ul" pathLength="1" d="M56 36 C90 41 134 34 186 38"/></g>
+            <g class="row rb" style="--from:-46px"><path d="M22 62 L45 60 L46 84 L21 86 Z"/><path d="M58 73 C72 68 86 78 100 72 S122 75 136 71"/></g>
+            <g class="row rc" style="--from:-46px"><path d="M22 108 L45 106 L46 130 L21 132 Z"/><path d="M58 119 C70 114 82 124 94 118 S108 120 114 117"/></g>
+          </svg>
+        </figure>
+        <figure class="scene s4">
+          <svg viewBox="0 0 240 150" aria-hidden="true">
+            <path class="sk" pathLength="1" d="M16 40 L68 37 L70 94 L14 97 Z M24 52 L58 50 M24 64 L62 63 M24 76 L46 75"/>
+            <g class="rocket">
+              <path class="rb" pathLength="1" d="M148 22 C170 42 172 80 164 102 L134 103 C126 80 128 42 148 22Z"/>
+              <path class="rw" pathLength="1" d="M141 58 C141 50 155 50 155 58 C155 66 141 66 141 58Z"/>
+              <path class="rf" pathLength="1" d="M134 86 L118 108 L134 103 M164 86 L180 108 L164 103"/>
+              <path class="fl" d="M140 108 C140 122 148 130 148 142 C148 130 158 122 158 108"/>
+            </g>
+            <path class="sm" pathLength="1" d="M122 134 C112 124 104 140 94 130 C86 122 78 136 70 128"/>
+            <path class="sm" pathLength="1" d="M176 136 C186 128 194 140 204 132"/>
+          </svg>
+        </figure>
+      </div>
+      <p class="intro">I get to the <span class="u on">crux of messy problems</span>, <span class="u">generate ideas</span>, <span class="u">prioritize what matters</span>, <span class="u">design and help ship solutions</span>.</p>
+      <p class="aside">(of course, I make it look nice)</p>
     </div>
   </section>
 
@@ -155,21 +149,30 @@
   <p class="fine">© 2026 Tejaswini Gedam · Designed &amp; built as a living portfolio.</p>
 </footer>
 <script>
+  /* one continuous, messy scribble (a single path that loops over itself) */
+  (function () {
+    var pts = [], N = 240, T = Math.PI * 2 * 2.7, i, t;
+    for (i = 0; i <= N; i++) {
+      t = i / N * T;
+      var R = 1 + 0.14 * Math.sin(t * 0.45 + 1), r = 1 + 0.3 * Math.sin(t * 0.8), ph = 1 + 0.3 * Math.sin(t * 0.6);
+      pts.push([120 + 66 * R * Math.cos(t * 0.9 + 0.5) + 28 * r * Math.cos(t * 4.3 + ph),
+                80 + 36 * R * Math.sin(t * 0.9 + 0.5) + 24 * r * Math.sin(t * 4.3 + ph)]);
+    }
+    var f = pts[0], l = pts[pts.length - 1];
+    var a = [[f[0] - 80, f[1] - 30], [f[0] - 40, f[1] - 10]].concat(pts, [[l[0] + 40, l[1] + 8], [l[0] + 80, l[1] + 26]]);
+    var d = 'M' + a[0][0].toFixed(0) + ' ' + a[0][1].toFixed(0);
+    for (i = 0; i < a.length - 1; i++) {
+      var p0 = a[Math.max(i - 1, 0)], p1 = a[i], p2 = a[i + 1], p3 = a[Math.min(i + 2, a.length - 1)];
+      d += ' C' + [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6, p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6, p2[0], p2[1]].map(function (v) { return v.toFixed(0); }).join(' ');
+    }
+    document.getElementById('mess').setAttribute('d', d);
+  })();
+/* hero: four scenes, each with its own illustration, cycling automatically */
 (function () {
-  var h = document.querySelector(".hero");
-  if (!h) return;
-  var items = h.querySelectorAll(".hv");
-  function on(k) { h.setAttribute("data-k", k); }
-  function off() { h.removeAttribute("data-k"); }
-  Array.prototype.forEach.call(items, function (el) {
-    var k = el.getAttribute("data-k");
-    el.addEventListener("mouseenter", function () { on(k); });
-    el.addEventListener("mouseleave", off);
-    el.addEventListener("focus", function () { on(k); });
-    el.addEventListener("blur", off);
-    el.addEventListener("click", function () { on(k); });
-  });
-  document.addEventListener("click", function (e) { if (!e.target.closest(".hv")) off(); });
+  var sc = document.querySelectorAll('.scene'), us = document.querySelectorAll(".intro .u"), i = 0;
+  function show(n) { for (var k = 0; k < sc.length; k++) { sc[k].classList.toggle('on', k === n); us[k].classList.toggle("on", k === n); } }
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  setInterval(function () { i = (i + 1) % sc.length; show(i); }, 5500);
 })();
 </script>
 </body></html>

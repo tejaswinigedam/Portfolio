@@ -1,0 +1,79 @@
+/* ============================================================
+   Case studies — same look as the homepage (home.css):
+   white page, #fafafa bands, one blue accent, medium-weight
+   tight sans headlines, mono labels, pill buttons.
+   Loaded AFTER styles.css on every case study page.
+   ============================================================ */
+:root {
+  --page: #ffffff;
+  --paper: #ffffff;
+  --paper-2: #ffffff;
+  --canvas: #fafafa;
+  --ink: #05040e;
+  --ink-soft: #6b6b6b;
+  --line: #e4e3df;
+  --accent: #d9eafb;
+  --accent-ink: #05040e;
+  --pink: #2f7bf5;
+  --pink-deep: #1f5fd0;
+  --nav-bg: #fafafa;
+  --blue: #2f7bf5;
+  --violet: #2f7bf5;
+  --shadow: none;
+  --glide: cubic-bezier(.65, 0, .35, 1);
+  --display: "DM Sans", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+}
+::selection { background: var(--blue); color: #fff; }
+h1, h2 { font-weight: 500; letter-spacing: -.045em; line-height: .98; text-wrap: balance; }
+h3 { font-weight: 500; letter-spacing: -.03em; }
+em, i { font-style: normal; }
+.takeaway em, .quote-card em, blockquote em { font-style: italic; }
+
+/* nav: plain, sticky, blurred */
+.nav { padding: 24px clamp(16px, 4.44vw, 64px); background: color-mix(in srgb, #fafafa 92%, transparent); }
+.brand { font-family: var(--font); font-weight: 500; font-size: 14px; letter-spacing: .01em; }
+.nav nav { align-items: center; gap: clamp(16px, 2.2vw, 32px); }
+.nav-links { padding: 0; background: none; border-radius: 0; gap: clamp(16px, 2.2vw, 32px); }
+.nav-links a { font-size: 14px; font-weight: 500; color: var(--ink-soft); padding: 0; border-radius: 0; }
+.nav-links a:hover { color: var(--ink); }
+.nav-cta { font-size: 14px; font-weight: 500; padding: 9px 18px; border-radius: 999px; background: var(--ink); color: #fff; }
+.nav-cta:hover { background: var(--blue); }
+@media (max-width: 640px) { .nav { padding: 16px; } .brand { max-width: none; font-size: 14px; } .nav-links a, .nav-cta { font-size: 13px; } }
+
+/* labels + buttons */
+.eyebrow { font-weight: 400; letter-spacing: .06em; color: var(--ink-soft); }
+.eyebrow::before { background: var(--blue); }
+.back { font-weight: 400; letter-spacing: .06em; }
+.back:hover { color: var(--blue); }
+.btn { border-radius: 999px; font-weight: 500; font-size: 17px; background: var(--ink); color: #fff; border: 1.5px solid var(--ink); padding: 15px 26px; transition: transform .35s var(--glide), background .25s, color .25s, border-color .25s; }
+.btn:hover { background: var(--blue); border-color: var(--blue); color: #fff; }
+.btn.ghost { background: transparent; color: var(--ink); border-color: #d6d6d6; }
+.btn.ghost:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+.type-tag, .case-hero .tag { border: 1px solid #d6d6d6; background: transparent; color: var(--ink-soft); font-weight: 400; letter-spacing: .06em; }
+
+/* case hero: #fafafa band, big headline */
+.case-hero { background: var(--canvas); box-shadow: 0 0 0 100vmax var(--canvas); clip-path: inset(0 -100vmax); border-bottom: 0; padding: clamp(32px, 5vw, 56px) 0 clamp(36px, 5vw, 56px); margin-bottom: clamp(32px, 5vw, 56px); }
+.case-hero h1 { font-size: clamp(38px, 6.6vw, 92px); max-width: 18ch; letter-spacing: -.05em; margin-bottom: 18px; }
+.case-hero .lede { color: #333; }
+.case-hero .meta dt { font-weight: 400; letter-spacing: .06em; }
+.case-hero .meta dd { font-weight: 500; }
+
+/* sections inside the case study */
+.beat { font-weight: 400; letter-spacing: .06em; color: var(--blue); }
+.case-block h2, .hook-title { letter-spacing: -.045em; }
+.case-block p { color: #222; }
+.snapshot-item, .hfb-item, .rcard, .metric-card, .quote-card, .variant-card, .score-card, .about-side, .unsolved { border-radius: 16px; }
+.flow-step { border-radius: 12px; font-weight: 500; }
+.flow-step.flow-friction { background: rgba(47, 123, 245, .08); }
+.jtbd-core .jc-s { background: linear-gradient(transparent 62%, rgba(47, 123, 245, .25) 62%); }
+.shot img { border-radius: 16px; border-color: var(--line); }
+.takeaway, .scene-text { font-family: var(--font); font-style: normal; font-weight: 500; letter-spacing: -.03em; }
+
+/* footer, like the homepage */
+.foot { max-width: none; margin: clamp(64px, 8vw, 110px) 0 0; padding: clamp(48px, 7vw, 100px) clamp(16px, 4.44vw, 64px) 28px; background: var(--canvas); border-top: 0; }
+.foot > div, .foot .fine { max-width: calc(1120px); margin-left: auto; margin-right: auto; }
+.foot h3 { font-size: clamp(44px, 9vw, 130px); letter-spacing: -.055em; line-height: .92; font-weight: 500; }
+.foot .btn { background: var(--ink); }
+.foot .btn:hover { background: var(--blue); }
+.foot .fine { font-weight: 400; letter-spacing: .06em; text-transform: uppercase; }
+.case-nav a:hover { color: var(--blue); }
