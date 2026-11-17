@@ -15,7 +15,7 @@
 <body class="home">
 
 <header class="nav">
-  <a class="brand" href="index.html">Tejaswini Gedam</a>
+  <a class="brand" href="index.html">Tejaswini</a>
   <nav>
     <div class="nav-links">
       <a href="index.html#work">Work</a>
@@ -25,12 +25,17 @@
     <a class="nav-cta" href="mailto:tejugedam93@gmail.com">Contact</a>
   </nav>
 </header>
+<div class="strip" role="status" aria-label="Available to join immediately"><div class="strip-bar" aria-hidden="true"><div class="strip-track"><span>Available to join immediately</span><span>Available to join immediately</span><span>Available to join immediately</span><span>Available to join immediately</span><span>Available to join immediately</span><span>Available to join immediately</span><span>Available to join immediately</span><span>Available to join immediately</span></div></div></div>
 <main>
   <section class="hero">
     <div class="hero-main">
       <p class="eyebrow">Product &amp; UX Designer</p>
       <h1>Tejaswini</h1>
     </div>
+    <figure class="hero-photo"><img src="images/tejaswini.webp" alt="Portrait of Tejaswini Gedam" width="940" height="1672" fetchpriority="high"></figure>
+  </section>
+
+  <section class="intro-section">
     <div class="hero-side">
       <svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="rough" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="4.5"/></filter></svg>
       <div class="scenes" role="img" aria-label="I get to the crux of messy problems, generate ideas, prioritize what matters, design and help ship solutions.">
@@ -89,7 +94,7 @@
       <div class="card-thumb" aria-hidden="true"><img src="work/img/meetup-thumb.jpg" alt="" loading="lazy"></div>
       <div class="card-body">
         <span class="type-tag">UX Research</span>
-        <h3>Meetup — UX Research for Indian Market Adoption</h3>
+        <h3>Meetup</h3>
         <p>A mixed-methods research study into why Meetup struggles to earn trust with users in India.</p>
       </div>
       <span class="card-cta">View case study →</span>
@@ -99,8 +104,8 @@
       <div class="card-thumb" aria-hidden="true"><img src="work/img/bidflow-dashboard.jpg" alt="" loading="lazy"></div>
       <div class="card-body">
         <span class="type-tag">Product Design</span>
-        <h3>Designing the workflow behind AI-powered tender management</h3>
-        <p>Designing BidFlow from 0→1 to help tender teams understand requirements, verify eligibility, and turn them into actionable work.</p>
+        <h3>Bid flow</h3>
+        <p>Designing the workflow behind AI-powered tender management</p>
       </div>
       <span class="card-cta">View case study →</span>
     </a>
@@ -109,7 +114,7 @@
       <div class="card-thumb" aria-hidden="true"><img src="work/img/seascanner-thumb.jpg" alt="" loading="lazy"></div>
       <div class="card-body">
         <span class="type-tag">Heuristic Evaluation</span>
-        <h3>Seascanner — Product Critique &amp; Heuristic Evaluation</h3>
+        <h3>Seascanner</h3>
         <p>A heuristic evaluation of a cruise-booking platform: 22 severity-rated issues across search, details and booking, with the business outcomes of fixing them.</p>
       </div>
       <span class="card-cta">View case study →</span>
@@ -146,8 +151,19 @@
     <p>Open to product &amp; UX design opportunities.</p>
     <a class="btn" href="mailto:tejugedam93@gmail.com">tejugedam93@gmail.com</a>
   </div>
-  <p class="fine">© 2026 Tejaswini Gedam · Designed &amp; built as a living portfolio.</p>
+  <p class="fine">© 2026 Tejaswini Gedam</p>
 </footer>
+<script src="card-hover.js" defer></script>
+<script>
+  (function () {
+    var el = document.querySelector('.intro-section .hero-side');
+    if (!el || !('IntersectionObserver' in window)) return;
+    el.classList.add('reveal');
+    new IntersectionObserver(function (es, o) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); o.unobserve(e.target); } });
+    }, { threshold: 0.15 }).observe(el);
+  })();
+</script>
 <script>
   /* one continuous, messy scribble (a single path that loops over itself) */
   (function () {

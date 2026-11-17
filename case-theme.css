@@ -5,20 +5,20 @@
    Loaded AFTER styles.css on every case study page.
    ============================================================ */
 :root {
-  --page: #ffffff;
-  --paper: #ffffff;
-  --paper-2: #ffffff;
-  --canvas: #fafafa;
+  --page: #f8f8f6;
+  --paper: #fbfbf9;
+  --paper-2: #fbfbf9;
+  --canvas: #f1f0ec;
   --ink: #05040e;
   --ink-soft: #6b6b6b;
   --line: #e4e3df;
-  --accent: #d9eafb;
+  --accent: #efe1f8;
   --accent-ink: #05040e;
-  --pink: #2f7bf5;
-  --pink-deep: #1f5fd0;
-  --nav-bg: #fafafa;
-  --blue: #2f7bf5;
-  --violet: #2f7bf5;
+  --pink: #9d17a0;
+  --pink-deep: #7b1280;
+  --nav-bg: #f8f8f6;
+  --blue: #9d17a0;
+  --violet: #9d17a0;
   --shadow: none;
   --glide: cubic-bezier(.65, 0, .35, 1);
   --display: "DM Sans", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
@@ -30,15 +30,15 @@ em, i { font-style: normal; }
 .takeaway em, .quote-card em, blockquote em { font-style: italic; }
 
 /* nav: plain, sticky, blurred */
-.nav { padding: 24px clamp(16px, 4.44vw, 64px); background: color-mix(in srgb, #fafafa 92%, transparent); }
-.brand { font-family: var(--font); font-weight: 500; font-size: 14px; letter-spacing: .01em; }
+.nav { padding: 24px clamp(16px, 4.44vw, 64px); background: color-mix(in srgb, #f8f8f6 70%, transparent); }
+.brand { font-family: "Instrument Serif", Georgia, "Times New Roman", serif; font-weight: 400; font-size: 28px; line-height: 1; letter-spacing: -.02em; color: var(--blue); }
 .nav nav { align-items: center; gap: clamp(16px, 2.2vw, 32px); }
 .nav-links { padding: 0; background: none; border-radius: 0; gap: clamp(16px, 2.2vw, 32px); }
 .nav-links a { font-size: 14px; font-weight: 500; color: var(--ink-soft); padding: 0; border-radius: 0; }
 .nav-links a:hover { color: var(--ink); }
 .nav-cta { font-size: 14px; font-weight: 500; padding: 9px 18px; border-radius: 999px; background: var(--ink); color: #fff; }
 .nav-cta:hover { background: var(--blue); }
-@media (max-width: 640px) { .nav { padding: 16px; } .brand { max-width: none; font-size: 14px; } .nav-links a, .nav-cta { font-size: 13px; } }
+@media (max-width: 640px) { .nav { padding: 16px; } .brand { max-width: none; font-size: 24px; } .nav-links a, .nav-cta { font-size: 13px; } }
 
 /* labels + buttons */
 .eyebrow { font-weight: 400; letter-spacing: .06em; color: var(--ink-soft); }
@@ -52,7 +52,7 @@ em, i { font-style: normal; }
 .type-tag, .case-hero .tag { border: 1px solid #d6d6d6; background: transparent; color: var(--ink-soft); font-weight: 400; letter-spacing: .06em; }
 
 /* case hero: #fafafa band, big headline */
-.case-hero { background: var(--canvas); box-shadow: 0 0 0 100vmax var(--canvas); clip-path: inset(0 -100vmax); border-bottom: 0; padding: clamp(32px, 5vw, 56px) 0 clamp(36px, 5vw, 56px); margin-bottom: clamp(32px, 5vw, 56px); }
+.case-hero { background: transparent; border-bottom: 0; padding: clamp(32px, 5vw, 56px) 0 clamp(36px, 5vw, 56px); margin-bottom: clamp(32px, 5vw, 56px); }
 .case-hero h1 { font-size: clamp(38px, 6.6vw, 92px); max-width: 18ch; letter-spacing: -.05em; margin-bottom: 18px; }
 .case-hero .lede { color: #333; }
 .case-hero .meta dt { font-weight: 400; letter-spacing: .06em; }
@@ -64,16 +64,31 @@ em, i { font-style: normal; }
 .case-block p { color: #222; }
 .snapshot-item, .hfb-item, .rcard, .metric-card, .quote-card, .variant-card, .score-card, .about-side, .unsolved { border-radius: 16px; }
 .flow-step { border-radius: 12px; font-weight: 500; }
-.flow-step.flow-friction { background: rgba(47, 123, 245, .08); }
-.jtbd-core .jc-s { background: linear-gradient(transparent 62%, rgba(47, 123, 245, .25) 62%); }
+.flow-step.flow-friction { background: rgba(157, 23, 160, .08); }
+.jtbd-core .jc-s { background: linear-gradient(transparent 62%, rgba(157, 23, 160, .25) 62%); }
 .shot img { border-radius: 16px; border-color: var(--line); }
 .takeaway, .scene-text { font-family: var(--font); font-style: normal; font-weight: 500; letter-spacing: -.03em; }
 
 /* footer, like the homepage */
-.foot { max-width: none; margin: clamp(64px, 8vw, 110px) 0 0; padding: clamp(48px, 7vw, 100px) clamp(16px, 4.44vw, 64px) 28px; background: var(--canvas); border-top: 0; }
+.foot { max-width: none; margin: clamp(64px, 8vw, 110px) 0 0; padding: clamp(48px, 7vw, 100px) clamp(16px, 4.44vw, 64px) 28px; background: transparent; border-top: 0; }
 .foot > div, .foot .fine { max-width: calc(1120px); margin-left: auto; margin-right: auto; }
 .foot h3 { font-size: clamp(44px, 9vw, 130px); letter-spacing: -.055em; line-height: .92; font-weight: 500; }
 .foot .btn { background: var(--ink); }
 .foot .btn:hover { background: var(--blue); }
 .foot .fine { font-weight: 400; letter-spacing: .06em; text-transform: uppercase; }
 .case-nav a:hover { color: var(--blue); }
+
+/* ---------- Same look as the homepage: cream page, constant "+" grid, serif display headings ---------- */
+body {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpath d='M24 20v8M20 24h8' stroke='%23d9d6cc' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+  background-size: 48px 48px; background-attachment: fixed;
+}
+.case-hero h1, .case-block h2, .hook-title, .foot h3 { font-family: "Instrument Serif", Georgia, "Times New Roman", serif; font-weight: 400; letter-spacing: -.02em; }
+.case-hero h1 { font-size: clamp(46px, 7.4vw, 104px); line-height: .96; }
+.case-block h2 { font-size: clamp(34px, 4.2vw, 56px); line-height: 1; }
+.foot h3 { font-size: clamp(52px, 10vw, 148px); line-height: .9; }
+.nav-cta, .nav-cta:hover { color: #fff; }
+.nav .nav-cta { color: #fff; }
+
+/* the reading sheet sits straight on the cream page (no big white block) */
+.sheet { background: transparent; }
