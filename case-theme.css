@@ -79,10 +79,6 @@ em, i { font-style: normal; }
 .case-nav a:hover { color: var(--blue); }
 
 /* ---------- Same look as the homepage: cream page, constant "+" grid, serif display headings ---------- */
-body {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpath d='M24 20v8M20 24h8' stroke='%23d9d6cc' stroke-width='1' fill='none'/%3E%3C/svg%3E");
-  background-size: 48px 48px; background-attachment: fixed;
-}
 .case-hero h1, .case-block h2, .hook-title, .foot h3 { font-family: "Instrument Serif", Georgia, "Times New Roman", serif; font-weight: 400; letter-spacing: -.02em; }
 .case-hero h1 { font-size: clamp(46px, 7.4vw, 104px); line-height: .96; }
 .case-block h2 { font-size: clamp(34px, 4.2vw, 56px); line-height: 1; }
@@ -92,3 +88,11 @@ body {
 
 /* the reading sheet sits straight on the cream page (no big white block) */
 .sheet { background: transparent; }
+
+/* project details (Timeline / Role / Scope / Product) on a single row */
+.case-hero .meta { flex-wrap: nowrap; gap: clamp(16px, 2.4vw, 36px); align-items: flex-start; }
+.case-hero .meta > div { max-width: none; flex: 1 1 0; min-width: 0; }
+.case-hero .meta > div:nth-child(1) { flex: 0 0 auto; }
+.case-hero .meta > div:nth-child(2) { flex: 0 0 auto; }
+.case-hero .meta dd { font-size: 14px; line-height: 1.35; }
+@media (max-width: 900px) { .case-hero .meta { flex-wrap: wrap; } .case-hero .meta > div { flex: 1 1 40%; } }
